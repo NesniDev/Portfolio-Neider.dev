@@ -1,0 +1,59 @@
+<section class="relative h-full border-orange-400 z-50">
+  <!-- main Atropos container (required), add your custom class here -->
+  <div class="atropos my-atropos">
+    <!-- scale container (required) -->
+    <div class="atropos-scale">
+      <!-- rotate container (required) -->
+      <div class="atropos-rotate">
+        <!-- inner container (required) -->
+        <div class="atropos-inner">
+          <div class="">
+            <img class="rounded-2xl" src="img/imagen.jfif" alt="" data-atropos-opacity="1;0.4"/>
+            <div
+              class="absolute text-center flex flex-col text-xl items-center content-end bottom-0 p-10 mx-auto left-0 right-0 z-50 text-white"
+            >
+              <h2 class="text-3xl font-extrabold mb-5">
+                Ingeniero de Sistemas
+              </h2>
+              <p class="text-base">
+                "Primero aprende informática y toda la teoría.
+              </p>
+              <p class="text-base">
+                Después desarrolla un estilo de programación.
+              </p>
+              <p class="text-base">Entonces, olvídalo todo y hackea"</p>
+              <em class="my-5">"George Carrette"</em>
+              <button
+                class="bg-white text-lg py-2 px-4 font-bold text-[var(--baseColor)] rounded-xl"
+              >
+                Leer Más...
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // import Atropos library
+  import Atropos from "atropos";
+
+  // Initialize
+  const myAtropos = Atropos({
+    el: ".my-atropos",
+    // // alwaysActive: true,
+    // rotateTouch: true,
+    // rotateXMax: 20,
+    // rotateYMax: 20,
+    // shadowOffset: 50,
+    // shadow: true,
+    // shadowScale: 1,
+    // highlight: true
+    shadowScale: 1.05,
+    activeOffset: 40
+    
+  });
+
+</script>

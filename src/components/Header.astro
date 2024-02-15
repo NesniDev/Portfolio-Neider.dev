@@ -1,0 +1,102 @@
+<header class="w-full mx-auto max-w-[1000px] py-12 h-[20vh] px-5 flex items-center justify-center md:block">
+  <div class="flex flex-row justify-between items-center gap-10">
+    <a href="/" class="flex gap-2 ancla-logo">
+      <img class="size-12 img-logo transition" src="img/Logo.avif" alt="" />
+      <img class="size-12 img-logo-2 transition" src="img/JavaScript-logo.avif" alt="" />
+      <div class="flex flex-col font-extrabold text-logo transition">
+        <h2 class="underline-offset-8">NESTNI DEV</h2>
+        <p>INGENIERO</p>
+      </div>
+    </a>
+    <nav >
+      <ul
+        class="flex flex-row justify-between gap-10 text-base tracking-widest text-[#D3D3D3] font-extrabold "
+      >
+        <li>
+          <a 
+          class="hover:text-[rgba(252,102,15,0.9)] "
+          href="#id">Proyectos</a>
+        </li>
+        <li>
+          <a 
+          class="hover:text-[rgba(252,102,15,0.9)] "
+          href="/">Habilidades</a>
+        </li>
+        <li>
+          <a 
+          class="hover:text-[rgba(252,102,15,0.9)] "
+          href="/">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  nav a {
+    position: relative;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-menu);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -12px;
+    transition: width 0.5s ease-out;
+    border-radius: 20px;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  .text-logo{
+    transition: all 0.2s ease-in-out;
+  }
+  .img-logo{
+    display: block;
+  }
+  .img-logo-2{
+    display: none;
+  }
+  .ancla-logo:hover .text-logo{
+    /*  */
+    font-size: 15px;
+    transform: rotate(-7deg);
+    display: block;
+  }  
+  .ancla-logo:hover .img-logo{
+    animation: changeReverse 1s ease-out;
+    display: none;
+  }
+  .ancla-logo:hover .img-logo-2{
+    animation: change 1s ease-out;
+    display: block;
+  }
+  .ancla-logo:not(:hover) .img-logo-2{
+    animation: changeReverse 1s ease-out;
+    display: block;
+  }
+
+
+
+  @keyframes change {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @keyframes changeReverse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
+
+</style>

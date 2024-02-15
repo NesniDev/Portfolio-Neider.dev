@@ -1,0 +1,143 @@
+---
+interface Props {
+  logo?;
+  name?: string;
+}
+
+import Html from "../icons/Html.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Css from "../icons/Css.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Sass from "../icons/Sass.astro";
+import React from "../icons/React.astro";
+import Astro1 from "../icons/Astro1.astro";
+import GitHub from "../icons/GitHub.astro";
+import Javascript from "../icons/Javascript.astro";
+import Typescript from "../icons/Typescript.astro";
+import NextJs from "../icons/NextJs.astro";
+import NodeJs from "../icons/NodeJs.astro";
+import Git from "../icons/Git.astro";
+import Sql from "../icons/Sql.astro";
+import Python from "../icons/Python.astro";
+import Bun from "../icons/Bun.astro";
+import Pnpm from "../icons/Pnpm.astro";
+import Notion from "../icons/Notion.astro";
+import ViteJs from "../icons/ViteJs.astro";
+import Linux from "../icons/Linux.astro";
+
+const { logo, name } = Astro.props;
+
+const TOOLS = [
+  {
+    logo: Html,
+    name: "HTML",
+  },
+  {
+    logo: Css,
+    name: "CSS",
+  },
+  {
+    logo: Sass,
+    name: "SASS",
+  },
+  {
+    logo: Tailwind,
+    name: "TAILWIND",
+  },
+  {
+    logo: Bootstrap,
+    name: "Bootstrap",
+  },
+  {
+    logo: Javascript,
+    name: "Javascript",
+  },
+  {
+    logo: React,
+    name: "React",
+  },
+  {
+    logo: Typescript,
+    name: "Typescript",
+  },
+  {
+    logo: NextJs,
+    name: "NextJs",
+  },
+  {
+    logo: Astro1,
+    name: "Astro",
+  },
+  {
+    logo: NodeJs,
+    name: "NodeJs",
+  },
+  {
+    logo: Git,
+    name: "Git",
+  },
+  {
+    logo: GitHub,
+    name: "GitHub",
+  },
+  {
+    logo: Linux,
+    name: "Linux",
+  },
+  {
+    logo: Sql,
+    name: "Sql Lite",
+  },
+  {
+    logo: Python,
+    name: "Python",
+  },
+  {
+    logo: ViteJs,
+    name: "Vite Js",
+  },
+  {
+    logo: Notion,
+    name: "Notion",
+  },
+  {
+    logo: Pnpm,
+    name: "Pnpm",
+  },
+  {
+    logo: Bun,
+    name: "Bun",
+  },
+];
+---
+
+<!-- Crear un evento hover donde en cada tecnologia me muestre los frameworks o dividir por secciones las tecnologias -->
+<section
+  class="grid grid-cols-5 overflow-hidden justify-center place-content-center py-14 px-9 grid-flow-row"
+>
+  {
+    TOOLS.map((tool) => (
+      <div class="a flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
+        <tool.logo class="size-16 icon" />
+        <h2 class="uppercase text-base font-extrabold mt-2">{tool.name}</h2>
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  div:hover .icon {
+    animation: rotateIcon 1s ease-in-out;
+    background: image-set("Foto.png" 2x, "Foto.png");
+  }
+
+  @keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+         /* Primer fotograma */
+    }
+    to {
+     transform: rotate(360deg);
+    }
+  }
+</style>

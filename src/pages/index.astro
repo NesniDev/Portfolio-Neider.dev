@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PersonalInformation from "../components/PersonalInformation.astro";
+import Container from "../components/Container.astro";
+import Information from "../components/Information.astro";
+import Projects from "../components/Projects.astro";
+import Tecnologys from "../components/Tecnologys.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout
+  title="Portfolio - Neider | Donde la Creatividad se Encuentra con la Tecnología."
+  description="¡Bienvenido a mi portfolio! En Neider, fusiono la creatividad con la tecnología para ofrecerte soluciones innovadoras y visualmente impactantes. Descubre cómo mis habilidades en diseño y desarrollo se combinan para crear experiencias únicas y memorables. Explora mi trabajo y déjate inspirar por la sinergia entre la imaginación y la tecnología en cada proyecto."
+>
+  <main>
+    <Container>
+      <PersonalInformation />
+    </Container>
+    <Container>
+      <h2 class="my-3 text-xl font-bold">Información General</h2>
+      <Information />
+    </Container>
+    <Container href="/#id">
+      <h2 class="my-3 text-xl font-bold">Proyectos Realizados</h2>
+      <Projects />
+    </Container>
+    <Container>
+      <h2 class="my-3 text-xl font-bold">Tecnologías</h2>
+      <Tecnologys />
+    </Container>
+    <Container>
+      <h2 class="my-3 text-xl font-bold">Contacto</h2>
+      <Contact />
+    </Container>
+  </main>
+</Layout>

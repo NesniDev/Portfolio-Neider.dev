@@ -1,0 +1,112 @@
+---
+import GitHub from "../icons/GitHub.astro"
+import Chrome from "../icons/Chrome.astro"
+import Html from "../icons/Html.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import Astro1 from "../icons/Astro1.astro"
+import Css from "../icons/Css.astro"
+import React from "../icons/React.astro"
+
+interface Props {
+  url?: string;
+  title?: string;
+  technologies?;
+  text?: string;
+}
+
+const { url, title, technologies, text } = Astro.props;
+
+const TECNOLOGYS = {
+    HTML: {
+        name: "HTML",
+        class: "text-[#e34f26]",
+        icon: Html
+    },
+    TAILWIND: {
+        name: "TAILWIND",
+        class: "text-[#0ED7B5]",
+        icon: Tailwind
+    },
+    ASTRO: {
+        name: "ASTRO",
+        class: "text-[#FF5D01]",
+        icon: Astro1
+    
+    },
+    CSS: {
+        name: "CSS",
+        class: "text-[#30a9dc]",
+        icon: Css
+    
+    },
+    REACT: {
+        name: "REACT",
+        class: "text-[#00D8FF]",
+        icon: React
+    }
+}
+
+const PROJECTS = [
+  {
+    url: "/img/Lawyer.webp",
+    title: "Page Lawyer",
+    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.TAILWIND, TECNOLOGYS.ASTRO],
+    text: "Portafolio responsivo donde se encuentra toda la información referente a mi vida (trabajos, estudios, aprendizajes, etc.) en la web.",
+  },
+  {
+    url: "/img/Lawyer.webp",
+    title: "Page School",
+    technologies: [TECNOLOGYS.ASTRO, TECNOLOGYS.TAILWIND],
+    text: "En este apartado se evidencia una página web educativa que he desarrollado con astro para evidenciar la información de un colegio.",
+  },
+  {
+    url: "/img/rick and morty.avif",
+    title: "API - Rick And Morty",
+    technologies: [TECNOLOGYS.REACT, TECNOLOGYS.TAILWIND],
+    text: "Proyecto de una API para la visualización de los personajes de Rick And Morty con su respectiva información.",
+  },
+];
+---
+
+<section class="gap-5 grid grid-cols-1 md:grid-cols-2 sm:auto-rows-auto lg:grid-cols-3 auto-rows-auto content-center max-h-full">
+  
+  {
+    PROJECTS.map((project) => (
+      <article class="relative before:absolute before:rounded-lg before:content before:bg-[var(--lineTop)] before:h-[5px] before:top-0 before:left-0 before:right-0 before:z-10
+      after:absolute after:rounded-lg after:content after:bg-sky-500 after:h-[5px] after:bottom-0 after:left-0 after:right-0 after:z-50 
+       bg-[#D3D3D3] text-[#1d2029] overflow-hidden rounded-lg">
+        
+        <div class="overflow-hidden hover:bg-gradient-to-b from-black">
+          <img class="h-44 w-full hover:scale-125 transition ease-in-out hover:animate-pulse object-center" src={project.url} alt=`Imagen de ${project.title}` />
+        </div>
+            <div class="flex flex-col items-center text-balance p-5">
+                <h3 class="text-2xl font-bold">{project.title}</h3>
+                <span class="flex justify-between items-center gap-3 mt-3">{
+                  project.technologies.map((tecnology) => (
+                  <span class={`flex flex-col justify-center items-center font-extrabold ${tecnology.class}`}>
+                    <tecnology.icon class="size-5 hover:scale-125 transition cursor-crosshair icon"/>
+                    
+                  </span>
+                    ))}
+                  </span>
+                <p class="mt-3 text-justify text-sm">{project.text}</p>
+            
+                </div>
+            <footer class="flex flex-row justify-evenly gap-5 mb-5">
+                <GitHub class="h size-8 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-crosshair"/>
+                <Chrome class="h size-8 hover:scale-110 hover:filter hover:drop-shadow-lg hover:from-red-500 transition cursor-crosshair "/>
+            </footer>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+    .h:hover{
+        filter: drop-shadow(0 0 6px rgba(0,100,100,0.8));
+    }
+    .icon:hover{
+        filter: drop-shadow(0 0 6px rgba(100,0,10,0.8));
+    }
+    
+</style>

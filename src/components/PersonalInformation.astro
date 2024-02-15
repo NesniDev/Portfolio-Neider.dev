@@ -1,0 +1,84 @@
+<section class="flex flex-col-reverse items-center md:flex-row md:gap-10 md:items-center h-full px-5 mt-5 mb-20">
+  <div class="flex flex-col mt-12">
+    <h2 class="text-4xl items-start">Neider Stith Nieto Rodriguez</h2>
+    <h5 class="text-2xl my-3">
+      <span class="typed5">Desarrollador de software</span>
+    </h5>
+    <div class="h5"></div>
+      Soy un desarrollador frontend con experiencia en el diseño y desarrollo de
+      sitios web. Me gusta mantenerme actualizado con las últimas tendencias y
+      tecnologías en el mundo del desarrollo web, y siempre estoy buscando
+      nuevas formas de mejorar mis habilidades y ampliar mis conocimientos.
+        <p class="text-center mb-10 mt-5"> ¡Espero tener la oportunidad de hablar contigo! <a
+         class="font-extrabold" href="#SeccionDeContacto">Contáctame.</a></p> 
+    </p>
+
+    <div class="flex flex-col justify-center items-center">
+      <a
+        class="relative flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm 
+        shadow-lg shadow-orange-500/80 font-bold hover:font-bold transition
+        text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 
+        group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-[var(--baseColor)] focus:ring-4 
+        focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 hover:scale-105"
+        href="Downloads/Hoja de Vida - Neider Nieto.pdf"
+        download="Reporte Hoja de Vida"
+        target="_blank"
+      >
+        <span
+          class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+        >
+          Hoja de Vida
+        </span>
+      </a>
+    </div>
+  </div>
+  <!-- <img class="rounded-lg content-center" src="img/Foto.png" /> -->
+  <div class="ss rounded-lg mb-14 h-56 w-40 md:h-72 md:w-[700px] lg:h-80 lg:w-[800px] mt-0 md:mt-10">
+  </div>
+</section>
+
+<style>
+  .ss{
+    background: var(--baseColor);
+    background-image: url(../img/Foto.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: var(--shadowImge);
+    border-radius: 10px;
+    position: relative;
+  }
+
+ 
+  .ss::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        var(--lineBottom), var(--orange), deeppink, var(--lineTop),
+        var(--lineBottom), var(--orange), deeppink, var(--lineTop)
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(10px);
+    animation: glowing 15s linear infinite;
+  }
+
+  @keyframes glowing {
+      0%{
+          background-position: 0 0;
+      }
+      50% {
+          background-position: 400% 0;
+      }
+      100% {
+          background-position: 0 0;
+      }
+  }
+</style>

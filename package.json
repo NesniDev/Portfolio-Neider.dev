@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-neider",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.10",
+    "@astrojs/tailwind": "^5.1.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "astro": "^4.3.6",
+    "atropos": "^2.0.2",
+    "preact": "^10.19.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sweetalert2": "^11.10.5",
+    "sweetalert2-react-content": "^5.0.7",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.23.0",
+    "standard": "^17.1.0"
+  }
+}
