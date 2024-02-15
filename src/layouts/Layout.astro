@@ -1,10 +1,10 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro"
+import Header from "../components/Header.astro";
 
 interface Props {
-	title: string;
+  title: string;
   description: string;
 }
 
@@ -13,72 +13,82 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="img/Logo.avif" />
-		<title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="img/Logo.avif" />
+    <title>{title}</title>
     <ViewTransitions />
     <!-- <link rel="stylesheet" href="path/to/atropos.css" /> -->
-	</head>
-	<body>
-		<Header/>
-		<slot />
-    <Footer/>
-    
-  </body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7K6P0C5B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-</html>
-<style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-	@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
-  :root {
-    --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);;
-    --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
-    --fondoImg: rgba(60, 56, 92, 0.9);
-    --color-menu: rgba(252, 102, 15, 0.9); 
-    --color-menu2: #c99806; 
-    --header: #D3D3D3;
-    --lightGrey: #f8f9fe;
-    --baseColor: #012029;
-    --greyBold: #6f717e;
-    --shadowImge: 0px 5px 15px rgba(255,255,255);
-    --yellow: #FFFF00;
-    --switch: linear-gradient(to right, #e5ff00 0%, #ff020f 100% );
-    /*Cards*/
-    --backgroundCard: #f0f3fa;
-    --lineTop: hsl(37, 97%, 70%);
-    --lineBottom: hsl(203, 89%, 53%);
-    /* FOOTER */
-    --orange: #fbc531;
-    --iconFab: #f6b333;
-    --iconBorder: 1px 3px 11px -5px rgb(209 13 45 / 69%);
-    --letterTitle: "Playpen Sans", system-ui, sans-serif;
-		--letterParagrah: "Caviar Dreams", system-ui, sans-serif;
-}
-	html {
-		font-family: var(--letterParagrah);
-		scroll-behavior: smooth;
-	}
-    
-    body{
+      gtag("config", "G-RR7K6P0C5B");
+    </script>
+    </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+      :root {
+        --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
+        --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
+        --fondoImg: rgba(60, 56, 92, 0.9);
+        --color-menu: rgba(252, 102, 15, 0.9);
+        --color-menu2: #c99806;
+        --header: #d3d3d3;
+        --lightGrey: #f8f9fe;
+        --baseColor: #012029;
+        --greyBold: #6f717e;
+        --shadowImge: 0px 5px 15px rgba(255, 255, 255);
+        --yellow: #ffff00;
+        --switch: linear-gradient(to right, #e5ff00 0%, #ff020f 100%);
+        /*Cards*/
+        --backgroundCard: #f0f3fa;
+        --lineTop: hsl(37, 97%, 70%);
+        --lineBottom: hsl(203, 89%, 53%);
+        /* FOOTER */
+        --orange: #fbc531;
+        --iconFab: #f6b333;
+        --iconBorder: 1px 3px 11px -5px rgb(209 13 45 / 69%);
+        --letterTitle: "Playpen Sans", system-ui, sans-serif;
+        --letterParagrah: "Caviar Dreams", system-ui, sans-serif;
+      }
+      html {
+        font-family: var(--letterParagrah);
+        scroll-behavior: smooth;
+      }
+
+      body {
         background-color: #012029;
 
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+      }
 
-    }
-
-    @media (prefers-color-scheme: dark) {
-    body {
-		color: rgba(255, 255, 255, 0.9);
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    body {
-      color: #012029;
-    }
-}
-</style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        body {
+          color: #012029;
+        }
+      }
+    </style>
+  </body>
+</html>
