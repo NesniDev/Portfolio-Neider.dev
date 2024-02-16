@@ -1,4 +1,5 @@
 ---
+// import Layout from "../layouts/Layout.astro";
 import Layout from "../layouts/Layout.astro";
 import PersonalInformation from "../components/PersonalInformation.astro";
 import Container from "../components/Container.astro";
@@ -17,7 +18,12 @@ import Contact from "../components/Contact.astro";
       <PersonalInformation />
     </Container>
     <Container>
-      <h2 class="my-3 text-xl font-bold">Información General</h2>
+      <h4><span class="typed"></span></h4>
+      <div class="uppercase my-3 text-xl font-bold" id="cadena-texto">
+        <h4>
+          información sobre mi <i class="text-yellow-300">carrera</i>
+        </h4>
+      </div>
       <Information />
     </Container>
     <Container href="/#id">
@@ -34,3 +40,4 @@ import Contact from "../components/Contact.astro";
     </Container>
   </main>
 </Layout>
+
