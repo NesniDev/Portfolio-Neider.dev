@@ -38,7 +38,9 @@ const { title, description } = Astro.props;
     >
 
   <body>
-    <Header />
+    
+    <Header/>
+    
     <slot />
     <Footer />
     <style is:global>
@@ -92,7 +94,7 @@ const { title, description } = Astro.props;
       }
       @media (prefers-color-scheme: light) {
         body {
-          color: #012029;
+          /* color: #012029; */
         }
       }
     </style>

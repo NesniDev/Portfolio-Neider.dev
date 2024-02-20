@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import ThumbsUp from "../icons/variable/ThumbsUp.astro";
-import ThumbsDown from "../icons/variable/ThumbsDown.astro";
-import { useForm } from "@formspree/react";
+
 import axios from "axios";
 import ButtonForm from "./ButtonForm.jsx";
 
@@ -14,6 +12,62 @@ function ContactForm() {
     grupocontacto2: false,
     message: "",
   });
+
+  const ThumbsDown = () => (
+    <svg
+      // {...Astro.props}
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-thumb-down-filled cursor-pointer"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M13 21.008a3 3 0 0 0 2.995 -2.823l.005 -.177v-4h2a3 3 0 0 0 2.98 -2.65l.015 -.173l.005 -.177l-.02 -.196l-1.006 -5.032c-.381 -1.625 -1.502 -2.796 -2.81 -2.78l-.164 .008h-8a1 1 0 0 0 -.993 .884l-.007 .116l.001 9.536a1 1 0 0 0 .5 .866a2.998 2.998 0 0 1 1.492 2.396l.007 .202v1a3 3 0 0 0 3 3z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M5 14.008a1 1 0 0 0 .993 -.883l.007 -.117v-9a1 1 0 0 0 -.883 -.993l-.117 -.007h-1a2 2 0 0 0 -1.995 1.852l-.005 .15v7a2 2 0 0 0 1.85 1.994l.15 .005h1z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+
+  const ThumbsUp = () => (
+    <svg
+      // {...Astro.props}
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-thumb-up-filled cursor-pointer"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -113,9 +167,7 @@ function ContactForm() {
             class="hover:text-green-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="telefono-radio"
           >
-            {/* <ReactComponent>
-                <ThumbsUp class="cursor-pointer" />
-            </ReactComponent> */}
+            <ThumbsUp />
           </label>
           <input
             type="radio"
@@ -128,9 +180,7 @@ function ContactForm() {
             class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="correo-radio"
           >
-            {/* <ReactComponent>
-              <ThumbsDown class="cursor-pointer" />
-            </ReactComponent> */}
+            <ThumbsDown />
           </label>
           <input
             type="radio"
