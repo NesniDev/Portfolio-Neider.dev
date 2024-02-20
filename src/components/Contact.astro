@@ -1,124 +1,21 @@
 ---
-import ThumbsUp from "../icons/variable/ThumbsUp.astro";
-import ThumbsDown from "../icons/variable/ThumbsDown.astro";
-import Container from "./Container.astro";
 
+import FormSpree from "./FormSpree.jsx"
 ---
 <!-- <Container> -->
   <section class="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-content">
     <div class="col-span-1">
-      <img class="size-72 md:size-full " src="/img/ImgContact.svg" alt="">
+      <img class="size-72 hidden md:block md:size-full " src="/img/ImgContact.svg" alt="">
     </div>
-    <fieldset class="w-80 md:w-full col-span-1 border-2 p-10 rounded-3xl border-slate-300 px-10">
+    <fieldset class="w-96 md:w-full col-span-1 border-2 p-10 rounded-3xl border-slate-300 px-10">
       <legend
         class="px-8 uppercase text-white-900/50 font-semibold text-[#9c9891]"
         >Contáctame</legend
       >
-        <form class="flex flex-col" id="form" action="https://formspree.io/f/mkndrbdo" method="POST">
-          <div class="grid gap-6 mb-6 md:grid-cols-1">
-            <div class="relative z-0">
-              <input
-                autocomplete="off"
-                type="text"
-                id="floating_standard"
-                class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                for="floating_standard"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >
-                Nombres
-              </label>
-            </div>
-          </div>
-          <div class="grid gap-6 mb-6 md:grid-cols-1">
-            <div class="relative z-0">
-              <input
-                autocomplete="off"
-                type="email"
-                id="floating_standard"
-                class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-                placeholder=" "
-              />
-              <label
-                for="floating_standard"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >
-                Correo Electrónico
-              </label>
-            </div>
-          </div>
-          <div class="grid gap-6 mb-6 md:grid-cols-1">
-            <div class="relative z-0">
-              <input
-                autocomplete="off"
-                type="tel"
-                id="floating_standard"
-                class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                for="floating_standard"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >
-                Teléfono
-              </label>
-            </div>
-          </div>
-          <div class="grid gap-6 mb-6 md:grid-cols-1">
-            <h2 class="font-extrabold text-center">¿TE GUSTÓ EL PORTAFOLIO?</h2>
-            <div class="flex justify-center gap-10 py-0">
-              <label
-                class="hover:text-green-500 hover:scale-[1.7] transition ease-in-out delay-200"
-                for="telefono-radio"
-              >
-                <ThumbsUp class="cursor-pointer"/>
-              </label>
-              <input
-                type="radio"
-                id="telefono-radio"
-                name="grupocontacto"
-                hidden
-              />
-              <label
-                class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
-                for="correo-radio"
-              >
-                <ThumbsDown class="cursor-pointer"/>
-              </label>
-              <input type="radio" id="correo-radio" name="grupocontacto" hidden />
-            </div>
-          </div>
-          <div class="grid gap-6 mb-6 md:grid-cols-1">
-            <div class="relative z-0">
-              <textarea
-                id="floating_standard"
-                class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-                placeholder=""
-              ></textarea>
-              <label
-                for="floating_standard"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-9 scale-75 top-7 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >
-                Comentarios
-              </label>
-            </div>
-          </div>
-  
-          <button
-            id="button"
-            type="submit"
-            class="w-fit m-auto text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:red-cyan-800 rounded-lg text-sm px-5 py-2.5 text-center mb-2 font-extrabold"
-          >
-            Enviar Formulario
-          </button>
-        </form>
+      <!-- action="https://formspree.io/f/mkndrbdo" method="POST"  -->
+        <FormSpree client:load/>
       
       
     </fieldset>
   </section>
 <!-- </Container> -->
-

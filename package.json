@@ -13,17 +13,17 @@
     "@astrojs/react": "^3.0.10",
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
+    "@formspree/react": "^2.5.1",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "astro": "^4.3.6",
     "atropos": "^2.0.2",
-    "preact": "^10.19.4",
+    "axios": "^1.6.7",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sweetalert2": "^11.10.5",
-    "sweetalert2-react-content": "^5.0.7",
-    "tailwindcss": "^3.4.1",
-    "typed.js": "^2.1.0"
+    "react-toastify": "^10.0.4",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "lightningcss": "^1.23.0",
