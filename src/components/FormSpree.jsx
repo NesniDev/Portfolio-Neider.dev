@@ -113,7 +113,7 @@ function ContactForm() {
             class="hover:text-green-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="telefono-radio"
           >
-            {/* <ThumbsUp class="cursor-pointer" /> */}
+            <ThumbsUp class="cursor-pointer" />
           </label>
           <input
             type="radio"
@@ -125,7 +125,7 @@ function ContactForm() {
             class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="correo-radio"
           >
-            {/* <ThumbsDown class="cursor-pointer" /> */}
+            <ThumbsDown class="cursor-pointer" />
           </label>
           <input
             type="radio"
