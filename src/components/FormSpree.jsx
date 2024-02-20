@@ -120,6 +120,7 @@ function ContactForm() {
             name="grupocontacto"
             checked={state.grupocontacto}
             onChange={handleChange}
+            hidden
           />
           <label
             class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
@@ -132,6 +133,7 @@ function ContactForm() {
             name="grupocontacto2"
             checked={state.grupocontacto2}
             onChange={handleChange}
+            hidden
           />
         </div>
       </div>
