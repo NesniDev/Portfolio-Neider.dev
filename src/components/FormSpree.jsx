@@ -4,6 +4,7 @@ import ThumbsDown from "../icons/variable/ThumbsDown.astro";
 import { useForm } from "@formspree/react";
 import axios from "axios";
 import ButtonForm from "./ButtonForm.jsx";
+// import ReactComponent from "./ReactComponent";
 
 function ContactForm() {
   const [state, setState] = useState({
@@ -24,7 +25,7 @@ function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     try {
       const response = await axios.post(
         "https://formspree.io/f/mkndrbdo",
@@ -34,6 +35,14 @@ function ContactForm() {
     } catch (error) {
       console.error(error);
     }
+    setState({
+      names: "",
+      email: "",
+      tel: "",
+      grupocontacto: false,
+      grupocontacto2: false,
+      message: "",
+    });
   };
 
   return (
@@ -113,7 +122,9 @@ function ContactForm() {
             class="hover:text-green-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="telefono-radio"
           >
-            <ThumbsUp class="cursor-pointer" />
+            {/* <ReactComponent>
+                <ThumbsUp class="cursor-pointer" />
+            </ReactComponent> */}
           </label>
           <input
             type="radio"
@@ -126,7 +137,9 @@ function ContactForm() {
             class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
             for="correo-radio"
           >
-            <ThumbsDown class="cursor-pointer" />
+            {/* <ReactComponent>
+              <ThumbsDown class="cursor-pointer" />
+            </ReactComponent> */}
           </label>
           <input
             type="radio"
