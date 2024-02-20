@@ -4,7 +4,6 @@ import ThumbsDown from "../icons/variable/ThumbsDown.astro";
 import { useForm } from "@formspree/react";
 import axios from "axios";
 import ButtonForm from "./ButtonForm.jsx";
-// import ReactComponent from "./ReactComponent";
 
 function ContactForm() {
   const [state, setState] = useState({
@@ -25,7 +24,7 @@ function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     try {
       const response = await axios.post(
         "https://formspree.io/f/mkndrbdo",
@@ -35,14 +34,6 @@ function ContactForm() {
     } catch (error) {
       console.error(error);
     }
-    setState({
-      names: "",
-      email: "",
-      tel: "",
-      grupocontacto: false,
-      grupocontacto2: false,
-      message: "",
-    });
   };
 
   return (
