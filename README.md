@@ -1,54 +1,41 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+# Portfolio - Neider Nieto
+
+Este portfolio es una plataforma digital diseñada para exhibir y destacar las habilidades, experiencia y proyectos desarrollados por Neider Nieto en el ámbito del desarrollo web y tecnologías relacionadas. Este portfolio sirve como una vitrina virtual que me permite presentar su trabajo de manera profesional y atractiva para clientes potenciales, reclutadores y cualquier persona interesada en su perfil y habilidades.
+
+
+# Hola! 👋
+
+![App Screenshot](https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=Ing.+Neider+Nieto;Developer+Front-End;Systems+Engineering;Active+Learner/Researcher;Love+to+learn+new+stuffs)
+## 🚀 About Me
+Welcome to my GitHub! I'm Neider Nieto,and my profession is systems engineering
+from the University of San Gil - Colombia and i'm specialist in strategic marketing, 
+I'm passionate about Frontend programming. 
+
+![App Screenshot](https://e1.pxfuel.com/desktop-wallpaper/504/736/desktop-wallpaper-computer-tech-information-technology.jpg)
+## Tech Stak
+
+**Cliente** 
+
+```bash
+  Html, Css, Astro, Redux, TailwindCSS
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**Servidor**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+   NodeJS
 ```
+## Otras Desempeños
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+👩‍💻 Actualmente trabajo como docente en informática.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+🧠 Actualmente estoy aprendiendo desarrollo web.
 
-Any static assets, like images, can be placed in the `public/` directory.
+📫 Cómo contactarme - abajo
 
-## 🧞 Commands
+## 🔗 Redes Sociales
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://neiderdev.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neidernieto/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/NeiderNieto10)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
