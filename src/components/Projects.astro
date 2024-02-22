@@ -52,18 +52,24 @@ const PROJECTS = [
     title: "Page Lawyer",
     technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.TAILWIND, TECNOLOGYS.ASTRO],
     text: "El objetivo principal era proporcionar una plataforma digital que reflejara la profesionalidad y experiencia del bufete, para desarrollar su presencia en línea mediante la creación de una página web moderna y funcional.",
+    gh: "https://github.com/NesniDev/Page-Lawyer",
+    page: "https://lawyerslam.netlify.app/"
   },
   {
     url: "/img/engineer.avif",
-    title: "Page School",
-    technologies: [TECNOLOGYS.ASTRO, TECNOLOGYS.TAILWIND],
+    title: "Page Enginner",
+    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.ASTRO, TECNOLOGYS.REACT, TECNOLOGYS.TAILWIND],
     text: "Representa mi viaje personal y profesional en el mundo del diseño y desarrollo web. Con el objetivo de mostrar destacar mediante una plataforma la experiencia, habilidades, proyectos y logros conseguidos.",
+    gh: "https://github.com/NesniDev/Portfolio-Neider.dev",
+    page: "neiderdev.netlify.app/"
   },
   {
     url: "/img/rick and morty.avif",
     title: "API - Rick And Morty",
     technologies: [TECNOLOGYS.REACT, TECNOLOGYS.TAILWIND],
     text: "Este proyecto está inspirado por el vasto universo y los personajes de la serie, decidí desarrollar una API que proporcionara acceso a información detallada sobre los personajes, episodios, ubicaciones y más.",
+    gh: "https://github.com/NesniDev/Rick-Morty-Api",
+    page: "https://apiriickandmorty.netlify.app/"
   },
 ];
 ---
@@ -93,8 +99,12 @@ const PROJECTS = [
             
                 </div>
             <footer class="flex flex-row justify-evenly gap-5 mb-5">
-                <GitHub class="h size-8 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-crosshair"/>
-                <Chrome class="h size-8 hover:scale-110 hover:filter hover:drop-shadow-lg hover:from-red-500 transition cursor-crosshair "/>
+              <a href={project.gh} target="_blank">
+                <GitHub   class="h size-8 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-pointer"/>
+                </a>
+                <a href={project.gh} target="_blank">
+                  <Chrome  class="h size-8 hover:scale-110 hover:filter hover:drop-shadow-lg hover:from-red-500 transition cursor-pointer "/>
+                  </a>
             </footer>
       </article>
     ))
@@ -106,7 +116,7 @@ const PROJECTS = [
         filter: drop-shadow(0 0 6px rgba(0,100,100,0.8));
     }
     .icon:hover{
-        filter: drop-shadow(0 0 6px rgba(100,0,10,0.8));
+        filter: drop-shadow(0 0 6px rgb(255, 155, 6));
     }
     
 </style>

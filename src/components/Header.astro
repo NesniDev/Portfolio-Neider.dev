@@ -20,13 +20,13 @@
         class="flex flex-row justify-between gap-10 text-base tracking-widest text-[#D3D3D3] font-extrabold"
       >
         <li>
-          <a class="hover:text-[rgba(252,102,15,0.9)]" href="#id">Proyectos</a>
+          <a class="hover:text-[#fbc531]" href="#id">Proyectos</a>
         </li>
         <li>
-          <a class="hover:text-[rgba(252,102,15,0.9)]" href="/">Habilidades</a>
+          <a class="hover:text-[#fbc531]" href="/">Habilidades</a>
         </li>
         <li>
-          <a class="hover:text-[rgba(252,102,15,0.9)]" href="/">Contacto</a>
+          <a class="hover:text-[#fbc531]" href="/">Contacto</a>
         </li>
       </ul>
     </nav>
@@ -44,7 +44,7 @@
   nav a::after {
     content: "";
     position: absolute;
-    background-color: var(--color-menu);
+    background-color: #fbc531;
     height: 3px;
     width: 0%;
     left: 0;
@@ -55,6 +55,21 @@
   nav a:hover::after {
     width: 100%;
   }
+  nav a::before {
+    content: "";
+    position: absolute;
+    background-color: #fbc531;
+    height: 3px;
+    width: 0%;
+    right: 0;
+    top: -8px;
+    transition: width 0.5s ease-out;
+    border-radius: 20px;
+  }
+  nav a:hover::before {
+    width: 100%;
+  }
+  
 
   .ancla-logo .img-logo-2 {
     transition: transform 0.25s;

@@ -1,6 +1,10 @@
 import Atropos from "atropos/react";
+import { useState } from "react";
 
 export default function App() {
+  const [value, setValue] = useState(false);
+
+  const handleButton = () => {};
   return (
     <div id="app">
       {/* Atropos */}
@@ -31,12 +35,22 @@ export default function App() {
               Entonces, olvídalo todo y hackea"
             </p>
             <em class="text-sm my-3 md:my-5">"George Carrette"</em>
-            <button class="bg-white text-xs mb-1 md:text-lg py-2 px-4 font-bold text-[var(--baseColor)] rounded-xl">
-              Leer Más...
-            </button>
           </div>
         </div>
       </Atropos>
+      <button
+        onClick={handleButton}
+        class="my-2 flex items-center mx-auto group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500
+             hover:border-gray-400 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500
+              hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8
+               hover:before:blur  origin-left border-[2px] border-slate-200  transition
+                relative bg-[#012029] h-10 w-52 border- text-left px-2  text-white text-base font-bold rounded-lg  
+                overflow-hidden  before:absolute before:w-12 before:h-8 before:content[''] before:right-1 before:top-1 
+                before:z-10 before:bg-red-700 before:rounded-md before:blur-lg  after:absolute after:z-10 after:w-20 after:h-8
+                 after:content[''] after:bg-yellow-400 after:right-8 after:top-1 after:rounded-full after:blur-lg"
+      >
+        Sobre Mí...
+      </button>
     </div>
   );
 }

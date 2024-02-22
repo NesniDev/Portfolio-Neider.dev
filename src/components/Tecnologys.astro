@@ -37,41 +37,27 @@ const TOOLS = [
     name: "CSS",
   },
   {
-    logo: Sass,
-    name: "SASS",
-  },
-  {
-    logo: Tailwind,
-    name: "TAILWIND",
-  },
-  {
-    logo: Bootstrap,
-    name: "Bootstrap",
-  },
-  {
     logo: Javascript,
     name: "Javascript",
   },
+  
   {
-    logo: React,
-    name: "React",
-  },
-  {
-    logo: Typescript,
-    name: "Typescript",
-  },
-  {
-    logo: NextJs,
-    name: "NextJs",
+    logo: Tailwind,
+    name: "TAILWIND",
   },
   {
     logo: Astro1,
     name: "Astro",
   },
   {
-    logo: NodeJs,
-    name: "NodeJs",
+    logo: React,
+    name: "React",
   },
+  {
+    logo: NextJs,
+    name: "NextJs",
+  },
+  
   {
     logo: Git,
     name: "Git",
@@ -79,6 +65,25 @@ const TOOLS = [
   {
     logo: GitHub,
     name: "GitHub",
+  },
+  
+  {
+    logo: Typescript,
+    name: "Typescript",
+  },
+  {
+    logo: Sass,
+    name: "SASS",
+  },
+  {
+    logo: Bootstrap,
+    name: "Bootstrap",
+  },
+  
+  
+  {
+    logo: NodeJs,
+    name: "NodeJs",
   },
   {
     logo: Linux,
@@ -117,9 +122,17 @@ const TOOLS = [
 >
   {
     TOOLS.map((tool) => (
-      <div class="a flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
+      <div class="a group relative flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
         <tool.logo class="size-16 icon" />
-        <h2 class="uppercase text-base font-extrabold mt-2">{tool.name}</h2>
+        <span
+          class="absolute -top-6 left-[5%] -translate-x-[50%] 
+          z-20 origin-left scale-0 px-3 rounded-lg border 
+          border-gray-300 bg-white py-2 text-[#012029] text-sm font-bold
+          shadow-md transition-all duration-300 ease-in-out 
+          group-hover:scale-100"
+        >
+          {tool.name}
+        </span>
       </div>
     ))
   }
@@ -133,11 +146,11 @@ const TOOLS = [
 
   @keyframes rotateIcon {
     from {
-        transform: rotate(0deg);
-         /* Primer fotograma */
+      transform: rotate(0deg);
+      /* Primer fotograma */
     }
     to {
-     transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 </style>
