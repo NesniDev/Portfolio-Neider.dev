@@ -1,32 +1,39 @@
+---
+
+import DarkMode from "@/components/DarkMode.astro"
+---
 <header
   class="w-full mx-auto max-w-[1000px] py-12 h-[20vh] px-5 flex items-center justify-center md:block"
 >
-  <div class="flex flex-row justify-between items-center gap-10">
-    <a href="/" class="flex gap-2 ancla-logo">
+  <div class="flex flex-row justify-between items-center gap-10 ">
+    <a href="/" class="flex gap-2 ancla-logo dark:hover:drop-shadow-[0_10px_20px_rgba(230,200,25,5)]">
       <img class="size-12 cover img-logo transition" src="img/Logo.svg" alt="" />
       <img
         class="size-12 img-logo-2 transition"
         src="img/JavaScript-logo.avif"
         alt=""
       />
-      <div class="flex flex-col text-logo transition">
-        <h2 class="text-center text-sm font-bold">NESTNI DEV</h2>
-        <hr/>
-        <p class="text-center text-base font-extrabold">INGENIERO</p>
+      <div class="flex flex-col text-logo transition ">
+        <h2 class="text-center text-sm font-bold text-white dark:text-[#012029]">NESTNI DEV</h2>
+        <hr class="dark:border-slate-700"/>
+        <p class="text-center text-base font-extrabold text-white dark:text-[#012029]">INGENIERO</p>
       </div>
     </a>
+    <!-- <DarkMode/> -->
+    <!-- <DarkMode client:only/> -->
     <nav>
       <ul
-        class="flex flex-row justify-between gap-10 text-base tracking-widest text-[#D3D3D3] font-extrabold"
-      >
+        class="flex flex-row justify-between gap-10 text-base tracking-widest font-extrabold "
+        >
         <li>
-          <a class="hover:text-[#fbc531]" href="#id">Proyectos</a>
+          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] " href="#id">Proyectos</a>
         </li>
         <li>
-          <a class="hover:text-[#fbc531]" href="/">Habilidades</a>
+          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] "  href="/">Habilidades</a>
         </li>
-        <li>
-          <a class="hover:text-[#fbc531]" href="/">Contacto</a>
+        <li class="flex items-center gap-5">
+          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] "  href="/">Contacto</a>
+          <DarkMode class="text-white dark:text-[#012029]"/>
         </li>
       </ul>
     </nav>
@@ -95,5 +102,11 @@
     text-shadow: 0px 0px 17px #1a9ddf;
     
   }
+
+  /* DARK MODE */
+
+/* radio settings 👇 */
+
+
 
 </style>

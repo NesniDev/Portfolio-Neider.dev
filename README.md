@@ -8,9 +8,7 @@ Este portfolio es una plataforma digital diseñada para exhibir y destacar las h
 
 ![App Screenshot](https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=Ing.+Neider+Nieto;Developer+Front-End;Systems+Engineering;Active+Learner/Researcher;Love+to+learn+new+stuffs)
 ## 🚀 About Me
-Welcome to my GitHub! I'm Neider Nieto,and my profession is systems engineering
-from the University of San Gil - Colombia and i'm specialist in strategic marketing, 
-I'm passionate about Frontend programming. 
+Soy un desarrollador frontend con experiencia en el diseño y desarrollo de sitios web. Me gusta mantenerme actualizado con las últimas tendencias y tecnologías en el mundo del desarrollo web, y siempre estoy buscando nuevas formas de mejorar mis habilidades y ampliar mis conocimientos. 
 
 ![App Screenshot](https://e1.pxfuel.com/desktop-wallpaper/504/736/desktop-wallpaper-computer-tech-information-technology.jpg)
 ## Tech Stak

@@ -105,7 +105,7 @@ function ContactForm() {
             autocomplete="off"
             type="text"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.names}
@@ -113,7 +113,7 @@ function ContactForm() {
           />
           <label
             for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Nombres
           </label>
@@ -126,14 +126,14 @@ function ContactForm() {
             autocomplete="off"
             type="email"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             value={state.email}
             onChange={handleChange}
           />
           <label
             for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Correo Electrónico
           </label>
@@ -146,7 +146,7 @@ function ContactForm() {
             autocomplete="off"
             type="tel"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.tel}
@@ -154,7 +154,7 @@ function ContactForm() {
           />
           <label
             for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Teléfono
           </label>
@@ -196,7 +196,7 @@ function ContactForm() {
           <textarea
             name="message"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-white dark:focus:border-yellow-300/60 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.message}
@@ -204,7 +204,7 @@ function ContactForm() {
           ></textarea>
           <label
             for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-9 scale-75 top-7 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-9 scale-75 top-7 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Comentarios
           </label>
