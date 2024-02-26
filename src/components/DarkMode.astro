@@ -19,11 +19,11 @@ import MoonIcon from "../icons/variable/Moon.astro"
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme")
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "light"
-      : "dark"
-  }
+    }}
+  //   return window.matchMedia("(prefers-color-scheme: dark)").matches
+  //     ? "light"
+  //     : "dark"
+  // }
   const isDark = getThemePreference() === "dark"
   document.documentElement.classList[isDark ? "add" : "remove"]("dark")
 
@@ -38,4 +38,5 @@ import MoonIcon from "../icons/variable/Moon.astro"
   document
     .getElementById("themeToggle")
     .addEventListener("click", handleToggleClick)
+
 </script>

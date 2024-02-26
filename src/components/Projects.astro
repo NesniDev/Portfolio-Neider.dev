@@ -6,6 +6,7 @@ import Tailwind from "@/icons/Tailwind.astro"
 import Astro1 from "@/icons/Astro1.astro"
 import Css from "@/icons/Css.astro"
 import React from "@/icons/React.astro"
+import JavaScript from "@/icons/Javascript.astro"
 
 interface Props {
   url?: string;
@@ -39,6 +40,12 @@ const TECNOLOGYS = {
         icon: Css
     
     },
+    JAVASCRIPT: {
+        name: "CSS",
+        class: "text-[#30a9dc]",
+        icon: JavaScript
+    
+    },
     REACT: {
         name: "REACT",
         class: "text-[#00D8FF]",
@@ -61,15 +68,15 @@ const PROJECTS = [
     technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.ASTRO, TECNOLOGYS.REACT, TECNOLOGYS.TAILWIND],
     text: "Representa mi viaje personal y profesional en el mundo del diseño y desarrollo web. Con el objetivo de mostrar destacar mediante una plataforma la experiencia, habilidades, proyectos y logros conseguidos.",
     gh: "https://github.com/NesniDev/Portfolio-Neider.dev",
-    page: "neiderdev.netlify.app/"
+    page: "https://neiderdev.netlify.app/"
   },
   {
-    url: "/img/rick and morty.avif",
-    title: "API - Rick And Morty",
-    technologies: [TECNOLOGYS.REACT, TECNOLOGYS.TAILWIND],
+    url: "/img/bar.avif",
+    title: "Page Bar",
+    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.JAVASCRIPT],
     text: "Este proyecto está inspirado por el vasto universo y los personajes de la serie, decidí desarrollar una API que proporcionara acceso a información detallada sobre los personajes, episodios, ubicaciones y más.",
-    gh: "https://github.com/NesniDev/Rick-Morty-Api",
-    page: "https://apiriickandmorty.netlify.app/"
+    gh: "https://github.com/NesniDev/Page-Bar.dev",
+    page: "https://bar-ib.netlify.app/"
   },
 ];
 ---
@@ -102,7 +109,7 @@ const PROJECTS = [
               <a href={project.gh} target="_blank">
                 <GitHub   class="h size-8 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-pointer"/>
                 </a>
-                <a href={project.gh} target="_blank">
+                <a href={project.page} target="_blank">
                   <Chrome  class="h size-8 hover:scale-110 hover:filter hover:drop-shadow-lg hover:from-red-500 transition cursor-pointer "/>
                   </a>
             </footer>
