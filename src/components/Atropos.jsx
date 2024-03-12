@@ -21,7 +21,7 @@ export default function App() {
       >
         <div class="image" data-atropos-offset="5">
           <img class=" rounded-2xl" src="img/imagen.webp " alt="" />
-          <div class="absolute text-center flex flex-col text-xs md:text-xl items-center content-end bottom-0 p-1 md:p-10 mx-auto left-0 right-0 z-50 text-white">
+          <div class="absolute text-center flex flex-col text-xs md:text-xl items-center content-end bottom-0 p-1 md:p-10 mx-auto left-0 right-0 z-10 text-white">
             <h2 class="text-xl md:text-3xl font-extrabold mb-5">
               Ingeniero de Sistemas
             </h2>

@@ -1,17 +1,19 @@
 ---
 
 import DarkMode from "@/components/DarkMode.astro"
+import Menu from "@/icons/variable/Menu.astro"
 ---
 <header
-  class="w-full mx-auto max-w-[1000px] py-12 h-[20vh] px-5 flex items-center justify-center md:block"
+  class="w-full mx-auto max-w-[1000px] md:py-12 h-[20vh] px-5 flex items-center justify-between md:block"
 >
-  <div class="flex flex-row justify-between items-center gap-10 ">
-    <a class="flex gap-2 ancla-logo dark:hover:drop-shadow-[0_10px_20px_rgba(230,200,25,5)] cursor-pointer">
-      <img class="size-12 cover img-logo transition" src="img/Logo.svg" alt="" />
+  <div class="relative flex flex-row mx-auto justify-between items-center gap-10 w-full">
+    <a class="flex gap-2 ancla-logo dark:hover:drop-shadow-[0_10px_20px_rgba(230,200,25,5)] cursor-pointer ">
+      <img class="size-12 cover img-logo transition" loading="lazy" src="img/Logo.svg" alt="" />
       <img
         class="size-12 img-logo-2 transition"
+        loading="lazy"
         src="img/JavaScript-logo.avif"
-        alt=""
+        alt="Imagen del logo"
       />
       <div class="flex flex-col text-logo transition justify-center">
         <h2 class="text-center text-sm font-bold text-white dark:text-[#012029] uppercase">NEIDER DEV</h2>
@@ -20,65 +22,79 @@ import DarkMode from "@/components/DarkMode.astro"
         <p class="text-center text-base font-extrabold text-white dark:text-[#012029] uppercase">ingeniero</p>
       </div>
     </a>
-    <!-- <DarkMode/> -->
-    <!-- <DarkMode client:only/> -->
-    <nav>
-      <ul
-        class="flex flex-row justify-between gap-10 text-base tracking-widest font-extrabold "
-        >
-        <li>
-          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] " href="/#proyectos">Proyectos</a>
-        </li>
-        <li>
-          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] " href="/#habilidades">Habilidades</a>
-        </li>
-        <li class="flex items-center gap-5">
-          <a class="hover:text-[#fbc531] text-white dark:text-[#012029] " href="/#contacto">Contacto</a>
-        </li>
-        <DarkMode class="text-white dark:text-[#012029]"/>
+    <nav id="menu" class=" md:justify-between md:gap-5 tracking-widest font-extrabold z-[99] text-4xl 
+    md:text-base absolute h-full top-0 left-0 right-0 bg-black py-[400px] md:py-0 md:static
+    items-center justify-center md:bg-transparent md:ml-36 lg:ml-80
+    hidden md:block flex flex-col md:flex-row gap-2 xl:gap-x-5 animate-jump-in
+     lg:text-base text-[#CAA152] dark:bg-gradient-to-b dark:from-[#012029] bg-gradient-to-b from-[#e3e3e3] md:from-transparent opacity-90 fijada">
+      <ul class="flex flex-col md:flex-row justify-between items-center gap-10">
+        <a class="hover:text-[#fbc531] text-white dark:text-[#012029]" href="/#proyectos">Proyectos</a>
+        <a class="hover:text-[#fbc531] text-white dark:text-[#012029]" href="/#habilidades">Habilidades</a>
+        <a class="hover:text-[#fbc531] text-white dark:text-[#012029] mb-2 md:mb-0" href="/#contacto">Contacto</a>
+        <DarkMode class="dark:text-[#012029] text-[#012029]" id="dark"/>
       </ul>
+
     </nav>
   </div>
+  <button class="button z-[100]">
+    <Menu class="text-white w-10 md:hidden block fijada absolute top-12 right-10 bottom-0" />
+  </button>
 </header>
 
 <style>
-  nav a {
-    position: relative;
+  .fijada{
+    position: fixed;
   }
-  nav a:hover {
-    text-shadow: 0px 0px 15px rgb(255, 255, 255, 0.5);
+  @media screen and (min-width: 768px) {
+    .fijada{
+      position: relative;
+    }
+    nav{
+      animation: none;
+    }
+    nav a {
+      position: relative;
+      
+    }
+    nav a:hover {
+      text-shadow: 0px 0px 15px rgb(255, 255, 255, 0.5);
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      background-color: #fbc531;
+      height: 3px;
+      width: 0%;
+      left: 0;
+      bottom: -12px;
+      transition: width 0.5s ease-out;
+      border-radius: 20px;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a::before {
+      content: "";
+      position: absolute;
+      background-color: #fbc531;
+      height: 3px;
+      width: 0%;
+      right: 0;
+      top: -8px;
+      transition: width 0.5s ease-out;
+      border-radius: 20px;
+    }
+    nav a:hover::before {
+      width: 100%;
+    }
   }
 
-  nav a::after {
-    content: "";
-    position: absolute;
-    background-color: #fbc531;
-    height: 3px;
-    width: 0%;
-    left: 0;
-    bottom: -12px;
-    transition: width 0.5s ease-out;
-    border-radius: 20px;
+  @media screen and (max-width: 768px) {
+    nav ul a{
+      color: white;
+    }
   }
-  nav a:hover::after {
-    width: 100%;
-  }
-  nav a::before {
-    content: "";
-    position: absolute;
-    background-color: #fbc531;
-    height: 3px;
-    width: 0%;
-    right: 0;
-    top: -8px;
-    transition: width 0.5s ease-out;
-    border-radius: 20px;
-  }
-  nav a:hover::before {
-    width: 100%;
-  }
-  
-
   .ancla-logo .img-logo-2 {
     transition: transform 0.25s;
     transform: scale(0);
@@ -103,11 +119,29 @@ import DarkMode from "@/components/DarkMode.astro"
     text-shadow: 0px 0px 17px #1a9ddf;
     
   }
-
   /* DARK MODE */
 
-/* radio settings 👇 */
-
+  
 
 
 </style>
+
+<script>
+  const menu = document.querySelector("#menu");
+  const boton = document.querySelector(".button");
+  const navLinks = document.querySelectorAll('#menu a');
+
+  
+  boton.addEventListener(
+    "click",
+    () => {
+
+      menu.classList.toggle("hidden");
+      
+       navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+         menu.classList.add('hidden'); // Ocultar el menú desplegable
+       });
+ });
+    })
+</script>

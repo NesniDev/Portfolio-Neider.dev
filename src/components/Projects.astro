@@ -81,7 +81,7 @@ const PROJECTS = [
 ];
 ---
 
-<section class="gap-5 grid grid-cols-1 md:grid-cols-2 sm:auto-rows-auto lg:grid-cols-3 auto-rows-auto content-center max-h-full ">
+<section class="grids">
   
   {
     PROJECTS.map((project) => (
@@ -124,6 +124,11 @@ const PROJECTS = [
     }
     .icon:hover{
         filter: drop-shadow(0 0 6px rgb(255, 155, 6));
+    }
+    .grids{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
     
 </style>
