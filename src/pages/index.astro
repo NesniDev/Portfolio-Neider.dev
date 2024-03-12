@@ -7,6 +7,10 @@ import Information from "@/components/Information.astro";
 import Projects from "@/components/Projects.astro";
 import Tecnologys from "@/components/Tecnologys.astro";
 import Contact from "@/components/Contact.astro";
+import TypedProjects from "@/components/FeaturesTyped.js/Proyectos.jsx"
+import TypedTecnologys from "@/components/FeaturesTyped.js/Tecnologías.jsx"
+import TypedInfo from "@/components/FeaturesTyped.js/InformaciónCarrera.jsx"
+import TypedContacto from "@/components/FeaturesTyped.js/Contacto.jsx"
 ---
 
 <Layout
@@ -18,26 +22,41 @@ import Contact from "@/components/Contact.astro";
       <PersonalInformation />
     </Container>
     <Container>
-      <h4><span class="typed"></span></h4>
+      <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedInfo client:load/></span>
       <div class="uppercase my-3 text-xl font-bold" id="cadena-texto">
-        <h2 class="dark:text-[#012029] text-white">
-          información sobre mi <i class="text-yellow-300 dark:text-orange-500">carrera</i>
+        <h2 class="dark:text-[#012029] text-white my-3 text-xl font-bold ">
+          información sobre mi <i class="text-orange-500">carrera</i>
+          
         </h2>
       </div>
       <Information />
     </Container>
     <Container id="proyectos">
-      <h2 class="my-3 text-xl font-bold text-white dark:text-[#012029]">Proyectos Realizados</h2>
+      <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedProjects client:load/></span>
+      <div class="" id="cadena-texto-proyectos">
+        <h2 class="mb-20">
+          Mis Proyectos <i class="text-orange-500">Realizados</i>
+        </h2>
+      </div>
       <Projects />
     </Container>
     <Container id="habilidades">
-      <h2 class="my-3 text-xl font-bold text-white dark:text-[#012029]">Tecnologías</h2>
+      <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedTecnologys client:load/></span>
+      <div class="" id="cadena-texto-tecnologias">
+        <h2 class="">
+          Técnologias que he <i class="text-orange-500">UTILIZADO</i>
+        </h2>
+      </div>
       <Tecnologys />
     </Container>
     <Container id="contacto">
-      <h2 class="my-3 text-xl font-bold text-white dark:text-[#012029]">Contacto</h2>
+      <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedContacto client:load/></span>
+      <div class="" id="cadena-texto-contacto">
+        <h2 class="">
+          Aqui me puedes <i class="text-orange-500">CONTACTAR</i>
+        </h2>
+      </div>
       <Contact />
     </Container>
   </main>
 </Layout>
-
