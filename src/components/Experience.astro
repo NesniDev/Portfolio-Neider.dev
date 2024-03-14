@@ -1,0 +1,90 @@
+---
+interface Props {
+    title: string;
+    subtitle: string;
+    date: string;
+    text: string;
+    text2: string;
+}
+
+const { title, subtitle, date, text} = Astro.props;
+
+
+const WORKS = [
+    {
+        id: 1,
+        title: "Docente de Técnico en Sistemas",
+        subtitle: "IFE COLOMBIA",
+        date: "Febrero - Actualmente",
+        text: "Diseñé y desarrollé planes de estudio innovadores para el técnico en sistemas, manteniendo el material didáctico actualizado a las nuevas tendencias",
+        text2: "Impartí clases teórico y prácticas sobre temas clave como diseño web, fundamentos de programación (java, python, js), sistemas operativos, Microsoft Office y bases de datos, utilizando métodos pedagógicos efectivos para garantizar una comprensión profunda por parte de los estudiantes",
+        direction: "left",
+
+    },
+    {
+        id: 2,
+        title: "Freelancer",
+        subtitle: "Diseño de páginas web",
+        date: "Actualmente",
+        text: "Diseñé y desarrollé sitios web personalizados para una variedad de clientes, utilizando tecnologías como HTML, CSS, JS, ASTRO y REACT cumpliendo con las expectativas del cliente y los plazos de entrega.",
+        text2: "Implementé soluciones de diseño responsivo para garantizar una experiencia óptima del usuario en dispositivos móviles y de escritorio.",
+        direction: "right",
+
+    },
+    {
+        id: 3,
+        title: "Asesor y Cajero",
+        subtitle: "Banco Agrario de Colombia",
+        date: "2017 - 2018",
+        text: "Procesé transacciones de depósito, retiro y transferencia con precisión y eficiencia, manteniendo la integridad financiera",
+        text2: "Fomenté la confianza y la lealtad del cliente a través de interacciones positivas y asesoramiento financiero básico.",
+        direction: "left",
+
+    },
+    
+]
+---
+
+<div class="container mx-auto w-full h-full">
+    <div class="relative wrap overflow-hidden p-10 h-full">
+      <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+      <!-- right timeline -->
+      {
+        WORKS.map((work) => (
+            work.direction == "right" ? (
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">{work.id}</h1>
+                    </div>
+                    <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h1 class="mx-auto font-extrabold text-xl text-white">{work.title}</h1>
+                        <h3 class="mb-3 font-bold text-white text-sm inline">{work.subtitle} </h3>
+                        <span class="mx-2">|</span>
+                        <span class="mx-auto font-semibold text-xs text-white">{work.date}</span>
+                        <p class="mt-2 text-sm leading-snug tracking-wide text-slate-900 text-opacity-100">&bull; {work.text}</p>
+                        <br>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">&bull; {work.text2}</p>
+                    </div>
+                </div>)
+            : (<div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <h1 class="mx-auto text-white font-semibold text-xl">{work.id}</h1>
+            </div>
+            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h1 class="mx-auto text-white font-semibold text-xl">{work.title}</h1>
+                <h3 class="mb-3 font-bold text-white text-sm inline">{work.subtitle}</h3>
+                <span class="mx-2">|</span>
+            <span class="mx-auto font-semibold text-xs text-white">{work.date}</span>
+            <p class="mt-2 text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">&bull; {work.text}</p>
+            <br>
+            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">&bull; {work.text2}</p>
+            </div>
+        </div>)
+        )) 
+      }
+      
+      
+    </div>
+  </div>

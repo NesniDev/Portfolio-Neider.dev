@@ -11,6 +11,8 @@ import TypedProjects from "@/components/FeaturesTyped.js/Proyectos.jsx"
 import TypedTecnologys from "@/components/FeaturesTyped.js/Tecnologías.jsx"
 import TypedInfo from "@/components/FeaturesTyped.js/InformaciónCarrera.jsx"
 import TypedContacto from "@/components/FeaturesTyped.js/Contacto.jsx"
+import TypedExperience from "@/components/FeaturesTyped.js/Experiencia.jsx"
+import Experience from "@/components/Experience.astro"
 ---
 
 <Layout
@@ -39,6 +41,15 @@ import TypedContacto from "@/components/FeaturesTyped.js/Contacto.jsx"
         </h2>
       </div>
       <Projects />
+    </Container>
+    <Container>
+      <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedExperience client:load/></span>
+      <div class="" id="cadena-texto-experiencia">
+        <h2 class="mb-20">
+          Está es mi experiencia <i class="text-orange-500">Personal</i>
+        </h2>
+      </div>
+      <Experience/>
     </Container>
     <Container id="habilidades">
       <span class="uppercase text-white my-3 text-xl font-bold  dark:text-[#012029]"><TypedTecnologys client:load/></span>
