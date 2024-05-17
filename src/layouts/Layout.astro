@@ -29,18 +29,16 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="Logo.avif" />
-    <link rel="sitemap" href="/sitemap-index.xml">
+    <link rel="icon" type="image/svg+xml" href="img/LogoNeider.avif" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
     <ViewTransitions />
     <!-- <link rel="stylesheet" href="path/to/atropos.css" /> -->
+  </head>
 
-    </head
-    >
+  <body class="dark:bg-white">
+    <Header />
 
-  <body class=" dark:bg-white">
-    <Header/>
-    
     <slot />
     <Footer />
     <style is:global>
@@ -89,32 +87,25 @@ const { title, description } = Astro.props;
       }
 
       @media (prefers-color-scheme: dark) {
-       
         body {
           color: rgba(255, 255, 255, 0.9);
         }
-      
       }
       @media (prefers-color-scheme: light) {
-
         html {
           background-color: #fafbfd;
         }
         body {
           color: #012029;
         }
-        a{
+        a {
           color: #012029;
         }
 
-        .image{
+        .image {
           box-shadow: #012029;
         }
-        
-        
       }
     </style>
-    
-
   </body>
 </html>
