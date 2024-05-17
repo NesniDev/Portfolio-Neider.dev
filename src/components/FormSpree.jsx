@@ -105,7 +105,7 @@ function ContactForm() {
             autocomplete="off"
             type="text"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.names}
@@ -126,7 +126,7 @@ function ContactForm() {
             autocomplete="off"
             type="email"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             value={state.email}
             onChange={handleChange}
@@ -146,7 +146,7 @@ function ContactForm() {
             autocomplete="off"
             type="tel"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.tel}
@@ -196,7 +196,7 @@ function ContactForm() {
           <textarea
             name="message"
             id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
             value={state.message}
