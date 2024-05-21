@@ -1,142 +1,32 @@
 ---
+import { TOOLS } from "./lib/Tecnologys";
 interface Props {
   logo?;
   name?: string;
 }
-
-import Html from "@/icons/Html.astro";
-import Tailwind from "@/icons/Tailwind.astro";
-import Css from "@/icons/Css.astro";
-import Bootstrap from "@/icons/Bootstrap.astro";
-import Sass from "@/icons/Sass.astro";
-import React from "@/icons/React.astro";
-import Astro1 from "@/icons/Astro1.astro";
-import GitHub from "@/icons/GitHub.astro";
-import Javascript from "@/icons/Javascript.astro";
-import Typescript from "@/icons/Typescript.astro";
-import NextJs from "@/icons/NextJs.astro";
-import NodeJs from "@/icons/NodeJs.astro";
-import Git from "@/icons/Git.astro";
-import Sql from "@/icons/Sql.astro";
-import Python from "@/icons/Python.astro";
-import Bun from "@/icons/Bun.astro";
-import Pnpm from "@/icons/Pnpm.astro";
-import Notion from "@/icons/Notion.astro";
-import ViteJs from "@/icons/ViteJs.astro";
-import Linux from "@/icons/Linux.astro";
-import MarkDown from "@/icons/MarkDown.astro";
-
-const { logo, name } = Astro.props;
-
-const TOOLS = [
-  {
-    logo: Html,
-    name: "HTML",
-  },
-  {
-    logo: Css,
-    name: "CSS",
-  },
-  {
-    logo: Javascript,
-    name: "Javascript",
-  },
-  
-  {
-    logo: Tailwind,
-    name: "TAILWIND",
-  },
-  {
-    logo: Astro1,
-    name: "Astro",
-  },
-  {
-    logo: React,
-    name: "React",
-  },
-  {
-    logo: NextJs,
-    name: "NextJs",
-  },
-  
-  {
-    logo: Git,
-    name: "Git",
-  },
-  {
-    logo: GitHub,
-    name: "GitHub",
-  },
-  
-  {
-    logo: Typescript,
-    name: "Typescript",
-  },
-  {
-    logo: Sass,
-    name: "SASS",
-  },
-  {
-    logo: Bootstrap,
-    name: "Bootstrap",
-  },
-  {
-    logo: NodeJs,
-    name: "NodeJs",
-  },
-  {
-    logo: Linux,
-    name: "Linux",
-  },
-  {
-    logo: Sql,
-    name: "Sql Lite",
-  },
-  {
-    logo: Python,
-    name: "Python",
-  },
-  {
-    logo: ViteJs,
-    name: "Vite Js",
-  },
-  {
-    logo: Notion,
-    name: "Notion",
-  },
-  {
-    logo: Pnpm,
-    name: "Pnpm",
-  },
-  {
-    logo: Bun,
-    name: "Bun",
-  },
-  {
-    logo: MarkDown,
-    name: "MarkDown"
-  },
-];
 ---
 
 <!-- Crear un evento hover donde en cada tecnologia me muestre los frameworks o dividir por secciones las tecnologias -->
-<section
-  class="grids pt-6 pb-14"
->
+<section class="grids pt-6 pb-14">
   {
     TOOLS.map((tool) => (
-      <div class="a group  relative flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
-        <tool.logo class="size-16 icon animate-swing-drop-in" />
-        <span
-          class="absolute -top-6 left-[5%] -translate-x-[50%] 
+      <>
+        <div class="a group  relative flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
+          <h2 class="text-[12px] text-center py-2 dark:text-[#012029] text-slate-100">
+            {tool.category}
+          </h2>
+          <tool.logo class="size-14 icon " />
+          <span
+            class="absolute -top-6 left-[5%] -translate-x-[50%] 
           z-20 origin-left scale-0 px-3 rounded-lg border 
           border-gray-300 bg-white py-2 text-[#012029] text-sm font-bold
           shadow-md transition-all duration-300 ease-in-out 
           group-hover:scale-100"
-        >
-          {tool.name}
-        </span>
-      </div>
+          >
+            {tool.name}
+          </span>
+        </div>
+      </>
     ))
   }
 </section>
@@ -156,9 +46,9 @@ const TOOLS = [
       transform: rotate(360deg);
     }
   }
-  .grids{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 20px;
-    }
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
 </style>
