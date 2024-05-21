@@ -25,13 +25,13 @@ export default function App() {
             <h2 class="text-xl md:text-3xl font-extrabold mb-5">
               Ingeniero de Sistemas
             </h2>
-            <p class="text-sm md:text-base">
+            <p class="text-sm md:text-base font-extralight">
               "Primero aprende informática y toda la teoría.
             </p>
-            <p class="text-sm md:text-base">
+            <p class="text-sm md:text-base font-extralight">
               Después desarrolla un estilo de programación.
             </p>
-            <p class="text-sm md:text-base">
+            <p class="text-sm md:text-base font-extralight">
               Entonces, olvídalo todo y hackea"
             </p>
             <em class="text-sm my-3 md:my-5">"George Carrette"</em>
