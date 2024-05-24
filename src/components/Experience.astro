@@ -1,5 +1,5 @@
 ---
-import { WORKS } from "./lib/Experience";
+import { WORKS } from "../lib/Experience";
 interface Props {
   title?: string;
   subtitle?: string;
@@ -20,7 +20,7 @@ interface Props {
     {
       WORKS.map((work) =>
         work.direction == "right" ? (
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+          <div class="mb-8 flex justify-between items-center w-full right-timeline hover:scale-105 transition">
             <div class="order-1 w-5/12" />
             <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <h1 class="mx-auto font-semibold text-lg text-white">
@@ -38,17 +38,17 @@ interface Props {
               <span class="mx-auto font-semibold text-xs text-white">
                 {work.date}
               </span>
-              <p class="mt-2 text-sm leading-snug tracking-wide text-white text-opacity-100 font-extralight">
+              <p class="mt-2 text-xs leading-snug tracking-wide text-white text-opacity-100 font-extralight">
                 &bull; {work.text}
               </p>
               <br />
-              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100 font-extralight">
+              <p class="text-xs leading-snug tracking-wide text-white text-opacity-100 font-extralight">
                 &bull; {work.text2}
               </p>
             </div>
           </div>
         ) : (
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline hover:scale-105 transition">
             <div class="order-1 w-5/12" />
             <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <h1 class="mx-auto text-white font-semibold text-xl">
@@ -66,11 +66,11 @@ interface Props {
               <span class="mx-auto font-semibold text-xs text-white">
                 {work.date}
               </span>
-              <p class="mt-2 text-sm font-extralight leading-snug tracking-wide text-white text-opacity-100">
+              <p class="mt-2 text-xs font-extralight leading-snug tracking-wide text-white text-opacity-100">
                 &bull; {work.text}
               </p>
               <br />
-              <p class="text-sm font-extralight leading-snug tracking-wide text-white text-opacity-100">
+              <p class="text-xs font-extralight leading-snug tracking-wide text-white text-opacity-100">
                 &bull; {work.text2}
               </p>
             </div>
