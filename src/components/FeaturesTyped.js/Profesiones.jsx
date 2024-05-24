@@ -8,10 +8,10 @@ function MyComponent() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "<i class='textoInfo'>Ingeniero de Sistemas</i>",
-        "<i class='textoInfo'>Desarrollador Front-End</i>",
-        "<i class='textoInfo'>Especialista en Marketing Estratégico</i>",
-        "<i class='textoInfo'>Técnico en Sistemas e Informática</i>",
+        "<span class='textoInfo'>Ingeniero de Sistemas</span>",
+        "<span class='textoInfo'>Desarrollador Front-End</span>",
+        "<span class='textoInfo'>Especialista en Marketing Estratégico</span>",
+        "<span class='textoInfo'>Técnico en Sistemas e Informática</span>",
       ],
       // stringsElement: '#cadena-desarrolloF', // ID del elemento que contiene cadenas de texto a mostrar.
       typeSpeed: 20, // Velocidad en mlisegundos para poner una letra,
