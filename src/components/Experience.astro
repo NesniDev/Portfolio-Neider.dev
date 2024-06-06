@@ -38,13 +38,16 @@ interface Props {
               <span class="mx-auto font-semibold text-xs text-white">
                 {work.date}
               </span>
-              <p class="mt-2 text-xs text-white font-extralight">
-                &bull; {work.text}
-              </p>
-              <br />
-              <p class="text-xs text-white font-extralight">
-                &bull; {work.text2}
-              </p>
+              <ul class="list-disc">
+                <li>
+                  <p class="mt-2 text-xs font-extralight text-white">
+                    {work.text}
+                  </p>
+                </li>
+                <li>
+                  <p class="text-xs font-extralight text-white">{work.text2}</p>
+                </li>
+              </ul>
             </div>
           </div>
         ) : (
@@ -66,13 +69,16 @@ interface Props {
               <span class="mx-auto font-semibold text-xs text-white">
                 {work.date}
               </span>
-              <p class="mt-2 text-xs font-extralight text-white">
-                &bull; {work.text}
-              </p>
-              <br />
-              <p class="text-xs font-extralight text-white">
-                &bull; {work.text2}
-              </p>
+              <ul class="list-disc">
+                <li>
+                  <p class="mt-2 text-xs font-extralight text-white">
+                    {work.text}
+                  </p>
+                </li>
+                <li>
+                  <p class="text-xs font-extralight text-white">{work.text2}</p>
+                </li>
+              </ul>
             </div>
           </div>
         )
