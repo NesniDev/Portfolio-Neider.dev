@@ -207,7 +207,7 @@ const etag = (payload, weak = false) => {
   return prefix + fnv1a52(payload).toString(36) + payload.length.toString(36) + '"';
 };
 
-const $$Astro$1 = createAstro("https://neiderdev.netlify.app/");
+const $$Astro$1 = createAstro();
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Image;
@@ -227,9 +227,9 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
     additionalAttributes.srcset = image.srcSet.attribute;
   }
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(additionalAttributes)}${spreadAttributes(image.attributes)}>`;
-}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_lightningcss@1.23.0/node_modules/astro/components/Image.astro", void 0);
+}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_@types+node@16.18.11_lightningcss@1.23.0_typescript@4.9.5/node_modules/astro/components/Image.astro", void 0);
 
-const $$Astro = createAstro("https://neiderdev.netlify.app/");
+const $$Astro = createAstro();
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Picture;
@@ -267,7 +267,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
     const srcsetAttribute = props.densities || !props.densities && !props.widths ? `${image.src}${image.srcSet.values.length > 0 ? ", " + image.srcSet.attribute : ""}` : image.srcSet.attribute;
     return renderTemplate`<source${addAttribute(srcsetAttribute, "srcset")}${addAttribute("image/" + image.options.format, "type")}${spreadAttributes(sourceAdditionalAttributes)}>`;
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
-}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_lightningcss@1.23.0/node_modules/astro/components/Picture.astro", void 0);
+}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_@types+node@16.18.11_lightningcss@1.23.0_typescript@4.9.5/node_modules/astro/components/Picture.astro", void 0);
 
 const imageConfig = {"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[]};
 					new URL("file:///C:/Users/neider_nieto/Desktop/Web/portfolio%20Neider/.vercel/output/static/");

@@ -3,15 +3,15 @@ import { c as createAstro, d as createComponent, r as renderTemplate, e as addAt
 /* empty css                          */
 /* empty css                        */
 
-const $$Astro$2 = createAstro("https://neiderdev.netlify.app/");
+const $$Astro$2 = createAstro();
 const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$ViewTransitions;
   const { fallback = "animate" } = Astro2.props;
   return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>`;
-}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_lightningcss@1.23.0/node_modules/astro/components/ViewTransitions.astro", void 0);
+}, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/node_modules/.pnpm/astro@4.3.6_@types+node@16.18.11_lightningcss@1.23.0_typescript@4.9.5/node_modules/astro/components/ViewTransitions.astro", void 0);
 
-const $$Astro$1 = createAstro("https://neiderdev.netlify.app/");
+const $$Astro$1 = createAstro();
 const $$Layout404 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Layout404;
@@ -19,7 +19,7 @@ const $$Layout404 = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="description"${addAttribute(description, "content")}><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="Logo.avif"><title>${title}</title>${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body> ${renderSlot($$result, $$slots["default"])}  </body> </html>`;
 }, "C:/Users/neider_nieto/Desktop/Web/portfolio Neider/src/layouts/Layout404.astro", void 0);
 
-const $$Astro = createAstro("https://neiderdev.netlify.app/");
+const $$Astro = createAstro();
 const $$404 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$404;
