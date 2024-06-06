@@ -1,54 +1,16 @@
 ---
-import GitHub from "@/icons/GitHub.astro"
-import Chrome from "@/icons/Chrome.astro"
-import { TECNOLOGYS } from "./lib/Projects";
-
-interface Props {
-  url?: string;
-  title?: string;
-  technologies?;
-  text?: string;
-}
-
-
-
-
-const PROJECTS = [
-  {
-    url: "/img/Lawyer.webp",
-    title: "Page Lawyer",
-    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.TAILWIND, TECNOLOGYS.ASTRO, TECNOLOGYS.JAVASCRIPT],
-    text: "El objetivo principal era proporcionar una plataforma digital que reflejara la profesionalidad y experiencia del bufete, para desarrollar su presencia en línea mediante la creación de una página web moderna y funcional.",
-    gh: "https://github.com/NesniDev/Page-Lawyer",
-    page: "https://www.abogadasandraalba.com/"
-  },
-  {
-    url: "/img/artex.avif",
-    title: "Page ArtexAlex",
-    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.ASTRO, TECNOLOGYS.JAVASCRIPT, TECNOLOGYS.TAILWIND],
-    text: "El principal objetivo era crear una plataforma digital que reflejara la creatividad y habilidad artesanal del taller, para fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.",
-    gh: "https://github.com/NesniDev/ArtexAlex",
-    page: "https://artexalex.pages.dev/"
-  },
-  {
-    url: "/img/bar.avif",
-    title: "Page Bar",
-    technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.JAVASCRIPT],
-    text: "El objetivo principal era desarrollar una plataforma digital para el ambiente acogedor del bar, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.",
-    gh: "https://github.com/NesniDev/Page-Bar.dev",
-    page: "https://bar-ib.netlify.app/"
-  },
-];
+import GitHub from "@/icons/GitHub.astro";
+import Chrome from "@/icons/Chrome.astro";
+import { PROJECTS } from "../lib/Projects";
 ---
 
 <section class="grids mt-5">
-  
   {
     PROJECTS.map((project) => (
       <article class="relative before:absolute before:rounded-lg before:content before:bg-[var(--lineTop)] before:h-[5px] before:top-0 before:left-0 before:right-0 before:z-10
-      after:absolute after:rounded-lg after:content after:bg-sky-500 after:h-[5px] after:bottom-0 after:left-0 after:right-0 after:z-50 
+      after:absolute after:rounded-lg after:content after:bg-sky-500 after:h-[5px] after:bottom-0 after:left-0 after:right-0 after:z-50
        bg-[#D3D3D3] text-[#1d2029] overflow-hidden rounded-lg">
-        
+
         <div class="overflow-hidden hover:bg-gradient-to-b from-black">
           <img class="h-44 w-full hover:scale-125 transition ease-in-out hover:animate-pulse object-center" src={project.url} alt=`Imagen de ${project.title}` />
         </div>
@@ -58,12 +20,12 @@ const PROJECTS = [
                   project.technologies.map((tecnology) => (
                   <span class={`flex flex-col justify-center items-center font-extrabold ${tecnology.class}`}>
                     <tecnology.icon class="size-5 hover:scale-125 transition cursor-crosshair icon"/>
-                    
+
                   </span>
                     ))}
                   </span>
                 <p class="mt-3 text-justify text-sm font-extralight">{project.text}</p>
-            
+
                 </div>
             <footer class="flex flex-row justify-evenly gap-5 mb-5">
               <a href={project.gh} target="_blank">
@@ -74,21 +36,23 @@ const PROJECTS = [
                   </a>
             </footer>
       </article>
+    
     ))
   }
 </section>
 
 <style>
-    .h:hover{
-        filter: drop-shadow(0 0 6px rgba(0,100,100,0.8));
-    }
-    .icon:hover{
-        filter: drop-shadow(0 0 6px rgb(255, 155, 6));
-    }
-    .grids{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    
+  .h:hover {
+    filter: drop-shadow(0 0 6px rgba(0, 100, 100, 0.8));
+  }
+  .icon:hover {
+    filter: drop-shadow(0 0 6px rgb(255, 155, 6));
+  }
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+
+  
 </style>

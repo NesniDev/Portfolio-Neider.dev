@@ -1,21 +1,27 @@
 ---
-
-import FormSpree from "./FormSpree.jsx"
+import FormSpree from "./FeaturesFrameworks/FormSpree";
 ---
+
 <!-- <Container> -->
-  <section class="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-content flex-1 m-10 dark:text-[#012029]">
-    <picture class="col-span-1">
-      <img class="size-72 hidden md:block md:size-full " src="/img/ImgContact.svg" alt="">
-    </picture>
-    <fieldset class="w-96 md:w-full col-span-1 border-2 p-10 rounded-3xl border-slate-300 px-10 flex-1">
-      <legend
-        class="px-8 uppercase text-white-900/50 font-semibold text-[#9c9891]"
-        >Contáctame</legend
-      >
-      <!-- action="https://formspree.io/f/mkndrbdo" method="POST"  -->
-        <FormSpree client:load/>
-      
-      
-    </fieldset>
-  </section>
+<section
+  class="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-content flex-1 m-10 dark:text-[#012029]"
+>
+  <picture class="col-span-1">
+    <img
+      class="size-72 hidden md:block md:size-full"
+      src="/img/ImgContact.svg"
+      alt=""
+    />
+  </picture>
+  <fieldset
+    class="w-96 md:w-full col-span-1 border-2 p-10 rounded-3xl border-slate-300 px-10 flex-1"
+  >
+    <legend
+      class="px-8 uppercase text-white-900/50 font-semibold text-[#9c9891]"
+      >Contáctame</legend
+    >
+    <!-- action="https://formspree.io/f/mkndrbdo" method="POST"  -->
+    <FormSpree client:load />
+  </fieldset>
+</section>
 <!-- </Container> -->
