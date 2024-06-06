@@ -9,7 +9,7 @@ export default function App() {
     <div id="app">
       {/* Atropos */}
       <Atropos
-        className="my-atropos"
+        ClassName="my-atropos"
         // activeOffset={40}
         shadow={true}
         highlight={true}
@@ -19,22 +19,22 @@ export default function App() {
         rotateXMax={50}
         rotateYMax={50}
       >
-        <div class="image" data-atropos-offset="5">
-          <img class=" rounded-2xl" src="img/imagen.webp " alt="" />
-          <div class="absolute text-center flex flex-col text-xs md:text-xl items-center content-end bottom-0 p-1 md:p-10 mx-auto left-0 right-0 z-10 text-white">
-            <h2 class="text-xl md:text-3xl font-extrabold mb-5">
+        <div ClassName="image" data-atropos-offset="5">
+          <img ClassName=" rounded-2xl" src="img/imagen.webp " alt="" />
+          <div ClassName="absolute text-center flex flex-col text-xs md:text-xl items-center content-end bottom-0 p-1 md:p-10 mx-auto left-0 right-0 z-10 text-white">
+            <h2 ClassName="text-xl md:text-3xl font-extrabold mb-5">
               Ingeniero de Sistemas
             </h2>
-            <p class="text-sm md:text-base font-extralight">
+            <p ClassName="text-sm md:text-base font-extralight">
               "Primero aprende informática y toda la teoría.
             </p>
-            <p class="text-sm md:text-base font-extralight">
+            <p ClassName="text-sm md:text-base font-extralight">
               Después desarrolla un estilo de programación.
             </p>
-            <p class="text-sm md:text-base font-extralight">
+            <p ClassName="text-sm md:text-base font-extralight">
               Entonces, olvídalo todo y hackea"
             </p>
-            <em class="text-sm my-3 md:my-5">"George Carrette"</em>
+            <em ClassName="text-sm my-3 md:my-5">"George Carrette"</em>
           </div>
         </div>
       </Atropos>
