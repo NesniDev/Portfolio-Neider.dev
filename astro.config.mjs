@@ -7,14 +7,14 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://neiderdev.netlify.app/",
+  // site: "https://neiderdev.netlify.app/",
   integrations: [
     tailwind(),
     react(),
-    sitemap({
-      filter: (page) =>
-        page !== "https://neiderdev.netlify.app/secret-vip-lounge/",
-    }),
+    // sitemap({
+    //   filter: (page) =>
+    //     page !== "https://neiderdev.netlify.app/secret-vip-lounge/",
+    // }),
   ],
   output: "server",
   adapter: vercel(),
