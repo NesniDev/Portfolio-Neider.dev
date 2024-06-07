@@ -2,14 +2,6 @@
   "name": "portfolio-neider",
   "type": "module",
   "version": "0.0.1",
-  
-    "builds": [
-      {
-        "src": "src/index.js",
-        "use": "@vercel/node"
-      }
-    ],
-  
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -29,6 +21,8 @@
     "astro": "^4.10.0",
     "atropos": "^2.0.2",
     "axios": "^1.7.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.2",
     "gh-pages": "^6.1.1",
     "path-to-regexp": "^6.2.2",
     "react": "^18.3.1",
@@ -36,11 +30,17 @@
     "react-toastify": "^10.0.5",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.4",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "vercel": "^34.2.6"
   },
   "devDependencies": {
     "@eslint/js": "9.4.0",
-    "eslint": "9.4.0",
-    "standard": "^17.1.0"
+    "eslint": "8.57.0",
+    "standard": "^17.1.0",
+    "tsconfck": "3.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0"
   }
 }

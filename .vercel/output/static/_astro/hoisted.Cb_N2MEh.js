@@ -1,1 +1,0 @@
-import"./hoisted.DZL4CV8D.js";const e=document.querySelector("#menu"),n=document.querySelector(".button"),c=document.querySelectorAll("#menu a");n.addEventListener("click",()=>{e.classList.toggle("hidden"),c.forEach(t=>{t.addEventListener("click",()=>{e.classList.add("hidden")})})});
