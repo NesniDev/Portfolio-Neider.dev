@@ -9,7 +9,7 @@ export default function App() {
     <div id="app">
       {/* Atropos */}
       <Atropos
-        ClassName="my-atropos"
+        className="my-atropos"
         // activeOffset={40}
         shadow={true}
         highlight={true}
