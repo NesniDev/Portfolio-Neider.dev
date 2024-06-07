@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "src/**/*.astro",
+        "use": "@astrojs/vercel/astro"
+      }
+    ],
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "dest": "src/index.astro"
+      }
+    ]
+  }
+  
