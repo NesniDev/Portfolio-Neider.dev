@@ -1,10 +1,10 @@
 
-import Html from "@/icons/Html.astro"
-import Tailwind from "@/icons/Tailwind.astro"
-import Astro1 from "@/icons/Astro1.astro"
-import Css from "@/icons/Css.astro"
-import React from "@/icons/React.astro"
-import JavaScript from "@/icons/Javascript.astro"
+import Html from "@/icons/Tecnologys/Html.astro"
+import Tailwind from "@/icons/Tecnologys/Tailwind.astro"
+import Astro1 from "@/icons/Tecnologys/Astro1.astro"
+import Css from "@/icons/Tecnologys/Css.astro"
+import React from "@/icons/Tecnologys/React.astro"
+import JavaScript from "@/icons/Tecnologys/Javascript.astro"
 
 export const TECNOLOGYS = {
     HTML: {
