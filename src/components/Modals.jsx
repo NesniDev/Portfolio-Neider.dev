@@ -50,29 +50,51 @@ const Modales = () => {
         Sobre Mí...
       </button>
       {isOpen && (
-        <article className="modal is-open ">
-          <div className="modal-container mx-28 md:mx-0 bg-slate-300 rounded-3xl">
+        <article className="modal is-open animate-blurred-fade-in">
+          <div className="modal-container mx-28 mt-[50px] md:mt-0 mb-[50px] md:mb-0 md:mx-0 bg-slate-300 rounded-3xl">
             <button className="modal-close" onClick={closeModal}>
               <CloseMod />
             </button>
-            <h3 className="text-center mt-10 md:mt-12  text-slate-900 font-extrabold text-xl md:text-2xl md:mb-5 mb-2">
-              Sobre mi...
-            </h3>
-            <p className="text-slate-900 text-xs md:text-sm">
-              Soy una persona creativa, responsable, puntual, disciplinada,
-              ordenada, cordial, sencilla y honesta; con habilidad para
-              adaptarse a las diferentes necesidades de la organización,
-              garantizando calidad, eficiencia y asumiendo un alto grado de
-              pertenencia, capaz de dar y/o contribuir a la solución de
-              problemas y toma de decisiones en forma estratégica, con énfasis
-              en el área de sistemas; capacitado para el trabajo en equipo e
-              individual, con excelentes relaciones interpersonales.
-            </p>
-            <img
-              className="size-28 md:size-44 mx-auto"
-              src="https://api.dicebear.com/8.x/adventurer/svg?seed=Coco"
-              alt="nature"
-            />
+            <div className="flex mx-auto justify-between">
+              <h3 className="mx-auto text-center mt-10 md:mt-12  text-slate-900 font-extrabold text-xl md:text-4xl md:mb-5 mb-2">
+                Sobre mi...
+              </h3>
+
+              <img
+                className="size-28 md:size-32 mx-auto"
+                src="https://api.dicebear.com/8.x/adventurer/svg?seed=Coco"
+                alt="nature"
+              />
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="text-slate-900 text-[10px] md:text-sm cursor-none">
+                ¡Hola! Mi nombre es <strong> Neider Nieto</strong>, Ingeniero de
+                Sistemas con una inclinación especial hacia el desarrollo
+                frontend. Desde que comencé en el mundo de la tecnología, he
+                estado fascinado por la intersección entre la funcionalidad y la
+                experiencia del usuario. Crear interfaces intuitivas y
+                atractivas que mejoren la interacción del usuario es lo que me
+                motiva a seguir aprendiendo y creciendo en esta disciplina.
+              </p>
+              <p className="text-slate-900 text-[10px] md:text-sm cursor-none">
+                Durante mi carrera, he trabajado en diversos proyectos que me
+                han permitido perfeccionar mis habilidades en HTML, CSS,
+                JavaScript y frameworks modernos como React y Astro. Me encanta
+                transformar ideas en experiencias de usuario fluidas y
+                accesibles, prestando atención a cada detalle para asegurar una
+                navegación óptima y una excelente usabilidad.
+              </p>
+
+              <p className="text-slate-900 text-[10px] md:text-sm cursor-none italic">
+                <i>
+                  Mi objetivo es seguir creciendo como desarrollador frontend,
+                  contribuyendo con mis conocimientos y creatividad para
+                  construir aplicaciones web que no solo cumplan con los
+                  requisitos técnicos, sino que también superen las expectativas
+                  de los usuarios.
+                </i>
+              </p>
+            </div>
           </div>
         </article>
       )}
