@@ -1,11 +1,16 @@
 ---
 interface Props {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
-const { title, description } = Astro.props;
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const { title, description } = Astro.props
+
+const pathname = Astro.url.pathname || '/'
+const site = Astro.site || 'https://neider.dev' // Replace with actual base URL
+const canonicalURL = new URL(pathname, site).toString()
+
+console.log(canonicalURL)
 ---
 
 <!-- Google tag (gtag.js)
@@ -48,7 +53,7 @@ const { title, description } = Astro.props;
 <!-- Open Graph / Facebook -->
 <meta property="og:locale" content="es_ES" />
 <meta property="og:type" content="website" />
-<!-- <meta property="og:url" content={canonicalURL} /> -->
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content="img/LogoNeider.avif" />
