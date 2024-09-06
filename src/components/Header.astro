@@ -1,16 +1,16 @@
 ---
-import DarkMode from "@/components/DarkMode.astro";
-import Menu from "@/icons/variable/Menu.astro";
+import DarkMode from '@/components/DarkMode.astro'
+import Menu from '@/icons/variable/Menu.astro'
 ---
 
-<div
+<!-- <div
   class="p-2 mb-2 text-xs md:text-lg text-[#012029] rounded-sm bg-blue-50 dark:bg-gray-800 dark:text-white text-center w-full mx-auto max-w-[1000px]"
   role="alert"
 >
   <span class="font-extrabold">Página En Desarrollo.</span> Sigo realizando modificaciones.
-</div>
+</div> -->
 <header
-  class="w-full mx-auto max-w-[1000px] md:py-12 h-[20vh] px-5 flex items-center justify-between md:block"
+  class="w-full mx-auto max-w-[1000px] md:py-6 px-5 flex items-center justify-between md:block"
 >
   <div
     class="relative flex flex-row mx-auto justify-between items-center gap-10 w-full"
@@ -81,7 +81,7 @@ import Menu from "@/icons/variable/Menu.astro";
       }
 
       nav a::after {
-        content: "";
+        content: '';
         position: absolute;
         background-color: #fbc531;
         height: 3px;
@@ -95,7 +95,7 @@ import Menu from "@/icons/variable/Menu.astro";
         width: 100%;
       }
       nav a::before {
-        content: "";
+        content: '';
         position: absolute;
         background-color: #fbc531;
         height: 3px;
@@ -142,18 +142,18 @@ import Menu from "@/icons/variable/Menu.astro";
   </style>
 
   <script>
-    const menu = document.querySelector("#menu");
-    const boton = document.querySelector(".button");
-    const navLinks = document.querySelectorAll("#menu a");
+    const menu = document.querySelector('#menu')
+    const boton = document.querySelector('.button')
+    const navLinks = document.querySelectorAll('#menu a')
 
-    boton.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
 
       navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden"); // Ocultar el menú desplegable
-        });
-      });
-    });
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden') // Ocultar el menú desplegable
+        })
+      })
+    })
   </script>
 </header>
