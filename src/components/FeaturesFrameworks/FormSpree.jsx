@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import axios from "axios";
-import ButtonForm from "./ButtonForm.jsx";
+import axios from 'axios'
+import ButtonForm from './ButtonForm.jsx'
 
 function ContactForm() {
   const [state, setState] = useState({
-    names: "",
-    email: "",
-    tel: "",
+    names: '',
+    email: '',
+    tel: '',
     grupocontacto: false,
     grupocontacto2: false,
-    message: "",
-  });
+    message: ''
+  })
 
   const ThumbsDown = () => (
     <svg
@@ -39,7 +39,7 @@ function ContactForm() {
         fill="currentColor"
       ></path>
     </svg>
-  );
+  )
 
   const ThumbsUp = () => (
     <svg
@@ -67,28 +67,28 @@ function ContactForm() {
         fill="currentColor"
       ></path>
     </svg>
-  );
+  )
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
     setState((prevState) => ({
       ...prevState,
-      [name]: type === "radio" ? checked : value,
-    }));
-  };
+      [name]: type === 'radio' ? checked : value
+    }))
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       const response = await axios.post(
-        "https://formspree.io/f/mkndrbdo",
+        'https://formsubmit.co/nestnidev17@gmail.com',
         state
-      );
-      console.log(response.data);
+      )
+      console.log(response.data)
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
-  };
+  }
 
   return (
     <form
@@ -213,9 +213,9 @@ function ContactForm() {
 
       <ButtonForm />
     </form>
-  );
+  )
 }
 function App() {
-  return <ContactForm />;
+  return <ContactForm />
 }
-export default App;
+export default App
