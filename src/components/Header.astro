@@ -17,15 +17,16 @@ import Menu from '@/icons/variable/Menu.astro'
   >
     <a
       class="flex items-center text-center ancla-logo hover:drop-shadow-[0_10px_20px_rgba(230,200,25,5)] dark:hover:drop-shadow-[0_10px_20px_rgba(230,200,25,5)] cursor-pointer"
+      href="/"
     >
       <img
-        class="size-28 cover img-logo transition"
+        class="size-28 cover img-logo"
         loading="lazy"
         src="img/LogoNeider.avif"
         alt=""
       />
       <img
-        class="size-24 cover img-logo-2 transition"
+        class="size-28 cover img-logo-2"
         loading="lazy"
         src="img/JavaScript-logo.avif"
         alt="Imagen del logo"
@@ -42,7 +43,7 @@ import Menu from '@/icons/variable/Menu.astro'
       <ul class="flex flex-col md:flex-row justify-between items-center gap-10">
         <a
           class="hover:text-[#fbc531] text-white dark:text-[#012029] font-black"
-          href="/#proyectos">Proyectos</a
+          href="/MoreProjects">Proyectos</a
         >
         <a
           class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold"
@@ -115,8 +116,11 @@ import Menu from '@/icons/variable/Menu.astro'
         color: white;
       }
     }
+    img {
+      transition: all 0.3s ease-in-out;
+    }
     .ancla-logo .img-logo-2 {
-      transition: transform 0.25s;
+      transition: transform 0.3s ease-in-out;
       transform: scale(0);
     }
 
@@ -125,18 +129,12 @@ import Menu from '@/icons/variable/Menu.astro'
     }
 
     .ancla-logo .img-logo {
-      transition: transform 0.2s;
+      transition: all 0.3s ease-in-out;
       position: absolute;
     }
 
     .ancla-logo:hover .img-logo {
       transform: scale(0);
-    }
-    .ancla-logo:hover .text-logo {
-      /*  */
-      font-size: 15px;
-      transform: rotate(-7deg);
-      text-shadow: 0px 0px 17px #1a9ddf;
     }
     /* DARK MODE */
   </style>
