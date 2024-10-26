@@ -6,7 +6,7 @@ import { PROJECTS } from "../lib/Projects";
 
 <section class="grids mt-5 text-center flex ">
   {
-    PROJECTS.map((project) => (
+    PROJECTS.slice(0, 3).map((project) => (
       <article class="relative before:absolute before:rounded-lg before:content before:bg-[var(--lineTop)] before:h-[5px] before:top-0 before:left-0 before:right-0 before:z-10
       after:absolute after:rounded-lg after:content after:bg-sky-500 after:h -[5px] after:bottom-0 after:left-0 after:right-0 after:z-10
        bg-[#D3D3D3] text-[#1d2029] overflow-hidden rounded-lg" >
@@ -18,7 +18,7 @@ import { PROJECTS } from "../lib/Projects";
                 <h3 class="text-2xl font-black">{project.title}</h3>
                 <span class="flex justify-between items-center gap-3 mt-3">{
                   project.technologies.map((tecnology) => (
-                  <span class={`flex flex-col justify-center items-center font-extrabold ${tecnology.class}`}>
+                    <span class={`flex flex-col justify-center items-center font-extrabold ${tecnology.class}`}>
                     <tecnology.icon class="size-5 hover:scale-125 transition cursor-crosshair icon"/>
 
                   </span>
@@ -26,8 +26,9 @@ import { PROJECTS } from "../lib/Projects";
                   </span>
                 <p class="mt-3 text-justify text-sm font-extralight">{project.text}</p>
 
-                </div>
-            <footer class="flex flex-row justify-evenly gap-5 mb-5">
+            </div>
+            <span class={`badge ${project.badge === "Completed" ? "completed" : "in-progress"}`}>{project.badge}</span>
+            <footer class="flex flex-row justify-center gap-5 mb-5">
               <a href={project.gh} target="_blank">
                 <GitHub   class="h size-8 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-pointer"/>
                 </a>
@@ -42,7 +43,7 @@ import { PROJECTS } from "../lib/Projects";
 
 </section>
 <a
-href="/"
+href="/MoreProjects"
 class="my-2 flex justify-between items-center mx-auto group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500
      hover:border-gray-400 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500
       hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8
@@ -55,7 +56,7 @@ class="my-2 flex justify-between items-center mx-auto group group-hover:before:d
 Ver Más...
 </a>
 
-<style>
+<style is:global>
   .h:hover {
     filter: drop-shadow(0 0 6px rgba(0, 100, 100, 0.8));
   }
@@ -67,6 +68,32 @@ Ver Más...
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
   }
+  .badge {
+    display: inline-flex;
+    border-radius: 10px;
+    padding: 5px 7px;
+    font-size: 10px;
+    box-shadow: 1px 1px 5px #2df800;
+    color: black;
+    background-image: linear-gradient(110deg, #2df800, 45%, #ffffff, 55%, #2df800);
+    background-size: 250% 100%;
+    animation: backgroundAnimate 2s linear infinite;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
 
-  
+  @keyframes backgroundAnimate{
+    from{
+      background-position: 0 0;
+    }
+    to{
+      background-position: 200% 0;
+    }
+
+}
+  .in-progress {
+    background-image: linear-gradient(110deg, #f6af35, 45%, #ffffff, 55%, #f6af35);
+    color: black;
+    box-shadow: 1px 1px 5px #f6af35;
+  }
 </style>
