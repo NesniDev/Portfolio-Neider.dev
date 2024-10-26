@@ -18,6 +18,11 @@ const { title, description } = Astro.props
   <head>
     <SEO title={title} description={description} />
     <ViewTransitions />
+    <link
+      href="https://fonts.cdnfonts.com/css/caviar-dreams"
+      rel="stylesheet"
+    />
+
     <!-- <link rel="stylesheet" href="path/to/atropos.css" /> -->
   </head>
 
@@ -35,7 +40,7 @@ const { title, description } = Astro.props
       <Arrow class="size-7 hover:animate-pulse animate-duration-slow" />
     </a>
     <style is:global>
-      @import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+      /* @import url('https://fonts.cdnfonts.com/css/caviar-dreams'); */
       :root {
         --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
         --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
@@ -57,12 +62,10 @@ const { title, description } = Astro.props
         --orange: #fbc531;
         --iconFab: #f6b333;
         --iconBorder: 1px 3px 11px -5px rgb(209 13 45 / 69%);
-        --letterTitle: 'Playpen Sans', system-ui, sans-serif;
-        --letterParagrah: 'Caviar Dreams', system-ui, sans-serif;
         color-scheme: light dark;
       }
       html {
-        font-family: var(--letterParagrah);
+        font-family: 'Caviar Dreams', system-ui, sans-serif;
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;
@@ -72,7 +75,6 @@ const { title, description } = Astro.props
 
       body {
         background-color: #012029;
-
         display: flex;
         flex-direction: column;
         min-height: 100vh;
