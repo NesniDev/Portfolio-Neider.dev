@@ -22,6 +22,7 @@ import MarkDown from "@/icons/Tecnologys/MarkDown.astro";
 import Wordpress from "@/icons/Tecnologys/Wordpress.astro";
 import Php from "@/icons/Tecnologys/Php1.astro";
 import Vercel from "@/icons/Tecnologys/Vercel.astro";
+import Java from "@/icons/Tecnologys/Java.astro";
 
 export const TOOLS = [
     {
@@ -118,9 +119,9 @@ export const TOOLS = [
       category: "Gestión de proyectos",
     },
     {
-      logo: Pnpm,
-      name: "Pnpm",
-      category: "Gestor de dependencias",
+      logo: Java,
+      name: "Java",
+      category: "Lenguaje de programación",
     },
     {
       logo: Bun,
