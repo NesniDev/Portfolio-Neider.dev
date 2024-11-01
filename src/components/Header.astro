@@ -53,13 +53,17 @@ import Menu from '@/icons/variable/Menu.astro'
           class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold mb-2 md:mb-0"
           href="/#contacto">Contacto</a
         >
-        <DarkMode class="dark:text-[#012029] text-[#012029]" id="dark" />
+        <DarkMode
+          class="dark:text-[#012029] text-[#012029]"
+          id="dark"
+          transition:persist
+        />
       </ul>
     </nav>
   </div>
   <button class="button z-[100]">
     <Menu
-      class="text-white w-10 md:hidden block absolute top-[115px] right-10 bottom-0"
+      class="text-white w-10 md:hidden block absolute top-[40px] right-10 bottom-0"
     />
   </button>
 
