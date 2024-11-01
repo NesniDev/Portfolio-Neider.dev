@@ -31,7 +31,7 @@ export const PROJECTS = [
       badge: "Completed"
     },
     {
-      url: "/img/bar.avif",
+      url: "/img/API.avif",
       title: "Page View APIs",
       technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.JAVASCRIPT, TECNOLOGYS.ASTRO, TECNOLOGYS.TAILWIND],
       text: "El objetivo principal era desarrollar una plataforma para la visualización de APIS, que he creado durante mi proceso de aprendizaje y que permitirá a los usuarios acceder a la información de manera fácil y sencilla.",
