@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import SEO from '@/components/SEO.astro'
 import Arrow from '@/icons/variable/Arrow.astro'
+import DarkMode from '@/components/DarkMode.astro'
 
 interface Props {
   title: string
@@ -28,7 +29,6 @@ const { title, description } = Astro.props
 
   <body class="dark:bg-white" id="inicio">
     <Header />
-
     <slot />
     <Footer />
     <a
@@ -118,6 +118,14 @@ const { title, description } = Astro.props
       }
       a {
         animation-range: 100px 0;
+      }
+      html.dark {
+        background-color: #0d0950;
+        color: #fff;
+      }
+
+      .dark .nav-links a {
+        color: #fff;
       }
     </style>
   </body>
