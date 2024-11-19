@@ -37,6 +37,38 @@ const { title, description } = Astro.props
     </a>
     <style is:global>
       /* @import url('https://fonts.cdnfonts.com/css/caviar-dreams'); */
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/public/fonts/CaviarDreams.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/public/fonts/CaviarDreams_Bold.ttf') format('ttf');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/public/fonts/CaviarDreams_BoldItalic.ttf') format('ttf');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/public/fonts/CaviarDreams_Italic.ttf') format('ttf');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
       :root {
         --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
         --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
