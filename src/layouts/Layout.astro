@@ -21,6 +21,11 @@ const { title, description } = Astro.props
     <ViewTransitions />
 
     <!-- <link rel="stylesheet" href="path/to/atropos.css" /> -->
+    <script defer>
+      document.fonts.ready.then(() => {
+        document.body.classList.add('font-loaded')
+      })
+    </script>
   </head>
 
   <body class="dark:bg-white" id="inicio">
@@ -36,8 +41,6 @@ const { title, description } = Astro.props
       <Arrow class="size-7 hover:animate-pulse animate-duration-slow" />
     </a>
     <style is:global>
-      /* @import url('https://fonts.cdnfonts.com/css/caviar-dreams'); */
-
       @font-face {
         font-family: 'Caviar Dreams';
         src: url('/fonts/CaviarDreams.ttf') format('truetype');
@@ -93,7 +96,7 @@ const { title, description } = Astro.props
         color-scheme: light dark;
       }
       html {
-        font-family: 'Caviar Dreams', system-ui, sans-serif;
+        font-family: 'Caviar Dreams', sans-serif;
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;
@@ -102,7 +105,9 @@ const { title, description } = Astro.props
       }
 
       body {
+        font-family: 'Caviar Dreams', Arial, sans-serif;
         background-color: #012029;
+
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -154,6 +159,9 @@ const { title, description } = Astro.props
 
       .dark .nav-links a {
         color: #fff;
+      }
+      body:not(.font-loaded) {
+        visibility: hidden;
       }
     </style>
   </body>
