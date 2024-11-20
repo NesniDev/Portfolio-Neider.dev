@@ -15,7 +15,7 @@ const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="md:mr-0">
+<html lang="es" class="md:mr-0 font-Caviar">
   <head>
     <SEO title={title} description={description} />
     <!-- <ViewTransitions /> -->
@@ -35,7 +35,7 @@ const { title, description } = Astro.props
       <Arrow class="size-7 hover:animate-pulse animate-duration-slow" />
     </a>
     <style is:global>
-      /* @font-face {
+      @font-face {
         font-family: 'Caviar Dreams';
         src: url('/fonts/CaviarDreams.ttf') format('truetype');
         font-weight: 400;
@@ -65,7 +65,7 @@ const { title, description } = Astro.props
         font-weight: 400;
         font-style: italic;
         font-display: swap;
-      } */
+      }
       :root {
         --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
         --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
