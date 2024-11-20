@@ -15,14 +15,19 @@ const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="md:mr-0 font-Caviar">
+<html lang="es" class="md:mr-0">
   <head>
     <SEO title={title} description={description} />
     <!-- <ViewTransitions /> -->
     <!-- <link rel="stylesheet" href="src/components/StylesOnCss/globals.css" /> -->
+    <script defer>
+      document.fonts.ready.then(() => {
+        document.body.classList.add('font-loaded')
+      })
+    </script>
   </head>
 
-  <body class="dark:bg-white font-Caviar" id="inicio">
+  <body class="dark:bg-white" id="inicio">
     <Header />
     <slot />
     <Footer />
@@ -37,33 +42,14 @@ const { title, description } = Astro.props
     <style is:global>
       @font-face {
         font-family: 'Caviar Dreams';
-        src: url('/fonts/CaviarDreams.ttf') format('truetype');
+        src:
+          url('/fonts/CaviarDreams.ttf') format('truetype'),
+          url('/fonts/CaviarDreams_Bold.ttf') format('truetype'),
+          url('/fonts/CaviarDreams_BoldItalic.ttf') format('truetype'),
+          url('/fonts/CaviarDreams_Italic.ttf') format('truetype');
+
         font-weight: 400;
         font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'Caviar Dreams';
-        src: url('/fonts/CaviarDreams_Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'Caviar Dreams';
-        src: url('/fonts/CaviarDreams_BoldItalic.ttf') format('truetype');
-        font-weight: 700;
-        font-style: italic;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'Caviar Dreams';
-        src: url('/fonts/CaviarDreams_Italic.ttf') format('truetype');
-        font-weight: 400;
-        font-style: italic;
         font-display: swap;
       }
       :root {
@@ -90,6 +76,7 @@ const { title, description } = Astro.props
         color-scheme: light dark;
       }
       html {
+        font-family: 'Caviar Dreams', Arial, sans-serif;
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;
@@ -98,6 +85,7 @@ const { title, description } = Astro.props
       }
 
       body {
+        font-family: 'Caviar Dreams', Arial, sans-serif;
         background-color: #012029;
 
         display: flex;
@@ -152,13 +140,13 @@ const { title, description } = Astro.props
       .dark .nav-links a {
         color: #fff;
       }
-      /* body:not(.font-loaded) {
+      body:not(.font-loaded) {
         visibility: hidden;
+      }
+      /* body.font-loaded {
+        visibility: visible; /* Asegúrate de que sea visible */
+      /* transition: opacity 0.3s ease-in-out; Si tienes animación 
       } */
     </style>
   </body>
 </html>
-<!-- <script defer>
-  document.fonts.ready.then(() => {
-    document.body.classList.add('font-loaded')
-  }) -->
