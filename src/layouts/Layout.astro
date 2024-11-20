@@ -34,7 +34,130 @@ const { title, description } = Astro.props
     >
       <Arrow class="size-7 hover:animate-pulse animate-duration-slow" />
     </a>
-    <style is:global></style>
+    <style is:global>
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/fonts/CaviarDreams.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/fonts/CaviarDreams_Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/fonts/CaviarDreams_BoldItalic.ttf') format('truetype');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('/fonts/CaviarDreams_Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+      :root {
+        --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
+        --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
+        --fondoImg: rgba(60, 56, 92, 0.9);
+        --color-menu: rgba(252, 102, 15, 0.9);
+        --color-menu2: #c99806;
+        --header: #d3d3d3;
+        --lightGrey: #f8f9fe;
+        --baseColor: #012029;
+        --greyBold: #6f717e;
+        --shadowImge: 0px 5px 15px rgba(255, 255, 255);
+        --yellow: #ffff00;
+        --switch: linear-gradient(to right, #e5ff00 0%, #ff020f 100%);
+        /*Cards*/
+        --backgroundCard: #f0f3fa;
+        --lineTop: hsl(37, 97%, 70%);
+        --lineBottom: hsl(203, 89%, 53%);
+        /* FOOTER */
+        --orange: #fbc531;
+        --iconFab: #f6b333;
+        --iconBorder: 1px 3px 11px -5px rgb(209 13 45 / 69%);
+        color-scheme: light dark;
+      }
+      html {
+        font-family: 'Caviar Dreams', sans-serif;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* margin-right: -200px; */
+      }
+
+      body {
+        font-family: 'Caviar Dreams', Arial, sans-serif;
+        background-color: #012029;
+
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      #top {
+        transition: animation ease-in-out 0.2s;
+        animation: scroll linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 10px;
+      }
+
+      @keyframes scroll {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        html {
+          background-color: #fafbfd;
+        }
+        body {
+          color: #012029;
+        }
+        a {
+          color: #012029;
+        }
+
+        .image {
+          box-shadow: #012029;
+        }
+      }
+      a {
+        animation-range: 100px 0;
+      }
+      html.dark {
+        background-color: #012029;
+        color: #fff;
+      }
+
+      .dark .nav-links a {
+        color: #fff;
+      }
+      body:not(.font-loaded) {
+        visibility: hidden;
+      }
+    </style>
   </body>
 </html>
 <script defer>
