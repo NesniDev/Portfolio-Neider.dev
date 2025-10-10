@@ -47,6 +47,15 @@ export const PROJECTS = [
       gh: "https://github.com/NesniDev/Page-Bar.dev",
       page: "https://bar-ib.netlify.app/",
       badge: "Completed"
+    },
+    {
+      url: "/img/ecommerce.png",
+      title: "Ecommerce",
+      technologies: [TECNOLOGYS.HTML, TECNOLOGYS.CSS, TECNOLOGYS.JAVASCRIPT, TECNOLOGYS.ASTRO, TECNOLOGYS.TAILWIND, TECNOLOGYS.REACT],
+      text: "Este ecommerce fue creado para la empresa de ropa femenina, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.",
+      gh: "https://github.com/NesniDev/Ecommerce",
+      page: "https://ecommerce-products-api.netlify.app",
+      badge: "Completed"
     }
     
   ];
