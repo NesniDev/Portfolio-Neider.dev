@@ -1,6 +1,7 @@
 ---
 import DarkMode from '@/components/DarkMode.astro'
 import Menu from '@/icons/variable/Menu.astro'
+import X from '@/icons/variable/X.astro'
 ---
 
 <!-- <div
@@ -34,13 +35,12 @@ import Menu from '@/icons/variable/Menu.astro'
     </a>
     <nav
       id="menu"
-      class="md:justify-between md:gap-5 tracking-widest z-30 text-4xl
-    md:text-base absolute h-full top-0 left-0 right-0 bg-black py-[400px] md:py-0 md:static
-    items-center justify-center md:bg-transparent md:ml-36 lg:ml-80
-    hidden md:block flex flex-col md:flex-row gap-2 xl:gap-x-5 animate-jump-in
-     lg:text-base text-[#CAA152] dark:bg-gradient-to-b dark:from-[#012029] dark:md:from-transparent bg-gradient-to-b from-[#e3e3e3] md:from-transparent opacity-90 fijada"
+      class="nav__overlay md:justify-between md:gap-5 tracking-widest z-30 text-xl
+    md:text-base bg-black md:py-0 md:static md:bg-transparent
+    hidden md:block flex-col md:flex-row gap-2 xl:gap-x-5 animate-jump-in
+     lg:text-base text-[#CAA152]"
     >
-      <ul class="flex flex-col md:flex-row justify-between items-center gap-10">
+      <ul class="nav__menu flex flex-col md:flex-row items-center gap-5">
         <a
           class="hover:text-[#fbc531] text-white dark:text-[#012029] font-black"
           href="/MoreProjects">Proyectos</a
@@ -50,20 +50,21 @@ import Menu from '@/icons/variable/Menu.astro'
           href="/#habilidades">Habilidades</a
         >
         <a
-          class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold mb-2 md:mb-0"
+          class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold md:mb-0"
           href="/#contacto">Contacto</a
         >
-        <DarkMode
-          class="dark:text-[#012029] text-[#012029]"
-          id="dark"
-          transition:persist
-        />
+        <DarkMode class="" id="dark" transition:persist />
       </ul>
     </nav>
   </div>
-  <button class="button z-[100]">
+  <button id="menuButton" class="button z-[100]">
     <Menu
-      class="text-white w-10 md:hidden block absolute top-[40px] right-10 bottom-0"
+      class="text-white dark:text-black w-8 transition-all duration-300 md:hidden block absolute top-[40px] right-10"
+      id="open__hamburguer"
+    />
+    <X
+      class="text-black w-8 md:hidden block transition-all duration-300 absolute top-[40px] right-10 opacity-0 scale-0"
+      id="close__hamburguer"
     />
   </button>
 
@@ -71,7 +72,8 @@ import Menu from '@/icons/variable/Menu.astro'
     .fijada {
       position: fixed;
     }
-    @media screen and (min-width: 768px) {
+
+    @media screen and (width >= 768px) {
       .fijada {
         position: relative;
       }
@@ -115,9 +117,40 @@ import Menu from '@/icons/variable/Menu.astro'
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (width < 768px) {
       nav ul a {
-        color: white;
+        color: #012029;
+      }
+
+      #dark {
+        background-color: #012029;
+      }
+
+      .nav__overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav__overlay--show {
+        opacity: 1;
+        pointer-events: unset;
+      }
+
+      .nav__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(252, 252, 252, 1);
+
+        max-width: 250px;
+        width: 65%;
+        overflow: auto;
+        padding: 120px 0;
+        box-shadow: 0px 0px 80px rgba(1, 32, 41, 1);
       }
     }
     img {
@@ -140,6 +173,7 @@ import Menu from '@/icons/variable/Menu.astro'
     .ancla-logo:hover .img-logo {
       transform: scale(0);
     }
+
     /* DARK MODE */
   </style>
 
@@ -147,9 +181,18 @@ import Menu from '@/icons/variable/Menu.astro'
     const menu = document.querySelector('#menu')
     const boton = document.querySelector('.button')
     const navLinks = document.querySelectorAll('#menu a')
+    const openHamburguer = document.querySelector('#open__hamburguer')
+    const closeHamburguer = document.querySelector('#close__hamburguer')
 
     boton.addEventListener('click', () => {
       menu.classList.toggle('hidden')
+      menu.classList.toggle('nav__overlay--show')
+
+      openHamburguer.classList.toggle('opacity-0')
+      openHamburguer.classList.toggle('scale-0')
+
+      closeHamburguer.classList.toggle('opacity-100')
+      closeHamburguer.classList.toggle('scale-100')
 
       navLinks.forEach((link) => {
         link.addEventListener('click', () => {
