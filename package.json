@@ -43,8 +43,8 @@
     "@types/node": "^18.0.0",
     "typescript": "^5.0.0"
   },
-    "engines": {
-      "node": ">=20.x"
-    }
+  "engines": {
+    "node": "20.x"
+  }
   
 }
