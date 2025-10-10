@@ -1,7 +1,0 @@
-{
-    "functions": {
-      ".vercel/output/functions/**": {
-        "runtime": "nodejs20.x"
-      }
-    }
-}
