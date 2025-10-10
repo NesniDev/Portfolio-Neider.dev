@@ -7,15 +7,17 @@ interface Props {
 ---
 
 <!-- Crear un evento hover donde en cada tecnologia me muestre los frameworks o dividir por secciones las tecnologias -->
-<section class="grids pt-6 pb-14">
-  {
-    TOOLS.map((tool) => (
-      <>
-        <div class="a group  relative flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair">
-          <h2 class="text-[12px] text-center py-2 dark:text-[#012029] text-slate-100 font-normal">
-            {tool.category}
-          </h2>
-          <tool.logo class="size-14 icon " />
+<section class="grids pt-5 flex flex-col items-center justify-center">
+  <div class="aaa">
+    {
+      TOOLS.map((tool, index) => (
+        <div
+          style={`--i: ${index}`}
+          class="a group scroll relative flex flex-col items-center p-3 hover:scale-110 transition hover:shadow-xl hover:shadow-slate-200 cursor-crosshair "
+        >
+          <picture>
+            <tool.logo class="size-36 icon " />
+          </picture>
           <span
             class="absolute -top-6 left-[5%] -translate-x-[50%] 
           z-20 origin-left scale-0 px-3 rounded-lg border 
@@ -26,16 +28,12 @@ interface Props {
             {tool.name}
           </span>
         </div>
-      </>
-    ))
-  }
+      ))
+    }
+  </div>
 </section>
 
 <style>
-  div:hover .icon {
-    animation: rotateIcon 1s ease-in-out;
-  }
-
   @keyframes rotateIcon {
     from {
       transform: rotate(0deg);
@@ -49,5 +47,43 @@ interface Props {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
+  }
+
+  :root {
+    --duration: 30s;
+    --total-items: 24;
+  }
+  .scroll {
+    position: absolute;
+    display: flex;
+    left: 100%;
+    margin-left: 200px; /* Añade separación entre logos */
+    animation: spin var(--duration) linear infinite;
+    animation-delay: calc(
+      var(--duration) / var(--total-items) * (var(--total-items) - var(--i)) *
+        -1
+    );
+  }
+
+  .aaa {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      #fff 20%,
+      #fff 80%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  @keyframes spin {
+    to {
+      left: -400%; /* Mueve los logos fuera de la pantalla */
+    }
   }
 </style>
