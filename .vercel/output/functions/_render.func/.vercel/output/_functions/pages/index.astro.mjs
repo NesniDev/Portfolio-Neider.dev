@@ -1,7 +1,7 @@
 /* empty css                                        */
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, b as addAttribute, s as spreadAttributes, d as createAstro, F as Fragment } from '../chunks/astro/server_CurXskN5.mjs';
+import { c as createComponent, m as maybeRenderHead, a as renderTemplate, r as renderComponent, b as addAttribute, d as createAstro, s as spreadAttributes, F as Fragment } from '../chunks/astro/server_CsCEEFOo.mjs';
 import 'kleur/colors';
-import { $ as $$Container, P as PROJECTS, a as $$GitHub, b as $$Chrome, d as $$Html, e as $$Css, f as $$Javascript, g as $$Tailwind, h as $$Astro1, i as $$React, c as $$Layout } from '../chunks/Container_HqMLmE7F.mjs';
+import { a as $$Container, P as PROJECTS, b as $$GitHub, c as $$Chrome, d as $$Html, e as $$Css, f as $$Javascript, g as $$Tailwind, h as $$Astro1, i as $$React, $ as $$Layout } from '../chunks/Container_Dsj8JOmx.mjs';
 import 'clsx';
 import { jsx, jsxs, Fragment as Fragment$1 } from 'react/jsx-runtime';
 import React, { useState } from 'react';
@@ -87,7 +87,7 @@ Hoja de Vida
 }, "C:/Users/Neider/Documents/Github/P\xE1ginasWeb/Portfolio-Neider.dev/src/components/PersonalInformation.astro", void 0);
 
 function App$2() {
-  useState(false);
+  const [value, setValue] = useState(false);
   return /* @__PURE__ */ jsx("div", { id: "app", children: /* @__PURE__ */ jsx(
     Atropos,
     {

@@ -1,5 +1,5 @@
 /* empty css                                        */
-import { c as createComponent, r as renderTemplate, b as addAttribute, d as createAstro, a as renderComponent, e as renderHead, f as renderSlot, m as maybeRenderHead } from '../chunks/astro/server_CurXskN5.mjs';
+import { c as createComponent, d as createAstro, b as addAttribute, a as renderTemplate, r as renderComponent, e as renderHead, f as renderSlot, m as maybeRenderHead } from '../chunks/astro/server_CsCEEFOo.mjs';
 import 'kleur/colors';
 import 'clsx';
 /* empty css                               */
