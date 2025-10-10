@@ -59,11 +59,11 @@ import X from '@/icons/variable/X.astro'
   </div>
   <button id="menuButton" class="button z-[100]">
     <Menu
-      class="text-white dark:text-black w-8 transition-all duration-300 md:hidden block absolute top-[40px] right-10"
+      class="text-white dark:text-black w-8 transition-all duration-300 md:hidden block -[40px] right-10"
       id="open__hamburguer"
     />
     <X
-      class="text-black w-8 md:hidden block transition-all duration-300 absolute top-[40px] right-10 opacity-0 scale-0"
+      class="text-black fixed w-8 md:hidden block transition-all duration-300 top-[40px] right-10 opacity-0 scale-0"
       id="close__hamburguer"
     />
   </button>
