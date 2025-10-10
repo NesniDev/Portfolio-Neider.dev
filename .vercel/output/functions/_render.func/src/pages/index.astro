@@ -1,0 +1,85 @@
+---
+// import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import PersonalInformation from "@/components/PersonalInformation.astro";
+import Container from "@/components/Container.astro";
+import Information from "@/components/Information.astro";
+import Projects from "@/components/Projects.astro";
+import Tecnologys from "@/components/Tecnologys.astro";
+import Contact from "@/components/Contact.astro";
+import TypedProjects from "@/components/FeaturesTyped.js/Proyectos.jsx";
+import TypedTecnologys from "@/components/FeaturesTyped.js/Tecnologías.jsx";
+import TypedInfo from "@/components/FeaturesTyped.js/InformaciónCarrera.jsx";
+import TypedContacto from "@/components/FeaturesTyped.js/Contacto.jsx";
+import TypedExperience from "@/components/FeaturesTyped.js/Experiencia.jsx";
+import Experience from "@/components/Experience.astro";
+---
+
+<Layout
+  title="Portfolio - Neider | Donde la Creatividad se Encuentra con la Tecnología."
+  description="¡Bienvenido a mi portfolio! En Neider, fusiono la creatividad con la tecnología para ofrecerte soluciones innovadoras y visualmente impactantes. Descubre cómo mis habilidades en diseño y desarrollo se combinan para crear experiencias únicas y memorables. Explora mi trabajo y déjate inspirar por la sinergia entre la imaginación y la tecnología en cada proyecto."
+>
+  <PersonalInformation />
+
+  <Container>
+    <span
+      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+      ><TypedInfo client:load /></span
+    >
+    <div class="uppercase my-3 text-xl font-bold" id="cadena-texto">
+      <h2 class="dark:text-[#012029] text-white my-3 text-xl font-bold">
+        información sobre mi <span class="text-orange-500">carrera</span>
+      </h2>
+    </div>
+    <Information />
+  </Container>
+
+  <Container id="proyectos">
+    <span
+      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+      ><TypedProjects client:load /></span
+    >
+    <div class="" id="cadena-texto-proyectos">
+      <h2 class="mb-20">
+        Mis Proyectos <span class="text-orange-500">Realizados</span>
+      </h2>
+    </div>
+    <Projects />
+  </Container>
+  <Container>
+    <span
+      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+      ><TypedExperience client:load /></span
+    >
+    <div class="" id="cadena-texto-experiencia">
+      <h2 class="mb-20">
+        Está es mi experiencia <span class="text-orange-500">Personal</span>
+      </h2>
+    </div>
+    <Experience />
+  </Container>
+  <Container id="habilidades">
+    <span
+      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+      ><TypedTecnologys client:load /></span
+    >
+    <div class="" id="cadena-texto-tecnologias">
+      <h2 class="">
+        Técnologias que he <span class="text-orange-500">UTILIZADO</span>
+      </h2>
+    </div>
+    <Tecnologys />
+  </Container>
+  <Container id="contacto">
+    <span
+      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+      ><TypedContacto client:load /></span
+    >
+    <div class="" id="cadena-texto-contacto">
+      <h2 class="">
+        Aqui me puedes <span class="text-orange-500">CONTACTAR</span>
+      </h2>
+    </div>
+    <Contact />
+  </Container>
+</Layout>
