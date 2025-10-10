@@ -1,18 +1,18 @@
 ---
 // import Layout from "../layouts/Layout.astro";
-import Layout from "@/layouts/Layout.astro";
-import PersonalInformation from "@/components/PersonalInformation.astro";
-import Container from "@/components/Container.astro";
-import Information from "@/components/Information.astro";
-import Projects from "@/components/Projects.astro";
-import Tecnologys from "@/components/Tecnologys.astro";
-import Contact from "@/components/Contact.astro";
-import TypedProjects from "@/components/FeaturesTyped.js/Proyectos.jsx";
-import TypedTecnologys from "@/components/FeaturesTyped.js/Tecnologías.jsx";
-import TypedInfo from "@/components/FeaturesTyped.js/InformaciónCarrera.jsx";
-import TypedContacto from "@/components/FeaturesTyped.js/Contacto.jsx";
-import TypedExperience from "@/components/FeaturesTyped.js/Experiencia.jsx";
-import Experience from "@/components/Experience.astro";
+import Layout from '@/layouts/Layout.astro'
+import PersonalInformation from '@/components/PersonalInformation.astro'
+import Container from '@/components/Container.astro'
+import Information from '@/components/Information.astro'
+import Projects from '@/components/Projects.astro'
+import Tecnologys from '@/components/Tecnologys.astro'
+import Contact from '@/components/Contact.astro'
+import TypedProjects from '@/components/FeaturesTyped.js/Proyectos.jsx'
+import TypedTecnologys from '@/components/FeaturesTyped.js/Tecnologías.jsx'
+import TypedInfo from '@/components/FeaturesTyped.js/InformaciónCarrera.jsx'
+import TypedContacto from '@/components/FeaturesTyped.js/Contacto.jsx'
+import TypedExperience from '@/components/FeaturesTyped.js/Experiencia.jsx'
+import Experience from '@/components/Experience.astro'
 ---
 
 <Layout
@@ -59,8 +59,7 @@ import Experience from "@/components/Experience.astro";
     <Experience />
   </Container>
   <Container id="habilidades">
-    <span
-      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+    <span class="uppercase text-white text-xl font-bold dark:text-[#012029]"
       ><TypedTecnologys client:load /></span
     >
     <div class="" id="cadena-texto-tecnologias">
