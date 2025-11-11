@@ -1,9 +1,11 @@
 ---
-import Atropos from "@/components/FeaturesFrameworks/Atropos.jsx";
-import Modal from "./Modals.jsx";
+import Atropos from '@/components/FeaturesFrameworks/Atropos.jsx'
+import Modal from './Modals.jsx'
 ---
 
-<section class="relative h-full border-orange-400 -z-1 mb-10 rounded-lg">
+<section
+  class="relative h-full border-orange-400 -z-1 mb-10 rounded-lg animate-fade-in-up"
+>
   <Atropos client:load />
-  <Modal client:load />
 </section>
+<Modal client:load />
