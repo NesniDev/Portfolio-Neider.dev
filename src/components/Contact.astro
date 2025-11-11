@@ -1,6 +1,7 @@
 ---
 import ThumbsDown from '@/icons/variable/ThumbsDown.astro'
 import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
+import { actions } from 'astro:actions'
 ---
 
 <!-- <Container> -->
@@ -21,19 +22,14 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
       class="px-8 uppercase text-white-900/50 font-semibold text-[#9c9891]"
       >Contáctame</legend
     >
-    <form
-      class="flex flex-col"
-      id="form"
-      action="https://formspree.io/f/mkndrbdo"
-      method="POST"
-    >
+    <form class="flex flex-col" action={actions.getForm} method="POST">
       <div class="grid gap-6 mb-6 md:grid-cols-1">
         <div class="relative z-0">
           <input
             name="names"
             autocomplete="off"
             type="text"
-            id="floating_standard"
+            id="names"
             class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
             required
@@ -52,7 +48,7 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
             name="email"
             autocomplete="off"
             type="email"
-            id="floating_standard"
+            id="email"
             class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
           />
@@ -69,11 +65,10 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
           <input
             name="tel"
             autocomplete="off"
-            type="tel"
-            id="floating_standard"
+            type="number"
+            id="tel"
             class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
-            required
           />
           <label
             for="floating_standard"
@@ -88,18 +83,18 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
         <div class="flex justify-center gap-10 py-0">
           <label
             class="hover:text-green-500 hover:scale-[1.7] transition ease-in-out delay-200"
-            for="telefono-radio"
+            for="like"
           >
             <ThumbsUp />
           </label>
-          <input type="radio" name="grupocontacto" hidden />
+          <input type="radio" name="like" id="like" hidden />
           <label
             class="hover:text-red-500 hover:scale-[1.7] transition ease-in-out delay-200"
-            for="correo-radio"
+            for="dislike"
           >
             <ThumbsDown />
           </label>
-          <input type="radio" name="grupocontacto2" hidden />
+          <input type="radio" name="dislike" id="dislike" hidden />
         </div>
       </div>
       <div class="grid gap-6 mb-6 md:grid-cols-1">
@@ -108,8 +103,7 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
             name="message"
             id="floating_standard"
             class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-            placeholder=" "
-            required></textarea>
+            placeholder=" "></textarea>
           <label
             for="floating_standard"
             class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-9 scale-75 top-7 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
@@ -128,3 +122,49 @@ import ThumbsUp from '@/icons/variable/ThumbsUp.astro'
     </form>
   </fieldset>
 </section>
+
+<script>
+  import { actions } from 'astro:actions'
+  import Swal from 'sweetalert2'
+
+  const form = document.querySelector('form') as HTMLFormElement
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const formData = new FormData(form)
+    const name = formData.get('names') as string
+    const email = formData.get('email') as string
+    const phone = Number(formData.get('tel')) || null
+    const like = formData.get('like') ? true : false
+    const dislike = formData.get('dislike') ? true : false
+    const message = formData.get('message') as string
+
+    const { data, error } = await actions.getForm({
+      name,
+      email,
+      phone,
+      like,
+      dislike,
+      message
+    })
+    if (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Ups...',
+        text: 'Algo salio mal! No se pudo enviar el formulario',
+        timer: 1500
+      })
+    }
+    if (data) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Exito',
+        text: 'Formulario enviado correctamente',
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      form.reset()
+    }
+  })
+</script>
