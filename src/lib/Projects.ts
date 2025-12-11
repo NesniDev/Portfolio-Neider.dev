@@ -2,7 +2,7 @@ import {TECNOLOGYS} from "./Tecnology-Projects"
 export const PROJECTS = [
   {
     url: "/img/infoByte.webp",
-    title: "Página de InfoByte",
+    title: "InfoByte",
     technologies: [
       TECNOLOGYS.HTML,
       TECNOLOGYS.CSS,
@@ -10,10 +10,24 @@ export const PROJECTS = [
       TECNOLOGYS.ASTRO,
       TECNOLOGYS.JAVASCRIPT,
     ],
-    text: "El objetivo principal era desarrollar una plataforma digital moderna para IFE Colombia, mostrando sus servicios y fortaleciendo su presencia en línea con un diseño atractivo y funcional.",
+    text: "El objetivo principal es desarrollar una plataforma digital moderna para IFE Colombia, mostrando sus servicios y fortaleciendo su presencia en línea con un diseño atractivo y funcional.",
     gh: "https://github.com/NesniDev/TecnicoSistemas",
     page: "https://tecnico-sistemas.vercel.app",
     badge: "Completed"
+  },
+  {
+    url: "/img/futbol.webp",
+    title: "Canchas de fútbol",
+    technologies: [
+      TECNOLOGYS.HTML,
+      TECNOLOGYS.CSS,
+      TECNOLOGYS.REACT,
+      TECNOLOGYS.TAILWIND,
+    ],
+    text: "El objetivo principal es desarrollar una plataforma donde los usuarios de Chiquinquirá podrán ver las canchas disponibles, hacer su reserva y pagar por la misma de manera sencilla y rápida. ",
+    gh: "https://github.com/NesniDev/Field-Football",
+    page: "https://field-football.vercel.app",
+    badge: "In Progress"
   },
     {
       url: "/img/Lawyer.webp",
