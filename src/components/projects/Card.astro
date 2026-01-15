@@ -1,0 +1,53 @@
+---
+import GitHub from '@/icons/Tecnologys/GitHub.astro'
+import Chrome from '@/icons/Tecnologys/Chrome.astro'
+import { PROJECTS } from '@/lib/Projects'
+
+interface Props {
+  project: (typeof PROJECTS)[number]
+}
+
+const { project } = Astro.props
+---
+
+<article class="card">
+  <img src={project.url} alt={project.title} />
+  <div class="card__content flex flex-col">
+    <div class="flex-1">
+      <p class="card__title">{project.title}</p>
+      <span class="flex justify-center items-center gap-3 mt-3">
+        {
+          project.technologies.map((tecnology) => (
+            <div>
+              <span
+                class={`flex justify-center items-center font-extrabold ${tecnology.class}`}
+              >
+                <tecnology.icon class="size-4 hover:scale-125 transition cursor-crosshair icon" />
+              </span>
+            </div>
+          ))
+        }
+      </span>
+      <p class="card__description">{project.text}</p>
+    </div>
+    <div>
+      <span
+        class={`badge mt-3 ${project.badge === 'Completed' ? 'completed' : 'in-progress'}`}
+      >
+        {project.badge}
+      </span>
+    </div>
+    <footer class="flex flex-row justify-center gap-5 mb-5">
+      <a href={project.gh} target="_blank">
+        <GitHub
+          class="h size-6 hover:scale-125 hover:filter hover:drop-shadow-lg transition cursor-pointer"
+        />
+      </a>
+      <a href={project.page} target="_blank">
+        <Chrome
+          class="h size-6 hover:scale-110 hover:filter hover:drop-shadow-lg hover:from-red-500 transition cursor-pointer"
+        />
+      </a>
+    </footer>
+  </div>
+</article>

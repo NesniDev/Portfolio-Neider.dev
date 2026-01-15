@@ -13,6 +13,7 @@ import TypedInfo from '@/components/FeaturesTyped.js/InformaciónCarrera.jsx'
 import TypedContacto from '@/components/FeaturesTyped.js/Contacto.jsx'
 import TypedExperience from '@/components/FeaturesTyped.js/Experiencia.jsx'
 import Experience from '@/components/Experience.astro'
+import SeeMore from '@/components/shared/SeeMore.astro'
 ---
 
 <Layout
@@ -35,17 +36,17 @@ import Experience from '@/components/Experience.astro'
   </Container>
 
   <Container id="proyectos">
-    <span
-      class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
+    <span class="uppercase text-white text-xl font-bold dark:text-[#012029]"
       ><TypedProjects client:load /></span
     >
     <div class="" id="cadena-texto-proyectos">
-      <h2 class="mb-20">
+      <h2>
         Mis Proyectos <span class="text-orange-500">Realizados</span>
       </h2>
     </div>
-    <Projects />
+    <Projects view="home" />
   </Container>
+  <SeeMore> Ver Más... </SeeMore>
   <Container>
     <span
       class="uppercase text-white my-3 text-xl font-bold dark:text-[#012029]"
