@@ -1,149 +1,124 @@
-import Html from '@/icons/Technologies/Html.astro'
-import Tailwind from '@/icons/Technologies/Tailwind.astro'
-import Css from '@/icons/Technologies/Css.astro'
-import Bootstrap from '@/icons/Technologies/Bootstrap.astro'
-import Sass from '@/icons/Technologies/Sass.astro'
-import React from '@/icons/Technologies/React.astro'
-import Astro1 from '@/icons/Technologies/Astro1.astro'
-import GitHub from '@/icons/Technologies/GitHub.astro'
-import Javascript from '@/icons/Technologies/Javascript.astro'
-import Typescript from '@/icons/Technologies/Typescript.astro'
-import NextJs from '@/icons/Technologies/NextJs.astro'
-import NodeJs from '@/icons/Technologies/NodeJs.astro'
-import Git from '@/icons/Technologies/Git.astro'
-import Sql from '@/icons/Technologies/Sql.astro'
-import Python from '@/icons/Technologies/Python.astro'
-import Bun from '@/icons/Technologies/Bun.astro'
-import Notion from '@/icons/Technologies/Notion.astro'
-import ViteJs from '@/icons/Technologies/ViteJs.astro'
-import Linux from '@/icons/Technologies/Linux.astro'
-import MarkDown from '@/icons/Technologies/MarkDown.astro'
-import Wordpress from '@/icons/Technologies/Wordpress.astro'
-import Php from '@/icons/Technologies/Php1.astro'
-import Vercel from '@/icons/Technologies/Vercel.astro'
-import Java from '@/icons/Technologies/Java.astro'
-
 export const TOOLS = [
   {
-    logo: Html,
+    logo: '/Technologies/Html.svg',
     name: 'HTML',
     category: 'Lenguaje de Marcado'
   },
   {
-    logo: Css,
+    logo: '/Technologies/Css.svg',
     name: 'CSS',
     category: 'Lenguaje de hojas de estilo'
   },
   {
-    logo: Javascript,
+    logo: '/Technologies/Javascript.svg',
     name: 'Javascript',
     category: 'Lenguaje de programación'
   },
 
   {
-    logo: Tailwind,
+    logo: '/Technologies/Tailwind.svg',
     name: 'TAILWIND',
     category: 'Framework de utilidades CSS'
   },
   {
-    logo: Astro1,
+    logo: '/Technologies/Astro.svg',
     name: 'Astro',
     category: 'Framework de desarrollo web'
   },
   {
-    logo: React,
+    logo: '/Technologies/React.svg',
     name: 'React',
     category: 'Biblioteca y framework frontend'
   },
   {
-    logo: NextJs,
+    logo: '/Technologies/NextJs.svg',
     name: 'NextJs',
     category: 'Framework de desarrollo web'
   },
 
   {
-    logo: Git,
+    logo: '/Technologies/Git.svg',
     name: 'Git',
     category: 'Sistema de control de versiones'
   },
   {
-    logo: GitHub,
+    logo: '/Technologies/GitHub.svg',
     name: 'GitHub',
     category: 'Plataforma alojamiento código'
   },
 
   {
-    logo: Typescript,
+    logo: '/Technologies/Typescript.svg',
     name: 'Typescript',
     category: 'Lenguajes de programación'
   },
   {
-    logo: Sass,
+    logo: '/Technologies/Sass.svg',
     name: 'SASS',
     category: 'Preprocesador de CSS'
   },
   {
-    logo: Bootstrap,
+    logo: '/Technologies/Bootstrap.svg',
     name: 'Bootstrap',
     category: 'Frameworks de componentes CSS'
   },
   {
-    logo: NodeJs,
+    logo: '/Technologies/NodeJs.svg',
     name: 'NodeJs',
     category: 'Entorno de ejecución'
   },
   {
-    logo: Linux,
+    logo: '/Technologies/Linux.svg',
     name: 'Linux',
     category: 'Sistema Operativo Linux'
   },
   {
-    logo: Sql,
+    logo: '/Technologies/Sql.svg',
     name: 'Sql Lite',
     category: 'Bases de datos relacionales'
   },
   {
-    logo: Python,
+    logo: '/Technologies/Python.svg',
     name: 'Python',
     category: 'Lenguaje de programación'
   },
   {
-    logo: ViteJs,
+    logo: '/Technologies/ViteJs.svg',
     name: 'Vite Js',
     category: 'Empaquetador de JavaScript'
   },
   {
-    logo: Notion,
+    logo: '/Technologies/Notion.svg',
     name: 'Notion',
     category: 'Gestión de proyectos'
   },
   {
-    logo: Java,
+    logo: '/Technologies/Java.svg',
     name: 'Java',
     category: 'Lenguaje de programación'
   },
   {
-    logo: Bun,
+    logo: '/Technologies/Bun.svg',
     name: 'Bun',
     category: 'Gestor de dependencias'
   },
   {
-    logo: MarkDown,
+    logo: '/Technologies/MarkDown.svg',
     name: 'MarkDown',
     category: 'Lenguajes de marcado'
   },
   {
-    logo: Php,
+    logo: '/Technologies/Php.svg',
     name: 'Php',
     category: 'Lenguajes de programación'
   },
   {
-    logo: Wordpress,
+    logo: '/Technologies/Wordpress.svg',
     name: 'Wordpress',
     category: 'Sistema de gestión de contenido'
   },
   {
-    logo: Vercel,
+    logo: '/Technologies/Vercel.svg',
     name: 'Vercel',
     category: 'Alojamiento en la nube'
   }

@@ -1,5 +1,5 @@
 ---
-import { TOOLS } from '../lib/Tecnologys'
+import { TOOLS } from '../lib/Technologies'
 interface Props {
   logo?
   name?: string
@@ -16,7 +16,9 @@ interface Props {
           class="a group scroll relative flex flex-col items-center p-3 hover:scale-110 transition cursor-crosshair "
         >
           <picture>
-            <tool.logo class="md:size-28 lg:size-36 size-16 icon " />
+            <tool.logo
+              class:list={['md:size-28', 'lg:size-36', 'size-16', 'icon']}
+            />
           </picture>
           <span
             class="absolute -top-6 left-[5%] -translate-x-[50%] 
