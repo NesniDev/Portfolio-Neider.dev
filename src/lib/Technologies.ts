@@ -1,125 +1,144 @@
 export const TOOLS = [
+  // Frontend
   {
-    logo: '/Technologies/Html.svg',
+    logo: '/Technologies/Frontend/Html.svg',
     name: 'HTML',
-    category: 'Lenguaje de Marcado'
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/Css.svg',
+    logo: '/Technologies/Frontend/Css.svg',
     name: 'CSS',
-    category: 'Lenguaje de hojas de estilo'
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/Javascript.svg',
+    logo: '/Technologies/Frontend/Javascript.svg',
     name: 'Javascript',
-    category: 'Lenguaje de programación'
-  },
-
-  {
-    logo: '/Technologies/Tailwind.svg',
-    name: 'TAILWIND',
-    category: 'Framework de utilidades CSS'
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/Astro.svg',
-    name: 'Astro',
-    category: 'Framework de desarrollo web'
-  },
-  {
-    logo: '/Technologies/React.svg',
-    name: 'React',
-    category: 'Biblioteca y framework frontend'
-  },
-  {
-    logo: '/Technologies/NextJs.svg',
-    name: 'NextJs',
-    category: 'Framework de desarrollo web'
-  },
-
-  {
-    logo: '/Technologies/Git.svg',
-    name: 'Git',
-    category: 'Sistema de control de versiones'
-  },
-  {
-    logo: '/Technologies/GitHub.svg',
-    name: 'GitHub',
-    category: 'Plataforma alojamiento código'
-  },
-
-  {
-    logo: '/Technologies/Typescript.svg',
+    logo: '/Technologies/Frontend/Typescript.svg',
     name: 'Typescript',
-    category: 'Lenguajes de programación'
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/Sass.svg',
-    name: 'SASS',
-    category: 'Preprocesador de CSS'
+    logo: '/Technologies/Frontend/React.svg',
+    name: 'React',
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/Bootstrap.svg',
+    logo: '/Technologies/Frontend/NextJs.svg',
+    name: 'NextJs',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/Astro.svg',
+    name: 'Astro',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/Tailwind.svg',
+    name: 'Tailwind',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/Bootstrap.svg',
     name: 'Bootstrap',
-    category: 'Frameworks de componentes CSS'
+    category: 'Frontend'
   },
   {
-    logo: '/Technologies/NodeJs.svg',
+    logo: '/Technologies/Frontend/Sass.svg',
+    name: 'SASS',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/MarkDown.svg',
+    name: 'Markdown',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/ViteJs.svg',
+    name: 'Vite',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/Vitest.svg',
+    name: 'Vitest',
+    category: 'Frontend'
+  },
+  {
+    logo: '/Technologies/Frontend/Wordpress.svg',
+    name: 'WordPress',
+    category: 'Frontend'
+  },
+
+  // Backend
+  {
+    logo: '/Technologies/Backend/NodeJs.svg',
     name: 'NodeJs',
-    category: 'Entorno de ejecución'
+    category: 'Backend'
   },
   {
-    logo: '/Technologies/Linux.svg',
-    name: 'Linux',
-    category: 'Sistema Operativo Linux'
-  },
-  {
-    logo: '/Technologies/Sql.svg',
-    name: 'Sql Lite',
-    category: 'Bases de datos relacionales'
-  },
-  {
-    logo: '/Technologies/Python.svg',
+    logo: '/Technologies/Backend/Python.svg',
     name: 'Python',
-    category: 'Lenguaje de programación'
+    category: 'Backend'
   },
   {
-    logo: '/Technologies/ViteJs.svg',
-    name: 'Vite Js',
-    category: 'Empaquetador de JavaScript'
-  },
-  {
-    logo: '/Technologies/Notion.svg',
-    name: 'Notion',
-    category: 'Gestión de proyectos'
-  },
-  {
-    logo: '/Technologies/Java.svg',
+    logo: '/Technologies/Backend/Java.svg',
     name: 'Java',
-    category: 'Lenguaje de programación'
+    category: 'Backend'
   },
   {
-    logo: '/Technologies/Bun.svg',
+    logo: '/Technologies/Backend/Php.svg',
+    name: 'PHP',
+    category: 'Backend'
+  },
+  {
+    logo: '/Technologies/Backend/Sql.svg',
+    name: 'SQLite',
+    category: 'Backend'
+  },
+  {
+    logo: '/Technologies/Backend/MongoDB.svg',
+    name: 'MongoDB',
+    category: 'Backend'
+  },
+  {
+    logo: '/Technologies/Backend/Express.svg',
+    name: 'Express',
+    category: 'Backend'
+  },
+
+  // Otros
+  {
+    logo: '/Technologies/Otros/Bun.svg',
     name: 'Bun',
-    category: 'Gestor de dependencias'
+    category: 'Otros'
   },
   {
-    logo: '/Technologies/MarkDown.svg',
-    name: 'MarkDown',
-    category: 'Lenguajes de marcado'
+    logo: '/Technologies/Otros/Git.svg',
+    name: 'Git',
+    category: 'Otros'
   },
   {
-    logo: '/Technologies/Php.svg',
-    name: 'Php',
-    category: 'Lenguajes de programación'
+    logo: '/Technologies/Otros/GitHub.svg',
+    name: 'GitHub',
+    category: 'Otros'
   },
   {
-    logo: '/Technologies/Wordpress.svg',
-    name: 'Wordpress',
-    category: 'Sistema de gestión de contenido'
+    logo: '/Technologies/Otros/Linux.svg',
+    name: 'Linux',
+    category: 'Otros'
   },
+
   {
-    logo: '/Technologies/Vercel.svg',
+    logo: '/Technologies/Otros/Notion.svg',
+    name: 'Notion',
+    category: 'Otros'
+  },
+
+  {
+    logo: '/Technologies/Otros/Vercel.svg',
     name: 'Vercel',
-    category: 'Alojamiento en la nube'
+    category: 'Otros'
   }
 ]
