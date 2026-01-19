@@ -40,6 +40,7 @@ const { project } = Astro.props
     <footer class="flex flex-row justify-center gap-5 mt-3">
       <a
         href={project.gh}
+        aria-label="Repositorio del Proyecto en GitHub"
         target="_blank"
         class="hover:scale-125 transition ease-in-out duration-300"
       >
@@ -47,6 +48,7 @@ const { project } = Astro.props
       </a>
       <a
         href={project.page}
+        aria-label="Pagina del Proyecto"
         target="_blank"
         class="hover:scale-125 transition ease-in-out duration-300"
       >
