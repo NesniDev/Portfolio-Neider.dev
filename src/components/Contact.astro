@@ -26,17 +26,22 @@ import { actions } from 'astro:actions'
       <div class="grid gap-6 mb-6 md:grid-cols-1">
         <div class="relative z-0">
           <input
-            name="names"
-            autocomplete="off"
-            type="text"
             id="names"
-            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
-            placeholder=" "
+            name="names"
+            type="text"
             required
+            placeholder=" "
+            class="peer block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0"
           />
+
           <label
-            for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            for="names"
+            class="absolute text-sm text-slate-400 duration-300 transform
+           -translate-y-6 scale-75 top-3 origin-[0]
+           peer-placeholder-shown:scale-100
+           peer-placeholder-shown:translate-y-0
+           peer-focus:scale-75
+           peer-focus:-translate-y-6"
           >
             Nombres
           </label>
@@ -46,17 +51,25 @@ import { actions } from 'astro:actions'
         <div class="relative z-0">
           <input
             name="email"
-            autocomplete="off"
+            autocomplete="email"
             type="email"
             id="email"
-            class="block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#012029] dark:border-[#012029] dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-yellow-600 peer"
             placeholder=" "
+            class="peer block py-2.5 px-0 w-full text-sm text-slate-100 bg-transparent
+           border-0 border-b-2 border-gray-300 appearance-none
+           focus:outline-none focus:ring-0 focus:border-yellow-600"
           />
+
           <label
-            for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            for="email"
+            class="absolute text-sm text-gray-500 duration-300 transform
+           -translate-y-6 scale-75 top-3 origin-[0]
+           peer-placeholder-shown:scale-100
+           peer-placeholder-shown:translate-y-0
+           peer-focus:scale-75
+           peer-focus:-translate-y-6"
           >
-            Correo Electrónico
+            Correo electrónico
           </label>
         </div>
       </div>
@@ -71,7 +84,7 @@ import { actions } from 'astro:actions'
             placeholder=" "
           />
           <label
-            for="floating_standard"
+            for="tel"
             class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-yellow-600 peer-focus:peer-focus:dark:text-orange-600 peer-focus:dark:font-extrabold peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Teléfono

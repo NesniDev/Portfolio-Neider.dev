@@ -41,23 +41,35 @@ import X from '@/icons/variable/X.astro'
      lg:text-base text-[#CAA152]"
     >
       <ul class="nav__menu flex flex-col md:flex-row items-center gap-5">
-        <a
-          class="hover:text-[#fbc531] text-white dark:text-[#012029] font-black"
-          href="/MoreProjects">Proyectos</a
-        >
-        <a
-          class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold"
-          href="/#habilidades">Habilidades</a
-        >
-        <a
-          class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold md:mb-0"
-          href="/#contacto">Contacto</a
-        >
-        <DarkMode class="" id="dark" transition:persist />
+        <li>
+          <a
+            class="hover:text-[#fbc531] text-white dark:text-[#012029] font-black"
+            href="/MoreProjects">Proyectos</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold"
+            href="/#habilidades">Habilidades</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-[#fbc531] text-white dark:text-[#012029] font-extrabold md:mb-0"
+            href="/#contacto">Contacto</a
+          >
+        </li>
+        <li>
+          <DarkMode class="" id="dark" transition:persist />
+        </li>
       </ul>
     </nav>
   </div>
-  <button id="menuButton" class="button z-[100]">
+  <button
+    aria-label="Boton de menu para cambiar el dark mode"
+    id="menuButton"
+    class="button z-[100]"
+  >
     <Menu
       class="text-white dark:text-black w-8 transition-all duration-300 md:hidden block -[40px] right-10"
       id="open__hamburguer"

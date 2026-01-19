@@ -20,19 +20,21 @@ import { WORKS } from '../lib/Experience'
         >
           <div class="order-1 md:w-5/12" />
           <div class="z-20 mb-2 flex justify-center items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-            <h1 class="mx-auto text-white font-semibold text-xl">{work.id}</h1>
+            <span class="mx-auto text-white font-semibold text-xl">
+              {work.id}
+            </span>
           </div>
           <div
             class={`order-1 rounded-lg shadow-xl md:w-5/12 px-6 py-4 ${
               work.direction === 'right' ? 'bg-gray-400' : 'bg-red-400'
             }`}
           >
-            <h1 class="mx-auto text-white font-semibold text-xl">
+            <h4 class="mx-auto text-white font-semibold text-xl">
               {work.title}
-            </h1>
-            <h3 class="mb-3 font-bold text-white text-sm inline">
+            </h4>
+            <h5 class="mb-3 font-bold text-white text-sm inline">
               {work.subtitle}
-            </h3>
+            </h5>
             <span class="mx-2">|</span>
             <span class="mx-auto font-semibold text-xs text-white">
               {work.date}
