@@ -20,16 +20,13 @@ const { title, description } = Astro.props
     <SEO title={title} description={description} />
     <ClientRouter />
     <!-- <link rel="stylesheet" href="src/components/StylesOnCss/globals.css" /> -->
-    <script defer>
-      document.fonts.ready.then(() => {
-        document.body.classList.add('font-loaded')
-      })
-    </script>
   </head>
 
-  <body class="dark:bg-white" id="inicio">
+  <body id="inicio">
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
     <a
       id="top"
@@ -140,13 +137,6 @@ const { title, description } = Astro.props
       .dark .nav-links a {
         color: #fff;
       }
-      body:not(.font-loaded) {
-        visibility: hidden;
-      }
-      /* body.font-loaded {
-        visibility: visible; /* Asegúrate de que sea visible */
-      /* transition: opacity 0.3s ease-in-out; Si tienes animación 
-      } */
     </style>
   </body>
 </html>
