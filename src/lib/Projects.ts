@@ -74,6 +74,20 @@ export const PROJECTS = [
     page: 'https://view-projects-api.vercel.app/',
     badge: 'In Progress'
   },
+
+  {
+    url: '/img/chat.avif',
+    title: 'Chat GPT - Local',
+    technologies: [
+      TECHNOLOGIES.ASTRO,
+      TECHNOLOGIES.TAILWIND,
+      TECHNOLOGIES.JAVASCRIPT
+    ],
+    text: 'El objetivo es tener un chat local que permita interactuar como ChatGPT, donde se pueda enviar y recibir mensajes en tiempo real.',
+    gh: 'https://github.com/NesniDev/CHATGPT-LOCAL',
+    page: 'https://chatgpt-local.netlify.app/',
+    badge: 'Completed'
+  },
   {
     url: '/img/bar.avif',
     title: 'Página de Bar',
