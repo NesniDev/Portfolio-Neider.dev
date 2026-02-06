@@ -70,6 +70,11 @@ export const TOOLS = [
     name: 'WordPress',
     category: 'Frontend'
   },
+  {
+    logo: '/Technologies/Frontend/Shadcn.svg',
+    name: 'Shadcn',
+    category: 'Frontend'
+  },
 
   // Backend
   {
