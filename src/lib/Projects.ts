@@ -22,7 +22,9 @@ export const PROJECTS = [
       TECHNOLOGIES.HTML,
       TECHNOLOGIES.CSS,
       TECHNOLOGIES.REACT,
-      TECHNOLOGIES.TAILWIND
+      TECHNOLOGIES.TAILWIND,
+      TECHNOLOGIES.NODEJS,
+      TECHNOLOGIES.EXPRESS
     ],
     text: 'El objetivo principal es desarrollar una plataforma donde los usuarios de Chiquinquirá podrán ver las canchas disponibles, hacer su reserva y pagar por la misma de manera sencilla y rápida. ',
     gh: 'https://github.com/NesniDev/Field-Football',
@@ -74,6 +76,18 @@ export const PROJECTS = [
     page: 'https://view-projects-api.vercel.app/',
     badge: 'In Progress'
   },
+  {
+    url: '/img/chatbot.avif',
+    title: 'Chatbot',
+    technologies: [
+      TECHNOLOGIES.JAVASCRIPT,
+      TECHNOLOGIES.NODEJS,
+      TECHNOLOGIES.EXPRESS
+    ],
+    text: 'El objetivo es tener un chatbot que permita interactuar con los usuarios, donde se pueda enviar y recibir mensajes en tiempo real.',
+    gh: 'https://github.com/NesniDev/BOT-IFE',
+    badge: 'In Progress'
+  },
 
   {
     url: '/img/chat.avif',
@@ -85,7 +99,7 @@ export const PROJECTS = [
     ],
     text: 'El objetivo es tener un chat local que permita interactuar como ChatGPT, donde se pueda enviar y recibir mensajes en tiempo real.',
     gh: 'https://github.com/NesniDev/CHATGPT-LOCAL',
-    page: 'https://chatgpt-local.netlify.app/',
+    page: 'https://ch4t-l0c41.netlify.app/',
     badge: 'Completed'
   },
   {

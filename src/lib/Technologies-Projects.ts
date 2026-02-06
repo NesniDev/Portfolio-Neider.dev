@@ -4,6 +4,8 @@ import Astro1 from '@/icons/Technologies/Astro1.astro'
 import Css from '@/icons/Technologies/Css.astro'
 import React from '@/icons/Technologies/React.astro'
 import JavaScript from '@/icons/Technologies/Javascript.astro'
+import Express from '@/icons/Technologies/Express.astro'
+import NodeJS from '@/icons/Technologies/NodeJS.astro'
 
 export const TECHNOLOGIES = {
   HTML: {
@@ -35,5 +37,16 @@ export const TECHNOLOGIES = {
     name: 'REACT',
     class: 'text-[#00D8FF]',
     icon: React
+  },
+
+  EXPRESS: {
+    name: 'EXPRESS',
+    class: 'text-[#000]',
+    icon: Express
+  },
+  NODEJS: {
+    name: 'NODEJS',
+    class: 'text-[#339933]',
+    icon: NodeJS
   }
 }
