@@ -109,11 +109,7 @@ export const TOOLS = [
   },
 
   // Otros
-  {
-    logo: '/Technologies/Otros/Bun.svg',
-    name: 'Bun',
-    category: 'Otros'
-  },
+
   {
     logo: '/Technologies/Otros/Git.svg',
     name: 'Git',
@@ -125,6 +121,16 @@ export const TOOLS = [
     category: 'Otros'
   },
   {
+    logo: '/Technologies/Otros/Docker.svg',
+    name: 'Docker',
+    category: 'Otros'
+  },
+  {
+    logo: '/Technologies/Otros/Excel.svg',
+    name: 'Excel',
+    category: 'Otros'
+  },
+  {
     logo: '/Technologies/Otros/Linux.svg',
     name: 'Linux',
     category: 'Otros'
@@ -133,6 +139,11 @@ export const TOOLS = [
   {
     logo: '/Technologies/Otros/Notion.svg',
     name: 'Notion',
+    category: 'Otros'
+  },
+  {
+    logo: '/Technologies/Otros/Bun.svg',
+    name: 'Bun',
     category: 'Otros'
   },
 
