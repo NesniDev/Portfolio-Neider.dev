@@ -71,6 +71,7 @@ const { view } = Astro.props
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
     place-items: center;
+    place-content: center;
     gap: 20px;
   }
   .badge {
@@ -185,5 +186,18 @@ const { view } = Astro.props
   .card:hover img {
     scale: 0;
     transform: rotate(-45deg);
+  }
+
+  @media (width < 768px) {
+    .card {
+      width: 340px;
+      height: 220px;
+    }
+    .card__title {
+      font-size: 20px;
+    }
+    .card__description {
+      font-size: 10px;
+    }
   }
 </style>

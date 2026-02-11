@@ -32,7 +32,7 @@ const { project } = Astro.props
     </div>
     <div>
       <span
-        class={`badge mt-3 ${project.badge === 'Completed' ? 'completed' : 'in-progress'}`}
+        class={`text-xs sm:text-sm badge mt-3 ${project.badge === 'Completed' ? 'completed' : 'in-progress'}`}
       >
         {project.badge}
       </span>
