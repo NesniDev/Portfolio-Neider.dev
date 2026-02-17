@@ -6,6 +6,7 @@ import React from '@/icons/Technologies/React.astro'
 import JavaScript from '@/icons/Technologies/Javascript.astro'
 import Express from '@/icons/Technologies/Express.astro'
 import NodeJS from '@/icons/Technologies/NodeJS.astro'
+import PostgreSQL from '@/icons/Technologies/PostgreSQL.astro'
 
 export const TECHNOLOGIES = {
   HTML: {
@@ -48,5 +49,10 @@ export const TECHNOLOGIES = {
     name: 'NODEJS',
     class: 'text-[#339933]',
     icon: NodeJS
-  }
+  },
+  POSTGRESQL: {
+    name: 'POSTGRESQL',
+    class: 'text-[#326691]',
+    icon: PostgreSQL
+  },
 }

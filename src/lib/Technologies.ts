@@ -112,6 +112,11 @@ export const TOOLS = [
     name: 'Express',
     category: 'Backend'
   },
+  {
+    logo: '/Technologies/Backend/Postgresql.svg',
+    name: 'PostgreSQL',
+    category: 'Backend'
+  },
 
   // Otros
 

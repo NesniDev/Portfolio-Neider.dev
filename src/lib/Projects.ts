@@ -32,18 +32,19 @@ export const PROJECTS = [
     badge: 'In Progress'
   },
   {
-    url: '/img/Lawyer.webp',
-    title: 'Página de Abogada',
+    url:'/img/inventario.avif',
+    title: 'Inventario',
     technologies: [
       TECHNOLOGIES.HTML,
       TECHNOLOGIES.CSS,
       TECHNOLOGIES.TAILWIND,
-      TECHNOLOGIES.ASTRO,
-      TECHNOLOGIES.JAVASCRIPT
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.NODEJS,
+      TECHNOLOGIES.POSTGRESQL
     ],
-    text: 'El objetivo principal era proporcionar una plataforma digital que reflejara la profesionalidad y experiencia del bufete, para desarrollar su presencia en línea mediante la creación de una página web moderna y funcional.',
-    gh: 'https://github.com/NesniDev/Page-Lawyer',
-    page: 'https://page-lawyer-nesnidevs-projects.vercel.app',
+    text: 'El objetivo principal es desarrollar una plataforma digital para el inventario de productos de manera local, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
+    gh: 'https://github.com/NesniDev/InventarioVL',
+    page: 'https://inventariovl.netlify.app/',
     badge: 'Completed'
   },
   {
@@ -59,6 +60,21 @@ export const PROJECTS = [
     text: 'El principal objetivo era crear una plataforma digital que reflejara la creatividad y habilidad artesanal del taller, para fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
     gh: 'https://github.com/NesniDev/ArtexAlex',
     page: 'https://artexalex.pages.dev/',
+    badge: 'Completed'
+  },
+  {
+    url: '/img/Lawyer.webp',
+    title: 'Página de Abogada',
+    technologies: [
+      TECHNOLOGIES.HTML,
+      TECHNOLOGIES.CSS,
+      TECHNOLOGIES.TAILWIND,
+      TECHNOLOGIES.ASTRO,
+      TECHNOLOGIES.JAVASCRIPT
+    ],
+    text: 'El objetivo principal era proporcionar una plataforma digital que reflejara la profesionalidad y experiencia del bufete, para desarrollar su presencia en línea mediante la creación de una página web moderna y funcional.',
+    gh: 'https://github.com/NesniDev/Page-Lawyer',
+    page: 'https://page-lawyer-nesnidevs-projects.vercel.app',
     badge: 'Completed'
   },
   {
