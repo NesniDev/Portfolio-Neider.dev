@@ -88,13 +88,8 @@ export const TOOLS = [
     category: 'Backend'
   },
   {
-    logo: '/Technologies/Backend/Java.svg',
-    name: 'Java',
-    category: 'Backend'
-  },
-  {
-    logo: '/Technologies/Backend/Php.svg',
-    name: 'PHP',
+    logo: '/Technologies/Backend/Nestjs.svg',
+    name: 'NestJs',
     category: 'Backend'
   },
   {
@@ -117,6 +112,16 @@ export const TOOLS = [
     name: 'PostgreSQL',
     category: 'Backend'
   },
+  {
+    logo: '/Technologies/Backend/Php.svg',
+    name: 'PHP',
+    category: 'Backend'
+  },
+  {
+    logo: '/Technologies/Backend/Java.svg',
+    name: 'Java',
+    category: 'Backend'
+  },
 
   // Otros
 
@@ -133,6 +138,11 @@ export const TOOLS = [
   {
     logo: '/Technologies/Otros/Docker.svg',
     name: 'Docker',
+    category: 'Otros'
+  },
+  {
+    logo: '/Technologies/Otros/n8n.svg',
+    name: 'n8n',
     category: 'Otros'
   },
   {
