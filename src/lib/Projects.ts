@@ -32,7 +32,7 @@ export const PROJECTS = [
     badge: 'In Progress'
   },
   {
-    url:'/img/inventario.avif',
+    url: '/img/inventario.avif',
     title: 'Inventario',
     technologies: [
       TECHNOLOGIES.HTML,
@@ -45,6 +45,21 @@ export const PROJECTS = [
     text: 'El objetivo principal es desarrollar una plataforma digital para el inventario de productos de manera local, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
     gh: 'https://github.com/NesniDev/InventarioVL',
     page: 'https://inventariovl.netlify.app/',
+    badge: 'Completed'
+  },
+  {
+    url: '/img/quiz.avif',
+    title: 'Quiz',
+    technologies: [
+      TECHNOLOGIES.HTML,
+      TECHNOLOGIES.CSS,
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.NODEJS,
+      TECHNOLOGIES.POSTGRESQL
+    ],
+    text: 'El objetivo principal es desarrollar una plataforma digital para realizar quizzes interactivos, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
+    gh: 'https://github.com/NesniDev/pagequiz',
+    page: 'https://pagequiz.netlify.app/',
     badge: 'Completed'
   },
   {
