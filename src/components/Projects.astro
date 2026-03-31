@@ -81,39 +81,38 @@ const paginatedProjects = PROJECTS.slice(
         ))
   }
 </section>
-<nav
-  class="flex justify-center items-center gap-2 p-5 text-center"
-  aria-label="Paginación de galería"
->
-  {
-    currentPage > 1 ? (
-      <a class="btn" href={`?page=${currentPage - 1}`}>
-        Anterior
-      </a>
-    ) : (
-      <span style="visibility: hidden;" class="btn">
-        Anterior
-      </span>
-    )
-  }
+{
+  view !== 'home' && (
+    <nav
+      class="flex justify-center items-center gap-2 p-5 text-center"
+      aria-label="Paginación de galería"
+    >
+      {currentPage > 1 ? (
+        <a class="btn" href={`?page=${currentPage - 1}`}>
+          Anterior
+        </a>
+      ) : (
+        <span style="visibility: hidden;" class="btn">
+          Anterior
+        </span>
+      )}
 
-  <span class="text-white dark:text-black"
-    >Página <strong>{currentPage}</strong> de <strong>{totalPages}</strong
-    ></span
-  >
-
-  {
-    currentPage < totalPages ? (
-      <a class="btn" href={`?page=${currentPage + 1}`}>
-        Siguiente
-      </a>
-    ) : (
-      <span style="visibility: hidden;" class="btn">
-        Siguiente
+      <span class="text-white dark:text-black">
+        Página <strong>{currentPage}</strong> de <strong>{totalPages}</strong>
       </span>
-    )
-  }
-</nav>
+
+      {currentPage < totalPages ? (
+        <a class="btn" href={`?page=${currentPage + 1}`}>
+          Siguiente
+        </a>
+      ) : (
+        <span style="visibility: hidden;" class="btn">
+          Siguiente
+        </span>
+      )}
+    </nav>
+  )
+}
 
 <style is:global>
   .grids {
