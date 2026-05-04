@@ -11,7 +11,7 @@ const { project } = Astro.props
 ---
 
 <article class="card">
-  <img src={project.url} alt={project.title} />
+  <img src={project.url} alt={project.title} loading="lazy" />
   <div class="card__content flex flex-col">
     <div class="flex-1">
       <p class="card__title">{project.title}</p>
