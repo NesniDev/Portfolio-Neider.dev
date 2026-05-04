@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel'
 // https://astro.build/config
 export default defineConfig({
-  // site: "https://neiderdev.netlify.app/",
+  site: 'https://neider.dev/',
   integrations: [
     tailwind(),
     react(),
