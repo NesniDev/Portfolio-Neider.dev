@@ -5,6 +5,7 @@ import Header from '../components/Header.astro'
 import SEO from '@/components/SEO.astro'
 import Arrow from '@/icons/variable/Arrow.astro'
 import DarkMode from '@/components/DarkMode.astro'
+import '../styles/global.css'
 
 interface Props {
   title: string
@@ -37,7 +38,7 @@ const { title, description } = Astro.props
       <Arrow class="size-7 hover:animate-pulse animate-duration-slow" />
     </a>
     <style is:global>
-      @font-face {
+      /* @font-face {
         font-family: 'Caviar Dreams';
         src:
           url('/fonts/CaviarDreams.ttf') format('truetype'),
@@ -48,7 +49,7 @@ const { title, description } = Astro.props
         font-weight: 400;
         font-style: normal;
         font-display: swap;
-      }
+      } */
       :root {
         --btnDownloadHover: 5px 10px 15px rgba(238, 241, 34, 0.9);
         --boxShadowImg: 5px 10px 15px rgba(40, 53, 43, 0.9);
@@ -73,7 +74,6 @@ const { title, description } = Astro.props
         color-scheme: light dark;
       }
       html {
-        font-family: 'Caviar Dreams', Arial, sans-serif;
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;
@@ -82,9 +82,8 @@ const { title, description } = Astro.props
       }
 
       body {
-        font-family: 'Caviar Dreams', Arial, sans-serif;
+        font-family: 'Comic Neue', sans-serif;
         background-color: #012029;
-
         display: flex;
         flex-direction: column;
         min-height: 100vh;
