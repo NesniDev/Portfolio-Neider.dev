@@ -1,12 +1,17 @@
 ---
 interface Props {
-title: string
-description: string
-image?: string
-canonicalURL?: string
+  title: string
+  description: string
+  image?: string
+  canonicalURL?: string
 }
 
-const { title, description, image = '/img/LogoNeider.avif', canonicalURL: propCanonicalURL } = Astro.props
+const {
+  title,
+  description,
+  image = '/img/LogoNeider.avif',
+  canonicalURL: propCanonicalURL
+} = Astro.props
 
 const pathname = Astro.url.pathname || '/'
 const site = Astro.site || 'https://neider.dev'
@@ -22,7 +27,7 @@ const currentYear = new Date().getFullYear()
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 <meta name="theme-color" content="#012029" />
-<meta 
+<meta
   name="keywords"
   content="ingeniero de software, desarrollador web, portfolio, Neider, frontend, backend, React, Astro, JavaScript, TypeScript, diseño web, aplicaciones web"
 />
@@ -72,41 +77,41 @@ const currentYear = new Date().getFullYear()
 
 <!-- Structured Data - Person -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Neider",
-  "url": "https://neider.dev",
-  "image": "https://neider.dev/img/LogoNeider.avif",
-  "sameAs": [
-    "https://twitter.com/NeiderNieto10",
-    "https://github.com/Neider"
-  ],
-  "jobTitle": "Desarrollador Web",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance"
-  },
-  "description": "{description}"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Neider",
+    "url": "https://neider.dev",
+    "image": "https://neider.dev/img/LogoNeider.avif",
+    "sameAs": [
+      "https://twitter.com/NeiderNieto10",
+      "https://github.com/Neider"
+    ],
+    "jobTitle": "Desarrollador Web",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "description": "{description}"
+  }
 </script>
 
 <!-- Structured Data - WebSite -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Neider Portfolio",
-  "url": "https://neider.dev",
-  "description": "{description}",
-  "author": {
-    "@type": "Person",
-    "name": "Neider"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://neider.dev/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Neider Portfolio",
+    "url": "https://neider.dev",
+    "description": "{description}",
+    "author": {
+      "@type": "Person",
+      "name": "Neider"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://neider.dev/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
-}
 </script>
