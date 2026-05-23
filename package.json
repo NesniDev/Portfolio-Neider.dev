@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/react": "^5.0.5",
+    "@astrojs/sitemap": "3.7.2",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^9.0.4",
+    "@astrojs/vercel": "^10.0.7",
     "@fontsource-variable/josefin-sans": "^5.2.8",
     "@fontsource/comic-neue": "^5.2.7",
     "@fontsource/titillium-web": "^5.2.8",
@@ -22,7 +22,7 @@
     "@supabase/supabase-js": "^2.79.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "astro": "^5.16.11",
+    "astro": "^6.3.7",
     "atropos": "^2.0.2",
     "axios": "^1.7.2",
     "eslint-plugin-import": "^2.29.1",
@@ -48,8 +48,5 @@
   "peerDependencies": {
     "@types/node": "^18.0.0",
     "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
