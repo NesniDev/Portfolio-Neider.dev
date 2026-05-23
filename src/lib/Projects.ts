@@ -1,6 +1,24 @@
 import { TECHNOLOGIES } from './Technologies-Projects'
 export const PROJECTS = [
   {
+    url: '/img/solvepc.webp',
+    title: 'SolvePc',
+    technologies: [
+      TECHNOLOGIES.HTML,
+      TECHNOLOGIES.CSS,
+      TECHNOLOGIES.JAVASCRIPT,
+      TECHNOLOGIES.ASTRO,
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.DOCKER,
+      TECHNOLOGIES.POSTGRESQL,
+      TECHNOLOGIES.EXPRESS
+    ],
+    text: 'SolvePc es una plataforma web que ofrece servicios de resolución de problemas de computadoras online.',
+    gh: 'https://github.com/NesniDev/SolvePc',
+    page: 'https://solve-pc.vercel.app/',
+    badge: 'Completed'
+  },
+  {
     url: '/img/infoByte.webp',
     title: 'InfoByte',
     technologies: [
@@ -40,7 +58,8 @@ export const PROJECTS = [
       TECHNOLOGIES.TAILWIND,
       TECHNOLOGIES.REACT,
       TECHNOLOGIES.NODEJS,
-      TECHNOLOGIES.POSTGRESQL
+      TECHNOLOGIES.POSTGRESQL,
+      TECHNOLOGIES.DOCKER
     ],
     text: 'El objetivo principal es desarrollar una plataforma digital para el inventario de productos de manera local, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
     gh: 'https://github.com/NesniDev/InventarioVL',
