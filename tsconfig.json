@@ -16,6 +16,12 @@
       ],
       "@/layots": [
         "@/layouts/*"
+      ],
+      "@/pages": [
+        "src/pages/*"
+      ],
+      "@/components-landing": [
+        "src/components-landing/*"
       ]
     }
 

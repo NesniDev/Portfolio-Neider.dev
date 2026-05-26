@@ -1,0 +1,100 @@
+---
+import SEO from '@/components/SEO.astro'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+
+import '../styles/global.css'
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <SEO title={title} description={description} />
+  </head>
+
+  <body>
+    <section class="layout-editor">
+      <header id="header">
+        <slot name="header" />
+      </header>
+
+      <aside id="bar-left">
+        <slot name="bar-left" />
+      </aside>
+
+      <section id="explorer">
+        <slot name="explorer" />
+      </section>
+
+      <main id="content">
+        <slot name="content" />
+      </main>
+
+      <aside id="bar-right">
+        <slot name="bar-right" />
+      </aside>
+
+      <div id="terminal">
+        <slot name="terminal" />
+      </div>
+
+      <footer id="footer">
+        <slot name="footer" />
+      </footer>
+    </section>
+  </body>
+</html>
+
+<style is:global>
+  .layout-editor {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+
+    grid-template-areas:
+      'header header header header header'
+      'bar-left explorer content content bar-right'
+      'bar-left explorer terminal terminal bar-right'
+      'footer footer footer footer footer';
+
+    grid-template-columns: auto 5fr 8fr 8fr auto;
+    grid-template-rows: auto 1fr 7fr auto;
+
+    gap: 2px;
+  }
+
+  /* --- Áreas de la interfaz --- */
+  #header {
+    grid-area: header;
+    background: #012129;
+  }
+  #bar-left {
+    grid-area: bar-left;
+    background: blue;
+  }
+  #explorer {
+    grid-area: explorer;
+    background: green;
+  }
+  #content {
+    grid-area: content;
+    background: #0b2a33;
+  }
+  #bar-right {
+    grid-area: bar-right;
+    background: yellow;
+  }
+  #terminal {
+    grid-area: terminal;
+    background: #333;
+  }
+  #footer {
+    grid-area: footer;
+    background: #012129;
+  }
+</style>
