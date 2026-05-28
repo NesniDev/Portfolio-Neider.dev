@@ -2,32 +2,40 @@
 import Header from '@/components-landing/header/Header.astro'
 import LayoutLanding from '../layouts/LayoutLanding.astro'
 import Layout from '../layouts/LayoutLanding.astro'
+import BarLeft from '../components-landing/aside-left/BarLeft.astro'
+import Explorer from '../components-landing/explorer/Explorer.astro'
+import { ViewContent } from '../components-landing/react/viewContent'
+import Terminal from '../components-landing/terminal/Terminal.astro'
+import Footer from '../components-landing/footer/Footer.astro'
 ---
 
 <LayoutLanding title="Portfolio Neider" description="Portfolio de Neider">
   <Header slot="header" />
 
-  <div slot="bar-left">
-    <h1 class="text-white">Bar-left</h1>
-  </div>
+  <BarLeft slot="bar-left" />
 
-  <div slot="explorer">
-    <h1 class="text-white">Explorer</h1>
-  </div>
-
+  <Explorer slot="explorer" />
   <div slot="content">
-    <h1 class="text-white">Content</h1>
+    <ViewContent client:load />
   </div>
 
-  <div slot="bar-right">
+  <div id="bar-right" slot="bar-right">
     <h1 class="text-white">Bar-right</h1>
   </div>
 
-  <div slot="terminal">
-    <h1 class="text-white">Terminal</h1>
-  </div>
+  <Terminal slot="terminal" />
 
-  <div slot="footer">
-    <h1 class="text-white">Footer</h1>
-  </div>
+  <Footer slot="footer" />
 </LayoutLanding>
+
+<script>
+  const barRight = document.getElementById('bar-right') as HTMLElement
+
+  barRight.classList.add('hidden')
+
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'b') {
+      barRight.classList.toggle('hidden')
+    }
+  })
+</script>

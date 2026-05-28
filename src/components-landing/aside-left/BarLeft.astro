@@ -1,0 +1,68 @@
+---
+import Config from '../icons/SideBar/Config.astro'
+import Debug from '../icons/SideBar/Debug.astro'
+import Extension from '../icons/SideBar/Extension.astro'
+import Files from '../icons/SideBar/Files.astro'
+import Search from '../icons/SideBar/Search.astro'
+import SourceControl from '../icons/SideBar/SourceControl.astro'
+import User from '../icons/SideBar/User.astro'
+---
+
+<div class="flex h-full flex-col items-center justify-between p-2">
+  <div class="flex flex-col items-center justify-center gap-3 icons">
+    <Files
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Files"
+    />
+    <Search
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Search"
+    />
+    <SourceControl
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Source Control"
+    />
+    <Debug
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Debug"
+    />
+    <Extension
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Extensions"
+    />
+  </div>
+  <div class="flex flex-col gap-3">
+    <User
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="User"
+    />
+    <Config
+      class="size-11 text-gray-500 transition hover:text-[#4ADE80] px-1.5"
+      title="Config"
+    />
+  </div>
+</div>
+
+<script is:inline>
+  const icons = document.querySelectorAll('.icons svg')
+  icons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      icons.forEach((i) =>
+        i.classList.remove(
+          'text-green-500',
+          'bg-green-500/10',
+          'rounded-md',
+          'transition-all',
+          'duration-200'
+        )
+      )
+      icon.classList.add(
+        'text-green-500',
+        'bg-green-500/10',
+        'rounded-md',
+        'transition-all',
+        'duration-200'
+      )
+    })
+  })
+</script>

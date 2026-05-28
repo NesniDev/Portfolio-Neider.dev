@@ -51,6 +51,10 @@ import '../styles/global.css'
 </html>
 
 <style is:global>
+  body {
+    scroll-behavior: smooth;
+  }
+
   .layout-editor {
     display: grid;
     width: 100%;
@@ -62,39 +66,46 @@ import '../styles/global.css'
       'bar-left explorer terminal terminal bar-right'
       'footer footer footer footer footer';
 
-    grid-template-columns: auto 5fr 8fr 8fr auto;
-    grid-template-rows: auto 1fr 7fr auto;
+    grid-template-columns: auto 3fr 8fr 8fr auto;
+    grid-template-rows: auto 1fr auto auto;
 
-    gap: 2px;
+    overflow: hidden;
   }
 
   /* --- Áreas de la interfaz --- */
   #header {
     grid-area: header;
-    background: #012129;
+    background: #000f13;
+    border-bottom: 1px solid #2a2a2a;
   }
   #bar-left {
     grid-area: bar-left;
-    background: blue;
+    background: #000f13;
+    border-right: 1px solid #2a2a2a;
   }
   #explorer {
     grid-area: explorer;
-    background: green;
+    background: #01191f;
+    border-right: 1px solid #2a2a2a;
   }
   #content {
     grid-area: content;
-    background: #0b2a33;
+    background: #01191f;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-color: #4ade80 #01191f;
+    scrollbar-width: thin;
   }
   #bar-right {
     grid-area: bar-right;
-    background: yellow;
+    background: #e9b116;
   }
   #terminal {
     grid-area: terminal;
-    background: #333;
+    background: #000000;
   }
   #footer {
     grid-area: footer;
-    background: #012129;
+    background: #4ade80;
   }
 </style>

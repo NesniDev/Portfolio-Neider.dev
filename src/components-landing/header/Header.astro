@@ -1,7 +1,25 @@
 ---
 import LayoutLanding from '@/layouts/LayoutLanding.astro'
+import Close from '../icons/Close.astro'
 ---
 
-<div>
-  <h1 class="text-white">Portfolio Neider</h1>
-</div>
+<nav
+  class="flex items-center justify-between p-2 text-gray-400 font-code text-xs"
+>
+  <ul class="flex justify-between gap-3">
+    <li>File</li>
+    <li>Edit</li>
+    <li>Selection</li>
+    <li>View</li>
+    <li>Go</li>
+    <li>Run</li>
+    <li>Terminal</li>
+    <li>Help</li>
+  </ul>
+
+  <span>{} - Portfolio - Visual Studio Code </span>
+
+  <div>
+    <button><Close /></button>
+  </div>
+</nav>

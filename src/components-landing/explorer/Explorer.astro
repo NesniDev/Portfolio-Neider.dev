@@ -1,0 +1,196 @@
+---
+import IconFile from '../icons/SideBar/IconFile.astro'
+import IconNodeJS from '../icons/SideBar/IconNodeJS.astro'
+import IconTerminal from '../icons/SideBar/IconTerminal.astro'
+import Markdown from '../icons/SideBar/Markdown.astro'
+
+import { ViewContent } from '../react/ViewContent.tsx'
+
+const archivos = {
+  proyectos: 'Proyectos',
+  habilidades: 'Habilidades',
+  experiencia: 'Experiencia',
+  contacto: 'Contacto'
+}
+---
+
+<div class="text-gray-300 h-full font-jetbrains">
+  <h2 class="text-sm font-semibold uppercase px-4 py-2 text-gray-400">
+    Explorer
+  </h2>
+
+  <div class="folder text-sm" data-open="false">
+    <button
+      class="folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+    >
+      <span class="arrow transition-transform duration-300 ease-in-out">
+        <img src="/icons/arrow-right.svg" alt="Arrow Right" class="w-4 h-4" />
+      </span>
+      <img
+        src="/icons/folder-close.svg"
+        alt="Folder Closed"
+        class="w-4 h-4 folder-close"
+      />
+      <img
+        src="/icons/folder-open.svg"
+        alt="Folder Open"
+        class="w-5 h-5 hidden folder-open"
+      />
+      <span>Portfolio</span>
+    </button>
+
+    <div
+      class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+    >
+      <div class="overflow-hidden">
+        <div class="folder" data-open="false">
+          <button
+            class="folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1 pl-3"
+          >
+            <span class="arrow transition-transform duration-300 ease-in-out">
+              <img
+                src="/icons/arrow-right.svg"
+                alt="Arrow Right"
+                class="w-4 h-4"
+              />
+            </span>
+            <img
+              src="/icons/folder-close.svg"
+              alt="Folder Closed"
+              class="w-4 h-4 folder-close"
+            />
+            <img
+              src="/icons/folder-open.svg"
+              alt="Folder Open"
+              class="w-5 h-5 hidden folder-open"
+            />
+            <span>src</span>
+          </button>
+
+          <div
+            class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden">
+              <ul class="flex flex-col gap-1">
+                <li
+                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
+                >
+                  <IconFile class="w-6 h-6 text-yellow-400" />
+                  <button
+                    class="cursor-pointer py-1 w-full text-left btn-tab"
+                    data-tab="profile">perfil.json</button
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
+                >
+                  <IconFile class="w-6 h-6 text-blue-600" />
+                  <button
+                    class="cursor-pointer py-1 w-full text-left btn-tab"
+                    data-tab="skills">habilidades.ts</button
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
+                >
+                  <IconFile class="w-6 h-6 text-blue-400" />
+                  <button
+                    class="cursor-pointer py-1 w-full text-left btn-tab"
+                    data-tab="projects">proyectos.jsx</button
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
+                >
+                  <IconFile class="w-6 h-6 text-gray-400" />
+                  <button
+                    class="cursor-pointer py-1 w-full text-left btn-tab"
+                    data-tab="experience">experiencia.log</button
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
+                >
+                  <IconTerminal class="w-6 h-6 text-green-600" />
+                  <button
+                    class="cursor-pointer py-1 w-full text-left btn-tab"
+                    data-tab="contact">contacto.sh</button
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+        >
+          <IconNodeJS class="w-4 h-4" />
+          <span>package.json</span>
+        </div>
+        <div
+          class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+        >
+          <Markdown class="w-4 h-4" />
+          <span>README.md</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  // Se obtiene cada contenedor de carpeta independiente
+  const folders = document.querySelectorAll('.folder')
+  const tabs = document.querySelectorAll('.btn-tab')
+
+  folders.forEach((folder) => {
+    // Uso de :scope > para seleccionar únicamente los elementos directos y evitar afectar carpetas anidadas
+    const toggleBtn = folder.querySelector(':scope > .folder-toggle')
+    const content = folder.querySelector(':scope > .folder-content')
+    const arrow = toggleBtn?.querySelector('.arrow')
+    const closeIcon = toggleBtn?.querySelector('.folder-close')
+    const openIcon = toggleBtn?.querySelector('.folder-open')
+
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = folder.getAttribute('data-open') === 'true'
+
+      if (isOpen) {
+        // Colapsar
+        folder.setAttribute('data-open', 'false')
+        content?.classList.remove('grid-rows-[1fr]')
+        content?.classList.add('grid-rows-[0fr]')
+
+        arrow?.classList.remove('rotate-90')
+        closeIcon?.classList.remove('hidden')
+        openIcon?.classList.add('hidden')
+      } else {
+        // Expandir
+        folder.setAttribute('data-open', 'true')
+        content?.classList.remove('grid-rows-[0fr]')
+        content?.classList.add('grid-rows-[1fr]')
+
+        arrow?.classList.add('rotate-90')
+        closeIcon?.classList.add('hidden')
+        openIcon?.classList.remove('hidden')
+      }
+    })
+  })
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab')
+      // Llamamos a la función que dispara el evento
+      window.showContent(target)
+    })
+  })
+
+  // Tu función para disparar el evento
+  window.showContent = (text) => {
+    window.dispatchEvent(
+      new CustomEvent('change-content', {
+        detail: text
+      })
+    )
+  }
+</script>
