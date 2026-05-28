@@ -1,3 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '@fontsource-variable/fira-code/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
 
 @import '@fontsource/comic-neue';
+
+@theme {
+  --font-code: 'Fira Code Variable', monospace;
+  --font-jetbrains: 'JetBrains Mono Variable', monospace;
+}
