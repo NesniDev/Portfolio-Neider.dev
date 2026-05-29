@@ -1,3 +1,8 @@
+import { supabase } from "../../lib/supabaseClient.js";
+import { useState } from "react";
+import confetti from "canvas-confetti"
+
+
 const links = [
   {
     name: 'Github',
@@ -32,6 +37,62 @@ const links = [
 ];
 
 export const TerminalContactForm = () => {
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState(null)
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setStatus(null)
+
+    const { error } = await supabase
+      .from("user") // 👈 reemplaza por el nombre real
+      .insert([
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message
+          // created_at no es necesario si Supabase lo maneja por default
+        }
+      ])
+
+    setLoading(false)
+
+    if (error) {
+      setStatus("Error al enviar el mensaje")
+      console.error(error.message)
+      return
+    }
+
+    setStatus("Mensaje enviado correctamente")
+
+    confetti({
+      particleCount: 120,
+      spread: 80,
+      origin: { y: 0.6 }
+    })
+    setForm({
+      name: "",
+      email: "",
+      message: ""
+    })
+  }
+
+  console.log(form)
   return (
     <div className=" bg-[#01191f] text-gray-300 font-code flex items-center justify-center gap-10 relative overflow-hidden">
 
@@ -83,7 +144,7 @@ export const TerminalContactForm = () => {
         </div>
 
         {/* Cuerpo del Formulario */}
-        <form className="px-3 py-1 md:p-6 flex flex-col space-y-5">
+        <form onSubmit={handleSubmit} className="px-3 py-1 md:p-6 flex flex-col space-y-5">
 
           {/* Campo: Identificar Usuario */}
           <div className="flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 font-code">
@@ -92,6 +153,9 @@ export const TerminalContactForm = () => {
             </label>
             <input
               type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               placeholder="[Enter Name]"
               className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
             />
@@ -104,6 +168,9 @@ export const TerminalContactForm = () => {
             </label>
             <input
               type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               placeholder="[Enter Email]"
               className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
             />
@@ -115,7 +182,10 @@ export const TerminalContactForm = () => {
               <span className="mr-3 text-gray-600">&gt;</span> input_payload
             </label>
             <textarea
+              value={form.message}
+              onChange={handleChange}
               rows=""
+              name="message"
               placeholder="[Enter Message ...]"
               className="w-full bg-transparent border border-[#1f2937] rounded-sm p-4 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors resize-none"
             ></textarea>
@@ -125,12 +195,13 @@ export const TerminalContactForm = () => {
           <div className="flex items-center">
             <span className="text-gray-600 mr-4 md:mr-6">-</span>
             <button
-              type="button"
+              disabled={loading}
               className="uppercase rounded-sm border border-[#fca985] hover:-translate-y-1 text-[#fca985] px-3 py-2 cursor-pointer text-sm tracking-[0.15em] hover:bg-[#fca985] hover:text-[#01191f] transition-all duration-300 font-semibold"
             >
-              Enviar
+              {loading ? "Enviando..." : "Enviar"}
             </button>
           </div>
+          {status && <p>{status}</p>}
 
         </form>
       </div>
