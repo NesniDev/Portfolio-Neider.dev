@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { TABS } from '../../lib/infoLanding'
-
-// 1. Importamos Highlight y el objeto de temas (themes) nativos
 import { Profile } from './tabs/Profile'
 import { Skills } from './tabs/Skills'
-import { Projects } from './tabs/Projects'
+import { ProjectsGrid } from './tabs/Projects'
+import { Experience } from './tabs/Experience'
+import { TerminalContactForm } from './tabs/Contact'
 
 export const ViewContent = () => {
   const [tabActiva, setTabActiva] = useState('profile')
@@ -26,20 +26,25 @@ export const ViewContent = () => {
   return (
     <div
       key={tabActiva}
-      className="p-10 animate-fade-in transition-opacity duration-300"
+      className="w-full py-4 px-2 animate-fade-in transition-opacity duration-300"
     >
+
       {tabActiva === 'projects' ? (
-        <Projects />
+        <ProjectsGrid />
       ) : tabActiva === 'profile' && data.isCode ? (
         // 2. Usamos directamente themes.vsDark (o puede probar themes.nightOwl)
         <Profile codigoString={codigoString} info={data} />
       ) : tabActiva === 'skills' ? (
         <Skills />
       ) : tabActiva === 'contact' ? (
-        <Contact />
-      ) : (
-        <div className="text-gray-400 text-lg">{data.content}</div>
-      )}
+        <TerminalContactForm />
+      ) : tabActiva === 'experience' ? (
+        <Experience info={data} />) :
+
+        (
+          <div className="text-gray-400 text-lg">{data.content}</div>
+        )}
     </div>
+
   )
 }
