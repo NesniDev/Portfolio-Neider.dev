@@ -1,0 +1,17 @@
+---
+import Close from '../icons/Close.astro'
+import IconFile from '../icons/SideBar/IconFile.astro'
+import { BreadCrumbs } from '../react/BreadCrumbs'
+---
+
+<div class="w-full flex">
+  <div
+    class="flex items-center p-3 gap-2 text-white text-sm font-jetbrains border-r border-[#2a2a2a]"
+  >
+    <IconFile class="text-amber-300 size-5" />
+    <h1>Perfil.json</h1>
+    <Close class="size-3" />
+  </div>
+</div>
+
+<BreadCrumbs />
