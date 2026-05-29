@@ -1,16 +1,55 @@
-<div class="flex items-center justify-between text-[#012129] font-code text-sm">
+---
+import SourceControl from '../icons/SideBar/SourceControl.astro'
+---
+
+<div class="flex items-center justify-between text-[#012129] font-code text-xs">
   <div class="flex items-center gap-4">
     <span class="font-bold bg-blue-400 py-1 px-2">WSL: Ubuntu</span>
-    <span>main</span>
+    <span class="flex gap-2 items-center">
+      <SourceControl class="size-3" /> main</span
+    >
     <span>0 problems</span>
-    <span>Live Share</span>
+    <span class="flex gap-2 items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-share-3"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7"
+        ></path></svg
+      > Live Share</span
+    >
   </div>
   <div class="flex items-center gap-4 pr-2">
-    <div>
+    <div class="flex items-center gap-5">
       <span>Ln 7, Col 23 </span>
       <span>Spaces: 2</span>
       <span>JSON</span>
       <span>UTF-8</span>
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+          ></path><path d="M9 17v1a3 3 0 0 0 6 0v-1"></path></svg
+        >
+      </span>
     </div>
   </div>
 </div>
