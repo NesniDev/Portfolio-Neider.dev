@@ -20,7 +20,7 @@ export const WelcomeScreen = () => {
       {/* Título Principal */}
       <div className="mb-12">
         <h1 className="text-7xl font-code font-semibold text-white tracking-wide">
-          Windsurf
+          Neider Nieto
         </h1>
       </div>
 

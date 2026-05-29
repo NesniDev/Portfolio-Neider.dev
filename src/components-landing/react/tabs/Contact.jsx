@@ -201,7 +201,6 @@ export const TerminalContactForm = () => {
               {loading ? "Enviando..." : "Enviar"}
             </button>
           </div>
-          {status && <p>{status}</p>}
 
         </form>
       </div>
