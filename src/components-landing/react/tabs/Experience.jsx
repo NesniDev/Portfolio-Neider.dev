@@ -20,7 +20,8 @@ import { EXPERIENCE } from '../../../lib/Experience'
 //     tagText: 'text-sky-400',
 //   },
 // };
-export const Experience = () => {
+export const Experience = ({ info }) => {
+  const data = info.content
   return (
     <div className=" bg-[#01191f] px-3 text-sm">
       <div className="flex items-center gap-2 text-white text-sm font-jetbrains border-b border-[#444444] mb-7 pb-3">
@@ -29,14 +30,14 @@ export const Experience = () => {
         <span className="inline-flex items-center text-slate-400 text-xs">
           <img src="/icons/experience/commit.svg" alt="Icon Commit" className='size-4' />
         </span>
-        <span className='text-gray-400'>{EXPERIENCE.length} commits</span>
+        <span className='text-gray-400'>{data.length} commits</span>
       </div>
       <div className="relative">
         {/* Línea vertical continua que conecta los nodos */}
         <div className="absolute left-2.75 top-4 bottom-0 w-px bg-slate-700/60 z-0"></div>
 
         <div className="flex flex-col gap-10">
-          {EXPERIENCE.map((item, index) => {
+          {data.map((item, index) => {
 
             return (
               <div key={index} className="relative pl-10 flex flex-col gap-2 z-10">
