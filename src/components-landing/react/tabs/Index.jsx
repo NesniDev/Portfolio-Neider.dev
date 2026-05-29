@@ -15,7 +15,7 @@ export const WelcomeScreen = () => {
 
 
   return (
-    <div className="w-full h-full flex flex-col p-10 md:p-16 text-gray-300 font-jetbrains animate-fade-in select-none">
+    <div className="w-full h-full flex flex-col items-center justify-center p-10 md:p-16 text-gray-300 font-jetbrains animate-fade-in select-none">
 
       {/* Título Principal */}
       <div className="mb-12">

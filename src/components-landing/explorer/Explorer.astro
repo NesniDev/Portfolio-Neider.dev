@@ -5,137 +5,144 @@ import IconTerminal from '../icons/SideBar/IconTerminal.astro'
 import Markdown from '../icons/SideBar/Markdown.astro'
 ---
 
-<div class="text-gray-300 h-full font-jetbrains">
-  <h2 class="text-sm font-semibold uppercase px-4 py-2 text-gray-400">
-    Explorer
-  </h2>
+<div class="text-gray-300 flex flex-col justify-between h-full font-jetbrains">
+  <div>
+    <h2 class="text-sm font-semibold uppercase px-4 py-2 text-gray-400">
+      Explorer
+    </h2>
 
-  <div class="folder text-sm" data-open="false">
-    <button
-      class="relative folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
-    >
-      <span class="arrow transition-transform duration-300 ease-in-out">
-        <img src="/icons/arrow-right.svg" alt="Arrow Right" class="w-4 h-4" />
-      </span>
-      <img
-        src="/icons/explorer/folder-close.svg"
-        alt="Folder Closed"
-        class="w-4 h-4 folder-close"
-      />
-      <img
-        src="/icons/explorer/folder-open.svg"
-        alt="Folder Open"
-        class="w-5 h-5 hidden folder-open"
-      />
-      <span>Portfolio</span>
-      <span
-        class="absolute size-5 -top-5 right-18 -rotate-90 text-amber-400 flecha opacity-100"
+    <div class="folder text-sm" data-open="false">
+      <button
+        class="relative folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
       >
+        <span class="arrow transition-transform duration-300 ease-in-out">
+          <img src="/icons/arrow-right.svg" alt="Arrow Right" class="w-4 h-4" />
+        </span>
         <img
-          src="/icons/explorer/location.svg"
-          alt="Arrow Right"
-          class="size-10"
+          src="/icons/explorer/folder-close.svg"
+          alt="Folder Closed"
+          class="w-4 h-4 folder-close"
         />
-      </span>
-    </button>
+        <img
+          src="/icons/explorer/folder-open.svg"
+          alt="Folder Open"
+          class="w-5 h-5 hidden folder-open"
+        />
+        <span>Portfolio</span>
+        <span
+          class="absolute size-5 -top-5 right-18 -rotate-90 text-amber-400 flecha opacity-100"
+        >
+          <img
+            src="/icons/explorer/location.svg"
+            alt="Arrow Right"
+            class="size-10"
+          />
+        </span>
+      </button>
 
-    <div
-      class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
-    >
-      <div class="overflow-hidden">
-        <div class="folder" data-open="false">
-          <button
-            class="folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1 pl-3"
-          >
-            <span class="arrow transition-transform duration-300 ease-in-out">
+      <div
+        class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+      >
+        <div class="overflow-hidden">
+          <div class="folder" data-open="false">
+            <button
+              class="folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1 pl-3"
+            >
+              <span class="arrow transition-transform duration-300 ease-in-out">
+                <img
+                  src="/icons/arrow-right.svg"
+                  alt="Arrow Right"
+                  class="w-4 h-4"
+                />
+              </span>
               <img
-                src="/icons/arrow-right.svg"
-                alt="Arrow Right"
-                class="w-4 h-4"
+                src="/icons/explorer/folder-close.svg"
+                alt="Folder Closed"
+                class="w-4 h-4 folder-close"
               />
-            </span>
-            <img
-              src="/icons/explorer/folder-close.svg"
-              alt="Folder Closed"
-              class="w-4 h-4 folder-close"
-            />
-            <img
-              src="/icons/explorer/folder-open.svg"
-              alt="Folder Open"
-              class="w-5 h-5 hidden folder-open"
-            />
-            <span>src</span>
-          </button>
+              <img
+                src="/icons/explorer/folder-open.svg"
+                alt="Folder Open"
+                class="w-5 h-5 hidden folder-open"
+              />
+              <span>src</span>
+            </button>
 
-          <div
-            class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
-          >
-            <div class="overflow-hidden">
-              <ul class="flex flex-col gap-1">
-                <li
-                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
-                >
-                  <IconFile class="w-6 h-6 text-yellow-400" />
-                  <button
-                    class="cursor-pointer py-1 w-full text-left btn-tab"
-                    data-tab="profile">perfil.json</button
+            <div
+              class="folder-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+            >
+              <div class="overflow-hidden">
+                <ul class="flex flex-col gap-1">
+                  <li
+                    class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
                   >
-                </li>
-                <li
-                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
-                >
-                  <IconFile class="w-6 h-6 text-blue-600" />
-                  <button
-                    class="cursor-pointer py-1 w-full text-left btn-tab"
-                    data-tab="skills">habilidades.ts</button
+                    <IconFile class="w-6 h-6 text-yellow-400" />
+                    <button
+                      class="cursor-pointer py-1 w-full text-left btn-tab"
+                      data-tab="profile">perfil.json</button
+                    >
+                  </li>
+                  <li
+                    class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
                   >
-                </li>
-                <li
-                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
-                >
-                  <IconFile class="w-6 h-6 text-blue-400" />
-                  <button
-                    class="cursor-pointer py-1 w-full text-left btn-tab"
-                    data-tab="projects">proyectos.jsx</button
+                    <IconFile class="w-6 h-6 text-blue-600" />
+                    <button
+                      class="cursor-pointer py-1 w-full text-left btn-tab"
+                      data-tab="skills">habilidades.ts</button
+                    >
+                  </li>
+                  <li
+                    class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
                   >
-                </li>
-                <li
-                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
-                >
-                  <IconFile class="w-6 h-6 text-gray-400" />
-                  <button
-                    class="cursor-pointer py-1 w-full text-left btn-tab"
-                    data-tab="experience">experiencia.log</button
+                    <IconFile class="w-6 h-6 text-blue-400" />
+                    <button
+                      class="cursor-pointer py-1 w-full text-left btn-tab"
+                      data-tab="projects">proyectos.jsx</button
+                    >
+                  </li>
+                  <li
+                    class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
                   >
-                </li>
-                <li
-                  class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
-                >
-                  <IconTerminal class="w-6 h-6 text-green-600" />
-                  <button
-                    class="cursor-pointer py-1 w-full text-left btn-tab"
-                    data-tab="contact">contacto.sh</button
+                    <IconFile class="w-6 h-6 text-gray-400" />
+                    <button
+                      class="cursor-pointer py-1 w-full text-left btn-tab"
+                      data-tab="experience">experiencia.log</button
+                    >
+                  </li>
+                  <li
+                    class="flex items-center gap-1 pl-7 transition duration-200 hover:bg-[rgba(74,222,128,0.1)]"
                   >
-                </li>
-              </ul>
+                    <IconTerminal class="w-6 h-6 text-green-600" />
+                    <button
+                      class="cursor-pointer py-1 w-full text-left btn-tab"
+                      data-tab="contact">contacto.sh</button
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
-        >
-          <IconNodeJS class="w-4 h-4" />
-          <span>package.json</span>
-        </div>
-        <div
-          class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
-        >
-          <Markdown class="w-4 h-4" />
-          <span>README.md</span>
+          <div
+            class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+          >
+            <IconNodeJS class="w-4 h-4" />
+            <span>package.json</span>
+          </div>
+          <div
+            class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+          >
+            <Markdown class="w-4 h-4" />
+            <span>README.md</span>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="pb-6 px-2">
+    <h2 class="flex flex-col justify-center text-xs text-center select-none">
+      Para abrir la barra lateral <pre class="font-bold">Ctrl + Alt + B</pre>
+    </h2>
   </div>
 </div>
 
