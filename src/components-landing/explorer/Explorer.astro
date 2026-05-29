@@ -21,22 +21,31 @@ const archivos = {
 
   <div class="folder text-sm" data-open="false">
     <button
-      class="folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
+      class="relative folder-toggle w-full flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
     >
       <span class="arrow transition-transform duration-300 ease-in-out">
         <img src="/icons/arrow-right.svg" alt="Arrow Right" class="w-4 h-4" />
       </span>
       <img
-        src="/icons/folder-close.svg"
+        src="/icons/explorer/folder-close.svg"
         alt="Folder Closed"
         class="w-4 h-4 folder-close"
       />
       <img
-        src="/icons/folder-open.svg"
+        src="/icons/explorer/folder-open.svg"
         alt="Folder Open"
         class="w-5 h-5 hidden folder-open"
       />
       <span>Portfolio</span>
+      <span
+        class="absolute size-5 -top-5 right-25 -rotate-90 text-amber-400 flecha opacity-100"
+      >
+        <img
+          src="/icons/explorer/location.svg"
+          alt="Arrow Right"
+          class="size-10"
+        />
+      </span>
     </button>
 
     <div
@@ -55,12 +64,12 @@ const archivos = {
               />
             </span>
             <img
-              src="/icons/folder-close.svg"
+              src="/icons/explorer/folder-close.svg"
               alt="Folder Closed"
               class="w-4 h-4 folder-close"
             />
             <img
-              src="/icons/folder-open.svg"
+              src="/icons/explorer/folder-open.svg"
               alt="Folder Open"
               class="w-5 h-5 hidden folder-open"
             />
@@ -140,39 +149,44 @@ const archivos = {
 </div>
 
 <script is:inline>
-  // Se obtiene cada contenedor de carpeta independiente
   const folders = document.querySelectorAll('.folder')
   const tabs = document.querySelectorAll('.btn-tab')
 
-  folders.forEach((folder) => {
-    // Uso de :scope > para seleccionar únicamente los elementos directos y evitar afectar carpetas anidadas
+  folders.forEach((folder, index) => {
     const toggleBtn = folder.querySelector(':scope > .folder-toggle')
     const content = folder.querySelector(':scope > .folder-content')
     const arrow = toggleBtn?.querySelector('.arrow')
     const closeIcon = toggleBtn?.querySelector('.folder-close')
     const openIcon = toggleBtn?.querySelector('.folder-open')
+    const flecha = folder.querySelector('.flecha')
 
     toggleBtn?.addEventListener('click', () => {
       const isOpen = folder.getAttribute('data-open') === 'true'
 
       if (isOpen) {
-        // Colapsar
         folder.setAttribute('data-open', 'false')
+
         content?.classList.remove('grid-rows-[1fr]')
         content?.classList.add('grid-rows-[0fr]')
 
         arrow?.classList.remove('rotate-90')
         closeIcon?.classList.remove('hidden')
         openIcon?.classList.add('hidden')
+
+        flecha?.classList.remove('opacity-0')
+        flecha?.classList.add('opacity-100')
       } else {
-        // Expandir
         folder.setAttribute('data-open', 'true')
+
         content?.classList.remove('grid-rows-[0fr]')
         content?.classList.add('grid-rows-[1fr]')
 
         arrow?.classList.add('rotate-90')
         closeIcon?.classList.add('hidden')
         openIcon?.classList.remove('hidden')
+
+        flecha?.classList.add('opacity-0')
+        flecha?.classList.remove('opacity-100')
       }
     })
   })
@@ -194,3 +208,21 @@ const archivos = {
     )
   }
 </script>
+
+<style>
+  .flecha {
+    display: inline-block;
+    animation: flecha 0.6s ease-in-out infinite;
+  }
+
+  @keyframes flecha {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+</style>
