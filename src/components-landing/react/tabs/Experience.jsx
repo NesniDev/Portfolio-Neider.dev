@@ -1,0 +1,82 @@
+
+import { EXPERIENCE } from '../../../lib/Experience'
+
+//   green: {
+//     border: 'border-emerald-500',
+//     dot: 'bg-emerald-500',
+//     tagBg: 'bg-emerald-900/40',
+//     tagText: 'text-emerald-400',
+//   },
+//   yellow: {
+//     border: 'border-amber-500',
+//     dot: 'bg-amber-500',
+//     tagBg: 'bg-amber-900/40',
+//     tagText: 'text-amber-400',
+//   },
+//   blue: {
+//     border: 'border-sky-500',
+//     dot: 'bg-sky-500',
+//     tagBg: 'bg-sky-900/40',
+//     tagText: 'text-sky-400',
+//   },
+// };
+export const Experience = () => {
+  return (
+    <div className=" bg-[#01191f] px-3 text-sm">
+      <div className="flex items-center gap-2 text-white text-sm font-jetbrains border-b border-[#444444] mb-7 pb-3">
+        <img src="/icons/experience/main.svg" alt="main" className="size-4" />
+        <span className='text-white font-code'>main</span>
+        <span className="inline-flex items-center text-slate-400 text-xs">
+          <img src="/icons/experience/commit.svg" alt="Icon Commit" className='size-4' />
+        </span>
+        <span className='text-gray-400'>{EXPERIENCE.length} commits</span>
+      </div>
+      <div className="relative">
+        {/* Línea vertical continua que conecta los nodos */}
+        <div className="absolute left-2.75 top-4 bottom-0 w-px bg-slate-700/60 z-0"></div>
+
+        <div className="flex flex-col gap-10">
+          {EXPERIENCE.map((item, index) => {
+
+            return (
+              <div key={index} className="relative pl-10 flex flex-col gap-2 z-10">
+                {/* Diseño del nodo estilo Git */}
+                <div className={`absolute left-0 top-1 w-6 h-6  rounded-full border-2 ${item.tag === 'main' ? 'border-emerald-500 bg-emerald-900/40 text-emerald-400' : item.tag === "education" ? " border-sky-500 bg-sky-900/40 text-sky-400" : "border-amber-500 bg-amber-900/40 text-amber-400"} flex items-center justify-center`}>
+                  <div className={`w-1.5 h-1.5 rounded-full ${item.tag === 'main' ? 'bg-emerald-500' : item.tag === "education" ? "bg-sky-500" : "bg-amber-500"}`}></div>
+                </div>
+
+                {/* Encabezado: Hash, Tipo y Título */}
+                <div className="flex flex-wrap items-baseline gap-2 font-code">
+                  <span className="text-amber-500 font-semibold">{item.hash}</span>
+                  <span className="text-slate-200">
+                    <span className="font-bold">{item.type}:</span> {item.title}
+                  </span>
+                </div>
+
+                {/* Descripción */}
+                <p className="text-slate-400 text-xs font-jetbrains">
+                  {item.description}
+                </p>
+
+                {/* Metadatos inferiores */}
+                <div className="flex flex-wrap items-center justify-start gap-4 text-slate-500 mt-1 font-code text-xs">
+                  <div className="flex items-center gap-1.5">
+                    {/* <User size={14} /> */}
+                    <span>{item.category}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    {/* <Clock size={14} /> */}
+                    <span>{item.date}</span>
+                  </div>
+                  <div className={`px-2 py-0.5 rounded-sm ${item.tag === 'education' ? 'bg-sky-900/40 text-sky-400' : item.tag === "certifications" ? "bg-amber-900/40 text-amber-400" : "bg-emerald-900/40 text-emerald-400"} font-medium`}>
+                    {item.tag}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div >
+  );
+}
