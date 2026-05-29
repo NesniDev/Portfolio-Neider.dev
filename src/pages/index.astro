@@ -1,13 +1,14 @@
 ---
 import Header from '@/components-landing/header/Header.astro'
 import LayoutLanding from '../layouts/LayoutLanding.astro'
-import Layout from '../layouts/LayoutLanding.astro'
 import BarLeft from '../components-landing/aside-left/BarLeft.astro'
 import Explorer from '../components-landing/explorer/Explorer.astro'
 import { ViewContent } from '../components-landing/react/viewContent'
 import Terminal from '../components-landing/terminal/Terminal.astro'
 import Footer from '../components-landing/footer/Footer.astro'
-import Tabs from '@/components-landing/tabs/Tabs.astro'
+import { ContentViewer } from '../components-landing/tabs/Tabs.jsx'
+import { BreadCrumbs } from '../components-landing/react/BreadCrumbs.jsx'
+import BarRight from '@/components-landing/aside-right/BarRight.astro'
 ---
 
 <LayoutLanding title="Portfolio Neider" description="Portfolio de Neider">
@@ -15,17 +16,22 @@ import Tabs from '@/components-landing/tabs/Tabs.astro'
 
   <BarLeft slot="bar-left" />
 
-  <Tabs slot="tab" />
-
   <Explorer slot="explorer" />
 
-  <ViewContent client:load slot="content" />
+  <div slot="content" class="flex flex-col w-full h-full overflow-hidden">
+    <div class="w-full flex flex-col shrink-0">
+      <ContentViewer client:load />
+      <BreadCrumbs client:load />
+    </div>
 
-  <div id="bar-right" slot="bar-right">
-    <h1 class="text-white">Bar-right</h1>
+    <div class="flex-1 overflow-y-auto">
+      <ViewContent client:load />
+    </div>
   </div>
 
   <Terminal slot="terminal" />
+
+  <BarRight slot="bar-right" />
 
   <Footer slot="footer" />
 </LayoutLanding>

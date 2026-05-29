@@ -3,15 +3,6 @@ import IconFile from '../icons/SideBar/IconFile.astro'
 import IconNodeJS from '../icons/SideBar/IconNodeJS.astro'
 import IconTerminal from '../icons/SideBar/IconTerminal.astro'
 import Markdown from '../icons/SideBar/Markdown.astro'
-
-import { ViewContent } from '../react/ViewContent.tsx'
-
-const archivos = {
-  proyectos: 'Proyectos',
-  habilidades: 'Habilidades',
-  experiencia: 'Experiencia',
-  contacto: 'Contacto'
-}
 ---
 
 <div class="text-gray-300 h-full font-jetbrains">
@@ -38,7 +29,7 @@ const archivos = {
       />
       <span>Portfolio</span>
       <span
-        class="absolute size-5 -top-5 right-25 -rotate-90 text-amber-400 flecha opacity-100"
+        class="absolute size-5 -top-5 right-18 -rotate-90 text-amber-400 flecha opacity-100"
       >
         <img
           src="/icons/explorer/location.svg"
@@ -148,11 +139,16 @@ const archivos = {
   </div>
 </div>
 
-<script is:inline>
+<script>
+  // Al no usar is:inline, Astro (Vite) agrupa este módulo correctamente
+  import { openTab } from '../store/tabsStore.js'
+
+  // Selección de elementos del DOM
   const folders = document.querySelectorAll('.folder')
   const tabs = document.querySelectorAll('.btn-tab')
 
-  folders.forEach((folder, index) => {
+  // 1. Lógica de apertura y cierre de carpetas (Explorador)
+  folders.forEach((folder) => {
     const toggleBtn = folder.querySelector(':scope > .folder-toggle')
     const content = folder.querySelector(':scope > .folder-content')
     const arrow = toggleBtn?.querySelector('.arrow')
@@ -191,22 +187,18 @@ const archivos = {
     })
   })
 
+  // 2. Lógica de emisión hacia el estado global (Nano Stores)
+  // Un único bucle para asignar el evento de clic a cada archivo
+
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-tab')
-      // Llamamos a la función que dispara el evento
-      window.showContent(target)
+      const targetId = tab.getAttribute('data-tab')
+      const title = tab.textContent.trim()
+
+      console.log('Intentando abrir:', targetId, title) // Agregue esto para depurar
+      openTab(targetId, title)
     })
   })
-
-  // Tu función para disparar el evento
-  window.showContent = (text) => {
-    window.dispatchEvent(
-      new CustomEvent('change-content', {
-        detail: text
-      })
-    )
-  }
 </script>
 
 <style>
