@@ -9,7 +9,7 @@
         "src/*"
       ],
       "@/components": [
-        "src/components/*"
+        "src/legacy/components/*"
       ],
       "@/icons": [
         "src/icons/*"
