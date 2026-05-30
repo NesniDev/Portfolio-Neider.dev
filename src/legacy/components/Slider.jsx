@@ -1,5 +1,5 @@
 import Marquee from 'react-fast-marquee'
-import { TOOLS } from '../lib/Technologies'
+import { TOOLS } from '../../lib/Technologies'
 
 export default function Slider({ speed, gradient, direction, category }) {
   return (

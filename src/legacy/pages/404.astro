@@ -1,0 +1,67 @@
+---
+import Layout404 from "@/layouts/Layout404.astro";
+---
+
+<Layout404 title="404 - Página no encontrada | Neider" description="La página que buscas no existe. Vuelve al inicio del portfolio de Neider">
+<div class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-purple-600/10"></div>
+
+<div class="relative z-10 text-center max-w-2xl mx-auto">
+<div class="mb-8 relative">
+<div class="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full"></div>
+<h1 class="text-9xl md:text-[12rem] font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent animate-pulse relative z-10">404</h1>
+</div>
+
+<div class="space-y-6">
+<div class="inline-block">
+<span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-sm font-semibold uppercase tracking-wider">
+Página no encontrada
+</span>
+</div>
+
+<p class="text-lg md:text-xl text-gray-300 dark:text-gray-400 max-w-md mx-auto">
+Oops! Parece que te has perdido en el código espaciar. La página que buscas no existe o ha sido movida.
+</p>
+
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+<a
+href="/"
+class="group relative px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg font-semibold text-white shadow-lg hover:shadow-orange-500/30 hover:scale-105 transition-all duration-300 overflow-hidden"
+>
+<span class="relative z-10 flex items-center gap-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-2 0a1 1 0 001-1v-4a1 1 0 011-1v4a1 1 0 001 1m-2 0h-4" />
+</svg>
+Volver al Inicio
+</span>
+<div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</a>
+
+<a
+href="/#proyectos"
+class="px-8 py-3 border-2 border-orange-500/50 text-orange-400 rounded-lg font-semibold hover:bg-orange-500/10 hover:border-orange-500 transition-all duration-300"
+>
+Ver Proyectos
+</a>
+</div>
+</div>
+
+<div class="mt-16 grid grid-cols-3 gap-4 max-w-sm mx-auto text-xs text-gray-500">
+<div class="text-center">
+<div class="text-2xl mb-1">🚀</div>
+<div>Proyectos</div>
+</div>
+<div class="text-center">
+<div class="text-2xl mb-1">💻</div>
+<div>Código</div>
+</div>
+<div class="text-center">
+<div class="text-2xl mb-1">✨</div>
+<div>Diseño</div>
+</div>
+</div>
+</div>
+
+<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
+</div>
+</Layout404>
