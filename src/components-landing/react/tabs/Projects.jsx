@@ -62,7 +62,7 @@ export const ProjectCard = ({ project }) => {
         <div className="flex items-center gap-5 mt-4 text-xs text-slate-500">
           <div className="flex items-center gap-1.5">
             <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-            <span>JavaScript</span>
+            <span>{project.language}</span>
           </div>
 
 
@@ -74,14 +74,14 @@ export const ProjectCard = ({ project }) => {
               <path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"></path>
               <path d="M12 12v3"></path>
             </svg>
-            <span>0</span>
+            <span>{project.forks}</span>
           </div>
 
           <span>Estado: {project.badge}</span>
         </div>
       </div>
       <div className='flex justify-center items-center'>
-        <img src={project.url} alt="Arrow right" className={`w-80 h-40 rounded-2xl
+        <img src={project.url} alt={project.title} loading="lazy" width="320" height="160" className={`w-80 h-40 rounded-2xl
 transition-all duration-500 ease-out
 
 opacity-0 translate-y-6 scale-95
@@ -93,12 +93,6 @@ group-hover:opacity-100
 group-hover:translate-y-0
 group-hover:scale-100
 group-hover:shadow-2xl`} />
-        {/* <button className="flex items-center gap-1.5 px-3 py-1 bg-[#21262d] border border-[#30363d] rounded-md text-xs font-medium text-slate-300 hover:bg-[#30363d] transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
-          Star
-        </button> */}
       </div>
     </div>
   );

@@ -92,7 +92,6 @@ export const TerminalContactForm = () => {
     })
   }
 
-  console.log(form)
   return (
     <div className=" bg-[#01191f] text-gray-300 font-code flex items-center justify-center gap-10 relative overflow-hidden">
 

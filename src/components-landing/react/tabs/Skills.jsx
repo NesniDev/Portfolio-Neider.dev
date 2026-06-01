@@ -149,30 +149,38 @@ export const Skills = () => {
 
 
       <p className='text-gray-400 uppercase font-jetbrains'>Installed Skills ({finalFiltered.length})</p>
-      <div className="flex flex-col gap-2 text-white text-sm font-jetbrains shrink">
-        {
-          finalFiltered.map((skill) => (
-            <article key={skill.name} className=" flex items-center gap-3 border border-[#0A2E39] rounded-lg py-4 px-2 transition hover:border-[#4ade80b6] duration-300 hover:shadow-[0_0_15px_rgba(74,222,128,0.35)]">
-              <div className="p-2 rounded-lg bg-[#03323d] ">
-                <img src={skill.logo} alt={skill.name} className="size-10" />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <h2 className="font-jetbrains flex gap-3 text-[16px] items-center font-bold">{skill.name}<span className="bg-green-400/40 text-green-500 px-1 py-0.5 rounded-sm text-xs">Installed</span></h2>
-                <p className="font-code text-xs">{skill.description}</p>
-                <ul className="font-code text-xs flex gap-4 capitalize text-gray-400">
-                  <li >{skill.company}</li>
-                  <li className='flex items-center gap-1'> <span>
-                    <img src="/icons/skills/download.svg" alt="Icon Download" className='size-4 text-slate-400' />
-                  </span> {skill.downloads}</li>
-                  <li className='flex items-center gap-1'><span className="inline-flex items-center">
-                    <img src="/icons/skills/star.svg" alt="Icon Star" className='size-4' />
-                  </span> {skill.stars}</li>
-                </ul>
-              </div>
-            </article>
-          ))
-        }
-      </div>
+      {finalFiltered.length === 0 ? (
+        <div className="flex flex-col items-center justify-center py-10 text-gray-500">
+          <img src="/icons/skills/skills.svg" alt="No results" className="size-10 mb-4 opacity-50" />
+          <p className="font-jetbrains text-sm">No se encontraron habilidades</p>
+          <p className="font-code text-xs mt-1">Intenta con otro término de búsqueda</p>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-2 text-white text-sm font-jetbrains shrink">
+          {
+            finalFiltered.map((skill) => (
+              <article key={skill.name} className=" flex items-center gap-3 border border-[#0A2E39] rounded-lg py-4 px-2 transition hover:border-[#4ade80b6] duration-300 hover:shadow-[0_0_15px_rgba(74,222,128,0.35)]">
+                <div className="p-2 rounded-lg bg-[#03323d] ">
+                  <img src={skill.logo} alt={skill.name} className="size-10" />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <h2 className="font-jetbrains flex gap-3 text-[16px] items-center font-bold">{skill.name}<span className="bg-green-400/40 text-green-500 px-1 py-0.5 rounded-sm text-xs">Installed</span></h2>
+                  <p className="font-code text-xs">{skill.description}</p>
+                  <ul className="font-code text-xs flex gap-4 capitalize text-gray-400">
+                    <li >{skill.company}</li>
+                    <li className='flex items-center gap-1'> <span>
+                      <img src="/icons/skills/download.svg" alt="Icon Download" className='size-4 text-slate-400' />
+                    </span> {skill.downloads}</li>
+                    <li className='flex items-center gap-1'><span className="inline-flex items-center">
+                      <img src="/icons/skills/star.svg" alt="Icon Star" className='size-4' />
+                    </span> {skill.stars}</li>
+                  </ul>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      )}
     </section >
   )
 }

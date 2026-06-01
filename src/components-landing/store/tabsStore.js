@@ -1,10 +1,10 @@
 import { atom } from 'nanostores';
 
-// 1. Inicializamos con "profile" ya abierto por defecto
+// 1. Inicializamos con array vacío (se abrirán las pestañas al interactuar)
 export const openedTabs = atom([
 ]);
 
-// 2. Establecemos "profile" como la pestaña activa desde el principio
+// 2. Establecemos "welcome" como la pestaña activa desde el principio
 export const activeTab = atom('welcome');
 
 /**
