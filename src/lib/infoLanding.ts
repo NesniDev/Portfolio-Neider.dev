@@ -5,7 +5,7 @@ interface Tab {
   isCode: boolean
   content: string | object
   lenguaje?: string,
-  experience?: string | object
+  experience?: string | object,
 }
 
 export const TABS: Record<string, Tab> = {
@@ -72,7 +72,9 @@ export const TABS: Record<string, Tab> = {
         text: 'SolvePc es una plataforma web que ofrece servicios de resolución de problemas de computadoras online.',
         gh: 'https://github.com/NesniDev/SolvePc',
         page: 'https://solve-pc.vercel.app/',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/infoByte.webp',
@@ -87,7 +89,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal es desarrollar una plataforma digital moderna para IFE Colombia, mostrando sus servicios y fortaleciendo su presencia en línea con un diseño atractivo y funcional.',
         gh: 'https://github.com/NesniDev/TecnicoSistemas',
         page: 'https://tecnico-sistemas.vercel.app',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/futbol.webp',
@@ -103,7 +107,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal es desarrollar una plataforma donde los usuarios de Chiquinquirá podrán ver las canchas disponibles, hacer su reserva y pagar por la misma de manera sencilla y rápida. ',
         gh: 'https://github.com/NesniDev/Field-Football',
         page: 'https://field-football.vercel.app',
-        badge: 'In Progress'
+        badge: 'In Progress',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/inventario.avif',
@@ -120,7 +126,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal es desarrollar una plataforma digital para el inventario de productos de manera local, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
         gh: 'https://github.com/NesniDev/InventarioVL',
         page: 'https://inventariovl.netlify.app/',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/quiz.avif',
@@ -150,7 +158,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El principal objetivo era crear una plataforma digital que reflejara la creatividad y habilidad artesanal del taller, para fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
         gh: 'https://github.com/NesniDev/ArtexAlex',
         page: 'https://artexalex.pages.dev/',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/Lawyer.webp',
@@ -165,7 +175,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal era proporcionar una plataforma digital que reflejara la profesionalidad y experiencia del bufete, para desarrollar su presencia en línea mediante la creación de una página web moderna y funcional.',
         gh: 'https://github.com/NesniDev/Page-Lawyer',
         page: 'https://page-lawyer-nesnidevs-projects.vercel.app',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/API.avif',
@@ -192,7 +204,9 @@ export const TABS: Record<string, Tab> = {
         ],
         text: 'El objetivo es tener un chatbot que permita interactuar con los usuarios, donde se pueda enviar y recibir mensajes en tiempo real.',
         gh: 'https://github.com/NesniDev/BOT-IFE',
-        badge: 'In Progress'
+        badge: 'In Progress',
+        language: 'JavaScript',
+        forks: 0
       },
 
       {
@@ -206,7 +220,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo es tener un chat local que permita interactuar como ChatGPT, donde se pueda enviar y recibir mensajes en tiempo real.',
         gh: 'https://github.com/NesniDev/CHATGPT-LOCAL',
         page: 'https://ch4t-l0c41.netlify.app/',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'Node JS',
+        forks: 0
       },
       {
         url: '/img/bar.avif',
@@ -219,7 +235,9 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal era desarrollar una plataforma digital para el ambiente acogedor del bar, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
         gh: 'https://github.com/NesniDev/Page-Bar.dev',
         page: 'https://bar-ib.netlify.app/',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       },
       {
         url: '/img/ecommerce.png',
@@ -234,7 +252,9 @@ export const TABS: Record<string, Tab> = {
         text: 'Este ecommerce fue creado para la empresa de ropa femenina, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
         gh: 'https://github.com/NesniDev/Ecommerce',
         page: 'https://ecommerce-products-api.netlify.app',
-        badge: 'Completed'
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
       }
     ]
   },

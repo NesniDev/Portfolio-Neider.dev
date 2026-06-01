@@ -1,25 +1,4 @@
 
-import { EXPERIENCE } from '../../../lib/Experience'
-
-//   green: {
-//     border: 'border-emerald-500',
-//     dot: 'bg-emerald-500',
-//     tagBg: 'bg-emerald-900/40',
-//     tagText: 'text-emerald-400',
-//   },
-//   yellow: {
-//     border: 'border-amber-500',
-//     dot: 'bg-amber-500',
-//     tagBg: 'bg-amber-900/40',
-//     tagText: 'text-amber-400',
-//   },
-//   blue: {
-//     border: 'border-sky-500',
-//     dot: 'bg-sky-500',
-//     tagBg: 'bg-sky-900/40',
-//     tagText: 'text-sky-400',
-//   },
-// };
 export const Experience = ({ info }) => {
   const data = info.content
   return (

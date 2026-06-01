@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECTS } from '../../../lib/Projects'
+import { TABS } from '../../../lib/infoLanding'
 
 // ==========================================
 // 2. COMPONENTE INDIVIDUAL: ProjectCard
@@ -103,7 +103,8 @@ group-hover:shadow-2xl`} />
 // ==========================================
 
 export const ProjectsGrid = () => {
-  if (!PROJECTS || PROJECTS.length === 0) {
+
+  if (!TABS.projects.content || TABS.projects.content.length === 0) {
     return (
       <div className="flex justify-center items-center w-full">
         <p className="text-xl text-gray-400 font-mono">No hay proyectos disponibles.</p>
@@ -131,11 +132,11 @@ export const ProjectsGrid = () => {
             <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
           </svg>
         </span>
-        Repositorios <span className='p-1.5 bg-gray-500 rounded-full text-sm font-bold text-gray-900'>{PROJECTS.length}</span></h2>
+        Repositorios <span className='p-1.5 bg-gray-500 rounded-full text-sm font-bold text-gray-900'>{TABS.projects.content.length}</span></h2>
       <section className="w-full py-5 px-4 md:px-8">
         <div className="">
           <div className="flex flex-col gap-4 justify-items-center">
-            {PROJECTS.map((project, index) => (
+            {TABS.projects.content.map((project, index) => (
               <ProjectCard
                 key={project.title || index}
                 project={project}
