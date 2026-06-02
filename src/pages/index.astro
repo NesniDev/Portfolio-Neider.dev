@@ -39,8 +39,6 @@ import BarRight from '@/components-landing/aside-right/BarRight.astro'
 <script>
   const barRight = document.getElementById('bar-right') as HTMLElement
 
-  barRight.classList.add('hidden')
-
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'b') {
       barRight.classList.toggle('hidden')
