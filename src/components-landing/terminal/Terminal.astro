@@ -1,29 +1,29 @@
 <section>
   <header
-    class="flex items-center justify-between bg-[#01191f] font-code text-xs border border-gray-800 border-l-0 px-6 py-1"
+    class="flex items-center justify-between bg-[#01191f] font-code text-xs border border-gray-800 border-l-0 px-3 sm:px-6 py-1"
   >
     <div
-      class="flex items-center gap-4 text-gray-400 transition-all duration-300"
+      class="flex items-center gap-2 sm:gap-4 text-gray-400 transition-all duration-300"
     >
-      <span class="bg-[#072c35ad] py-1 px-2 rounded-sm text-white"
+      <span class="bg-[#072c35ad] py-1 px-2 rounded-sm text-white whitespace-nowrap"
         >TERMINAL</span
       >
-      <span class="transition hover:text-white">PROBLEMS</span>
-      <span class="transition hover:text-white">OUTPUT</span>
+      <span class="hidden sm:inline transition hover:text-white cursor-pointer">PROBLEMS</span>
+      <span class="hidden sm:inline transition hover:text-white cursor-pointer">OUTPUT</span>
     </div>
   </header>
 
   <div
-    class="relative flex flex-col gap-1 text-white font-jetbrains text-xs px-6 py-2"
+    class="relative flex flex-col gap-1 text-white font-jetbrains text-xs px-3 sm:px-6 py-2 overflow-x-auto"
   >
-    <p>$ npm run dev</p>
-    <p class="text-[#4ade80]">
+    <p class="whitespace-nowrap">$ npm run dev</p>
+    <p class="text-[#4ade80] whitespace-nowrap">
       ready - started server on 0.0.0.0:3000, url: http://localhost:3000
     </p>
-    <p>info - Loaded env from /portfolio/.env.local</p>
-    <p class="text-[#4ade80]">✓ Compiled successfully in 1.2s</p>
-    <p class="text-[#4ade80]">✓ Compiled / in 234ms</p>
-    <p class="cursor">~/portfolio $</p>
+    <p class="whitespace-nowrap">info - Loaded env from /portfolio/.env.local</p>
+    <p class="text-[#4ade80] whitespace-nowrap">✓ Compiled successfully in 1.2s</p>
+    <p class="text-[#4ade80] whitespace-nowrap">✓ Compiled / in 234ms</p>
+    <p class="cursor whitespace-nowrap">~/portfolio $</p>
   </div>
 
   <style>

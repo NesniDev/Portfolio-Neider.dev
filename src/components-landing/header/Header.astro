@@ -1,26 +1,65 @@
 ---
-import LayoutLanding from '@/layouts/LayoutLanding.astro'
 import Close from '../icons/Close.astro'
 ---
 
 <nav
-  class="flex items-center justify-between p-2 text-gray-400 font-code text-xs"
+  class="flex items-center justify-between p-2 text-gray-400 font-code text-xs gap-2"
 >
-  <ul class="flex justify-between gap-3">
-    <li>File</li>
-    <li>Edit</li>
-    <li>Selection</li>
-    <li>View</li>
-    <li>Go</li>
-    <li>Run</li>
-    <li>Terminal</li>
-    <li>Help</li>
-  </ul>
+  <div class="flex items-center gap-2">
+    <!-- Botón hamburguesa (móvil/tablet) - Abre el Explorer -->
+    <button
+      data-explorer-toggle
+      class="header-burger inline-flex items-center gap-1.5 px-2 h-8 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors border border-transparent hover:border-[#4ade80]/40"
+      aria-label="Abrir explorador de archivos"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-[#4ade80]"
+      >
+        <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-7l-2-2H5a2 2 0 0 0-2 2z"></path>
+      </svg>
+      <span class="text-[10px] uppercase tracking-wider hidden sm:inline">Explorer</span>
+    </button>
 
-  <span>
-    <span>Portfolio - Visual Studio Code </span>
+    <ul class="hidden md:flex justify-between gap-3">
+      <li>File</li>
+      <li>Edit</li>
+      <li>Selection</li>
+      <li>View</li>
+      <li>Go</li>
+      <li>Run</li>
+      <li>Terminal</li>
+      <li>Help</li>
+    </ul>
+  </div>
+
+  <span class="truncate text-center flex-1 md:flex-none">
+    <span>Portfolio - Visual Studio Code</span>
   </span>
-  <div>
-    <button><Close /></button>
+
+  <div class="flex items-center">
+    <button class="p-1 hover:text-white transition-colors" aria-label="Cerrar">
+      <Close />
+    </button>
   </div>
 </nav>
+
+<style>
+  .header-burger {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .header-burger {
+      display: inline-flex;
+    }
+  }
+</style>

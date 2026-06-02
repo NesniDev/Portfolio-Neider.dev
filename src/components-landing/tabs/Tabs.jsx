@@ -53,7 +53,7 @@ export const ContentViewer = () => {
   if (tabs.length === 0) return null; // Ocultar barra si no hay pestañas abiertas
 
   return (
-    <div className="w-full flex overflow-x-auto border-b border-[#2a2a2a] bg-transparent custom-scrollbar">
+    <div className="w-full flex overflow-x-auto border-b border-[#2a2a2a] bg-transparent custom-scrollbar scrollbar-thin">
       {tabs.map((tab) => {
         const isActive = tab.id === current;
         const { Icon, color } = TAB_STYLES[tab.id];
@@ -62,7 +62,7 @@ export const ContentViewer = () => {
           <div
             key={tab.id}
             onClick={() => openTab(tab.id, tab.title)}
-            className={`flex items-center p-3 gap-2 text-sm font-jetbrains border-r border-[#2a2a2a] cursor-pointer select-none transition-all duration-200 min-w-max group
+            className={`flex items-center p-2 sm:p-3 gap-1.5 sm:gap-2 text-xs sm:text-sm font-jetbrains border-r border-[#2a2a2a] cursor-pointer select-none transition-all duration-200 min-w-max group
               ${isActive
                 ? 'bg-[rgba(255,255,255,0.03)] text-white border-t-2 border-t-amber-300'
                 : 'text-gray-400 border-t-2 border-t-transparent hover:bg-[rgba(255,255,255,0.01)]'}`}
@@ -76,14 +76,14 @@ export const ContentViewer = () => {
             </div>
 
 
-            <h1 className="mt-0.5">{tab.title}</h1>
+            <h1 className="mt-0.5 whitespace-nowrap">{tab.title}</h1>
 
             <button
               onClick={(e) => {
                 e.stopPropagation(); // Evita que al cerrar se active la pestaña
                 closeTab(tab.id);
               }}
-              className={`ml-2 p-1 rounded-md transition-opacity hover:bg-white/10 flex items-center justify-center
+              className={`ml-1 sm:ml-2 p-1 rounded-md transition-opacity hover:bg-white/10 flex items-center justify-center
                 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
               aria-label="Cerrar pestaña"
             >

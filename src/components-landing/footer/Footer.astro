@@ -2,14 +2,14 @@
 import SourceControl from '../icons/SideBar/SourceControl.astro'
 ---
 
-<div class="flex items-center justify-between text-[#012129] font-code text-xs">
-  <div class="flex items-center gap-4">
-    <span class="font-bold bg-blue-400 py-1 px-2">WSL: Ubuntu</span>
-    <span class="flex gap-2 items-center">
+<div class="flex items-center justify-between text-[#012129] font-code text-xs gap-2">
+  <div class="flex items-center gap-2 sm:gap-4 flex-wrap">
+    <span class="font-bold bg-blue-400 py-1 px-2 whitespace-nowrap">WSL: Ubuntu</span>
+    <span class="hidden sm:flex gap-2 items-center whitespace-nowrap">
       <SourceControl class="size-3" /> main</span
     >
-    <span>0 problems</span>
-    <span class="flex gap-2 items-center">
+    <span class="hidden md:inline whitespace-nowrap">0 problems</span>
+    <span class="hidden sm:flex gap-2 items-center whitespace-nowrap">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
@@ -27,29 +27,30 @@ import SourceControl from '../icons/SideBar/SourceControl.astro'
       > Live Share</span
     >
   </div>
-  <div class="flex items-center gap-4 pr-2">
-    <div class="flex items-center gap-5">
-      <span>Ln 7, Col 23 </span>
-      <span>Spaces: 2</span>
-      <span>JSON</span>
-      <span>UTF-8</span>
-      <span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
-          ></path><path d="M9 17v1a3 3 0 0 0 6 0v-1"></path></svg
-        >
-      </span>
+  <div class="flex items-center gap-2 sm:gap-4 pr-1 sm:pr-2">
+    <div class="hidden md:flex items-center gap-3 lg:gap-5">
+      <span class="whitespace-nowrap">Ln 7, Col 23 </span>
+      <span class="whitespace-nowrap">Spaces: 2</span>
+      <span class="whitespace-nowrap">JSON</span>
+      <span class="whitespace-nowrap">UTF-8</span>
     </div>
+    <span class="md:hidden whitespace-nowrap">UTF-8</span>
+    <span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+        ></path><path d="M9 17v1a3 3 0 0 0 6 0v-1"></path></svg
+      >
+    </span>
   </div>
 </div>

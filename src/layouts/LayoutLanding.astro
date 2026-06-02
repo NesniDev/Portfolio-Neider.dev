@@ -31,7 +31,7 @@ import '../styles/global.css'
         <slot name="tab" />
       </section>
 
-      <section id="explorer">
+      <section id="explorer" class="explorer-panel">
         <slot name="explorer" />
       </section>
 
@@ -50,7 +50,54 @@ import '../styles/global.css'
       <footer id="footer">
         <slot name="footer" />
       </footer>
+
+      <!-- Backdrop del Explorer (solo móvil/tablet) -->
+      <div id="explorer-backdrop" class="explorer-backdrop" aria-hidden="true"></div>
     </section>
+
+    <script>
+      // Lógica global para abrir/cerrar el Explorer en móvil
+      const explorer = document.getElementById('explorer')
+      const backdrop = document.getElementById('explorer-backdrop')
+      const toggleBtns = document.querySelectorAll<HTMLElement>('[data-explorer-toggle]')
+      const closeBtn = document.getElementById('explorer-close')
+
+      const isMobileOrTablet = () => window.matchMedia('(max-width: 1024px)').matches
+
+      const openExplorer = () => {
+        if (!explorer || !isMobileOrTablet()) return
+        explorer.classList.add('is-open')
+        backdrop?.classList.add('is-visible')
+        document.body.style.overflow = 'hidden'
+      }
+
+      const closeExplorer = () => {
+        if (!explorer) return
+        explorer.classList.remove('is-open')
+        backdrop?.classList.remove('is-visible')
+        document.body.style.overflow = ''
+      }
+
+      toggleBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault()
+          explorer?.classList.contains('is-open') ? closeExplorer() : openExplorer()
+        })
+      })
+
+      closeBtn?.addEventListener('click', closeExplorer)
+      backdrop?.addEventListener('click', closeExplorer)
+
+      // Cerrar con tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeExplorer()
+      })
+
+      // Limpiar estado al cambiar a desktop
+      window.addEventListener('resize', () => {
+        if (!isMobileOrTablet()) closeExplorer()
+      })
+    </script>
   </body>
 </html>
 
@@ -82,16 +129,20 @@ import '../styles/global.css'
     grid-area: header;
     background: #000f13;
     border-bottom: 1px solid #2a2a2a;
+    z-index: 30;
   }
   #bar-left {
     grid-area: bar-left;
     background: #000f13;
     border-right: 1px solid #2a2a2a;
+    z-index: 20;
   }
-  #explorer {
+  .explorer-panel {
     grid-area: explorer;
     background: #01191f;
     border-right: 1px solid #2a2a2a;
+    overflow-y: auto;
+    min-width: 0;
   }
   #content {
     grid-area: content;
@@ -111,6 +162,8 @@ import '../styles/global.css'
     grid-area: tab;
     background: #01191f;
     align-self: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   #bar-right {
     grid-area: bar-right;
@@ -123,5 +176,162 @@ import '../styles/global.css'
   #footer {
     grid-area: footer;
     background: #4ade80;
+  }
+
+  .explorer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 40;
+  }
+
+  .explorer-backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* === TABLET (768px - 1024px) === */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .layout-editor {
+      grid-template-areas:
+        'header   header   header   header'
+        'bar-left tab      tab      tab'
+        'bar-left content  content  bar-right'
+        'bar-left terminal terminal bar-right'
+        'footer   footer   footer   footer';
+
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-rows: auto auto 1fr auto auto;
+    }
+
+    .explorer-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 320px;
+      max-width: 85vw;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 50;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .explorer-panel.is-open {
+      transform: translateX(0);
+    }
+
+    #footer {
+      font-size: 0.7rem;
+    }
+
+    #footer > div > div:first-child {
+      gap: 1rem;
+    }
+  }
+
+  /* === MÓVIL (< 768px) === */
+  @media (max-width: 768px) {
+    body {
+      overflow-y: auto;
+    }
+
+    .layout-editor {
+      grid-template-areas:
+        'header'
+        'content'
+        'footer';
+
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+
+      height: auto;
+      min-height: 100vh;
+    }
+
+    #bar-left,
+    #tab,
+    #terminal,
+    #bar-right {
+      display: none;
+    }
+
+    #explorer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 320px;
+      max-width: 85vw;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 50;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6);
+      border-right: 1px solid #2a2a2a;
+    }
+
+    #explorer.is-open {
+      transform: translateX(0);
+    }
+
+    #header nav {
+      padding: 0.5rem;
+    }
+
+    #header nav ul {
+      display: none;
+    }
+
+    #header nav > span {
+      font-size: 0.7rem;
+    }
+
+    #content {
+      overflow-y: visible;
+      height: auto;
+      min-height: 400px;
+    }
+
+    #footer {
+      font-size: 0.65rem;
+      padding: 0.5rem;
+    }
+
+    #footer > div {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    #footer > div > div:first-child {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    #footer > div > div:last-child {
+      display: none;
+    }
+  }
+
+  /* === MÓVIL PEQUEÑO (< 480px) === */
+  @media (max-width: 480px) {
+    #header nav > span {
+      font-size: 0.65rem;
+    }
+
+    #header nav > div > button {
+      padding: 0.25rem;
+    }
+
+    #footer {
+      font-size: 0.6rem;
+    }
+
+    #footer > div > div:first-child {
+      gap: 0.4rem;
+    }
   }
 </style>

@@ -46,7 +46,7 @@ export const ViewContent = () => {
   return (
     <div
       key={currentTab}
-      className="w-full h-full py-4 px-2 overflow-y-auto animate-fade-in transition-opacity duration-300"
+      className="w-full h-full py-3 sm:py-4 px-2 sm:px-3 overflow-y-auto animate-fade-in transition-opacity duration-300"
     >
       {renderizarContenido()}
     </div>

@@ -1,17 +1,15 @@
 import { useStore } from '@nanostores/react';
-import { activeTab, openedTabs } from '../store/tabsStore'; // Verifique que la ruta coincida con su estructura
+import { activeTab, openedTabs } from '../store/tabsStore';
 
 export const BreadCrumbs = () => {
-  // 1. Suscripción al estado global
   const currentId = useStore(activeTab);
   const tabs = useStore(openedTabs);
 
-  // 2. Búsqueda de la información de la pestaña activa actual
   const currentTabObj = tabs.find(tab => tab.id === currentId);
 
   return (
-    <div className={` ${currentTabObj ? 'block' : 'hidden'} text-sm text-gray-400 mb-4 border border-[#2a2a2a] border-l-0 pl-7 py-2 font-jetbrains`}>
-      <ul className={`${currentTabObj ? 'flex' : 'hidden'}  items-center gap-2 text-sm text-gray-400`}>
+    <div className={` ${currentTabObj ? 'block' : 'hidden'} text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 border border-[#2a2a2a] border-l-0 pl-3 sm:pl-7 py-1.5 sm:py-2 font-jetbrains overflow-x-auto`}>
+      <ul className={`${currentTabObj ? 'flex' : 'hidden'} items-center gap-2 text-xs sm:text-sm text-gray-400 whitespace-nowrap`}>
 
         <li>
           <span className="text-gray-400 cursor-default transition hover:text-gray-500">
@@ -22,16 +20,12 @@ export const BreadCrumbs = () => {
           <img src="/icons/arrow-right.svg" alt="Arrow right" className="size-3" />
         </li>
 
-        {/* Directorio principal */}
         <li>
           <span className="text-gray-400 cursor-default transition hover:text-gray-500">
             src
           </span>
         </li>
 
-        {/* Raíz del proyecto */}
-
-        {/* Renderizado condicional: Solo mostramos el archivo si hay una pestaña activa */}
         {currentTabObj && (
           <>
             <li>

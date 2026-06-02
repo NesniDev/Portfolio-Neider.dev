@@ -60,13 +60,12 @@ export const TerminalContactForm = () => {
     setStatus(null)
 
     const { error } = await supabase
-      .from("user") // 👈 reemplaza por el nombre real
+      .from("user")
       .insert([
         {
           name: form.name,
           email: form.email,
           message: form.message
-          // created_at no es necesario si Supabase lo maneja por default
         }
       ])
 
@@ -93,16 +92,16 @@ export const TerminalContactForm = () => {
   }
 
   return (
-    <div className=" bg-[#01191f] text-gray-300 font-code flex items-center justify-center gap-10 relative overflow-hidden">
+    <div className="bg-[#01191f] text-gray-300 font-code flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-10 p-3 sm:p-4 md:p-6 relative overflow-hidden">
 
       {/* Contenedor principal estilo Glassmorphism */}
-      <div className="relative group">
+      <div className="relative group shrink-0 order-2 md:order-1">
 
         {/* Efecto de resplandor difuminado detrás del contenedor */}
         <div className="absolute -inset-1 bg-gradient-to-r from-[#1f2937] to-[#4b5563] rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
 
-        {/* Caja de los enlaces (Barra de herramientas horizontal) */}
-        <div className="relative flex flex-col justify-center items-center gap-4 bg-[#0a0f12]/90 backdrop-blur-xl border border-[#1f2937] p-3 rounded-full shadow-2xl z-10">
+        {/* Caja de los enlaces (Barra de herramientas horizontal en móvil, vertical en desktop) */}
+        <div className="relative flex flex-row md:flex-col justify-center items-center gap-3 md:gap-4 bg-[#0a0f12]/90 backdrop-blur-xl border border-[#1f2937] p-3 rounded-full md:rounded-full shadow-2xl z-10">
 
           {links.map((link) => (
             <a
@@ -112,9 +111,9 @@ export const TerminalContactForm = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`
-            flex items-center justify-center w-10 h-10 rounded-full
-            bg-[#151b21] border border-[#2a3642] 
-            
+            flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full
+            bg-[#151b21] border border-[#2a3642]
+
             transition-all duration-300 ease-in-out
             hover:text-white hover:scale-110 hover:shadow-lg
             ${link.hoverColor}
@@ -128,26 +127,26 @@ export const TerminalContactForm = () => {
       </div>
 
       {/* Ventana Principal de la Terminal */}
-      <div className="w-full max-w-3xl bg-[#0a0f12] border border-[#1f2937] rounded shadow-2xl z-10 overflow-hidden">
+      <div className="w-full max-w-3xl bg-[#0a0f12] border border-[#1f2937] rounded shadow-2xl z-10 overflow-hidden order-1 md:order-2">
 
         {/* Barra de Título de la Ventana */}
-        <div className="bg-[#151b21] flex items-center px-4 py-1 border-b border-[#1f2937]">
-          <div className="flex space-x-2 mr-6">
+        <div className="bg-[#151b21] flex items-center px-3 sm:px-4 py-1 border-b border-[#1f2937]">
+          <div className="flex space-x-2 mr-4 sm:mr-6">
             <div className="w-3 h-3 rounded-full bg-[#a54040]"></div>
             <div className="w-3 h-3 rounded-full bg-[#aa9d50]"></div>
             <div className="w-3 h-3 rounded-full bg-[#37a5a5]"></div>
           </div>
-          <span className="text-gray-500 text-xs md:text-sm tracking-wider">
+          <span className="text-gray-500 text-[10px] sm:text-xs md:text-sm tracking-wider truncate">
             root-ubuntu@neidernieto: ~/contact
           </span>
         </div>
 
         {/* Cuerpo del Formulario */}
-        <form onSubmit={handleSubmit} className="px-3 py-1 md:p-6 flex flex-col space-y-5">
+        <form onSubmit={handleSubmit} className="px-3 py-3 sm:px-4 sm:py-4 md:p-6 flex flex-col space-y-4 sm:space-y-5">
 
           {/* Campo: Identificar Usuario */}
-          <div className="flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 font-code">
-            <label className="text-green-500 w-56 flex-shrink-0 flex items-center text-xs md:text-sm ">
+          <div className="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-2 font-code">
+            <label className="text-green-500 md:w-56 md:flex-shrink-0 flex items-center text-xs sm:text-sm">
               <span className="mr-3 text-gray-600">&gt;</span> Nombre Completo
             </label>
             <input
@@ -156,13 +155,13 @@ export const TerminalContactForm = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="[Enter Name]"
-              className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
+              className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1.5 sm:py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
             />
           </div>
 
           {/* Campo: Ruta de Retorno (Email) */}
-          <div className="flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0">
-            <label className="text-green-500 w-56 flex-shrink-0 flex items-center text-xs md:text-sm">
+          <div className="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-2">
+            <label className="text-green-500 md:w-56 md:flex-shrink-0 flex items-center text-xs sm:text-sm">
               <span className="mr-3 text-gray-600">&gt;</span> Correo Electrónico
             </label>
             <input
@@ -171,35 +170,41 @@ export const TerminalContactForm = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="[Enter Email]"
-              className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
+              className="w-full bg-transparent border border-[#1f2937] rounded-sm px-3 py-1.5 sm:py-1 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors"
             />
           </div>
 
           {/* Campo: Carga Útil (Mensaje) */}
-          <div className="flex flex-col space-y-4 pt-1">
-            <label className="text-green-500 w-full flex items-center text-xs md:text-sm">
+          <div className="flex flex-col space-y-3 sm:space-y-4 pt-1">
+            <label className="text-green-500 w-full flex items-center text-xs sm:text-sm">
               <span className="mr-3 text-gray-600">&gt;</span> input_payload
             </label>
             <textarea
               value={form.message}
               onChange={handleChange}
-              rows=""
+              rows="5"
               name="message"
               placeholder="[Enter Message ...]"
-              className="w-full bg-transparent border border-[#1f2937] rounded-sm p-4 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors resize-none"
+              className="w-full bg-transparent border border-[#1f2937] rounded-sm p-3 sm:p-4 text-sm focus:outline-none focus:border-green-500 text-gray-50 placeholder-gray-700 transition-colors resize-none min-h-[120px]"
             ></textarea>
           </div>
 
           {/* Botón de Ejecución */}
           <div className="flex items-center">
-            <span className="text-gray-600 mr-4 md:mr-6">-</span>
+            <span className="text-gray-600 mr-3 sm:mr-4 md:mr-6">-</span>
             <button
               disabled={loading}
-              className="uppercase rounded-sm border border-[#fca985] hover:-translate-y-1 text-[#fca985] px-3 py-2 cursor-pointer text-sm tracking-[0.15em] hover:bg-[#fca985] hover:text-[#01191f] transition-all duration-300 font-semibold"
+              className="uppercase rounded-sm border border-[#fca985] hover:-translate-y-1 text-[#fca985] px-3 py-2 cursor-pointer text-xs sm:text-sm tracking-[0.15em] hover:bg-[#fca985] hover:text-[#01191f] transition-all duration-300 font-semibold"
             >
               {loading ? "Enviando..." : "Enviar"}
             </button>
           </div>
+
+          {status && (
+            <div className={`text-xs sm:text-sm font-code ${status.includes("Error") ? "text-red-400" : "text-green-400"}`}>
+              {status}
+            </div>
+          )}
 
         </form>
       </div>
