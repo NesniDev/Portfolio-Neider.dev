@@ -1,67 +1,412 @@
 ---
-import Layout404 from "@/layouts/Layout404.astro";
+import Layout404 from '@/layouts/Layout404.astro'
 ---
 
-<Layout404 title="404 - Página no encontrada | Neider" description="La página que buscas no existe. Vuelve al inicio del portfolio de Neider">
-<div class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-purple-600/10"></div>
-
-<div class="relative z-10 text-center max-w-2xl mx-auto">
-<div class="mb-8 relative">
-<div class="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full"></div>
-<h1 class="text-9xl md:text-[12rem] font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent animate-pulse relative z-10">404</h1>
-</div>
-
-<div class="space-y-6">
-<div class="inline-block">
-<span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-sm font-semibold uppercase tracking-wider">
-Página no encontrada
-</span>
-</div>
-
-<p class="text-lg md:text-xl text-gray-300 dark:text-gray-400 max-w-md mx-auto">
-Oops! Parece que te has perdido en el código espaciar. La página que buscas no existe o ha sido movida.
-</p>
-
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-<a
-href="/"
-class="group relative px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg font-semibold text-white shadow-lg hover:shadow-orange-500/30 hover:scale-105 transition-all duration-300 overflow-hidden"
+<Layout404
+  title="404 - Archivo no encontrado | Neider"
+  description="La ruta solicitada no existe en este espacio de trabajo. Vuelve al inicio del portfolio de Neider."
 >
-<span class="relative z-10 flex items-center gap-2">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-2 0a1 1 0 001-1v-4a1 1 0 011-1v4a1 1 0 001 1m-2 0h-4" />
-</svg>
-Volver al Inicio
-</span>
-<div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-</a>
+  <section class="error-stage">
+    <div class="error-grid-bg" aria-hidden="true"></div>
 
-<a
-href="/#proyectos"
-class="px-8 py-3 border-2 border-orange-500/50 text-orange-400 rounded-lg font-semibold hover:bg-orange-500/10 hover:border-orange-500 transition-all duration-300"
->
-Ver Proyectos
-</a>
-</div>
-</div>
+    <div class="error-window">
+      <div class="error-window-head">
+        <span class="status-dot"></span>
+        <span class="status-text">ERROR 404 — PAGE_NOT_FOUND</span>
+      </div>
 
-<div class="mt-16 grid grid-cols-3 gap-4 max-w-sm mx-auto text-xs text-gray-500">
-<div class="text-center">
-<div class="text-2xl mb-1">🚀</div>
-<div>Proyectos</div>
-</div>
-<div class="text-center">
-<div class="text-2xl mb-1">💻</div>
-<div>Código</div>
-</div>
-<div class="text-center">
-<div class="text-2xl mb-1">✨</div>
-<div>Diseño</div>
-</div>
-</div>
-</div>
+      <div class="error-window-body">
+        <div class="code-block">
+          <div class="line line-error">
+            <span class="line-no">01</span>
+            <span class="line-content">
+              <span class="tok-key">throw new</span>
+              <span class="tok-class">RouteNotFound</span><span
+                class="tok-punct">(</span
+              >
+            </span>
+          </div>
+          <div class="line line-error">
+            <span class="line-no">02</span>
+            <span class="line-content indent">
+              <span class="tok-prop">path</span><span class="tok-punct">:</span>
+              <span class="tok-string"
+                >"{`${Astro.url.pathname}` || '/unknown'}"</span
+              ><span class="tok-punct">,</span>
+            </span>
+          </div>
+          <div class="line line-error">
+            <span class="line-no">03</span>
+            <span class="line-content indent">
+              <span class="tok-prop">status</span><span class="tok-punct"
+                >:</span
+              >
+              <span class="tok-num">404</span><span class="tok-punct">,</span>
+            </span>
+          </div>
+          <div class="line line-error">
+            <span class="line-no">04</span>
+            <span class="line-content indent">
+              <span class="tok-prop">hint</span><span class="tok-punct">:</span>
+              <span class="tok-string"
+                >"Esta ruta no existe en el workspace."</span
+              >
+            </span>
+          </div>
+          <div class="line line-error">
+            <span class="line-no">05</span>
+            <span class="line-content">
+              <span class="tok-punct">)</span>
+            </span>
+          </div>
+          <div class="line blank">
+            <span class="line-no">06</span><span class="line-content"
+              >&nbsp;</span
+            >
+          </div>
+          <div class="line">
+            <span class="line-no">07</span>
+            <span class="line-content">
+              <span class="tok-comment"
+                >// Nada que compilar. Vuelve al archivo raíz.</span
+              >
+            </span>
+          </div>
+        </div>
 
-<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
-</div>
+        <div class="cta-row">
+          <a href="/" class="btn btn-primary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-2 0a1 1 0 001-1v-4a1 1 0 011-1v4a1 1 0 001 1m-2 0h-4"
+              ></path>
+            </svg>
+            <span>Ir a la Página Principal</span>
+            <kbd>⌘</kbd><kbd>Home</kbd>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ide-terminal">
+    <div class="terminal-tabs">
+      <span class="terminal-tab active">TERMINAL</span>
+      <span class="terminal-tab">PROBLEMS <span class="badge">1</span></span>
+      <span class="terminal-tab">OUTPUT</span>
+    </div>
+    <div class="terminal-body">
+      <p>
+        <span class="prompt">~/portfolio $</span>
+        <span class="cmd"
+          >find . -name "{`${Astro.url.pathname}` || '/unknown'}"</span
+        >
+      </p>
+      <p class="out-error">
+        find: ‘{`${Astro.url.pathname}` || '/unknown'}’: No such file or
+        directory
+      </p>
+      <p>
+        <span class="prompt">~/portfolio $</span>
+        <span class="cmd">ls src/pages/</span>
+      </p>
+      <p class="out-dim">index.astro</p>
+      <p class="out-error">
+        ls: cannot access '404.astro': <span class="hl"
+          >No such file or directory</span
+        >
+      </p>
+      <p>
+        <span class="prompt">~/portfolio $</span>
+        <span class="cursor-blink">█</span>
+      </p>
+    </div>
+  </section>
 </Layout404>
+
+<style>
+  .error-stage {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    background: #01191f;
+    overflow: hidden;
+    font-family: var(--font-jetbrains), monospace;
+  }
+  .error-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, black 25%, transparent 75%);
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      black 25%,
+      transparent 75%
+    );
+    pointer-events: none;
+  }
+
+  .error-window {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    background: #000f13;
+    border: 1px solid rgba(255, 95, 86, 0.35);
+    border-radius: 8px;
+    box-shadow:
+      0 0 0 1px rgba(0, 255, 255, 0.05),
+      0 20px 50px -20px rgba(0, 0, 0, 0.8),
+      0 0 80px -20px rgba(255, 95, 86, 0.25);
+    overflow: hidden;
+  }
+  .error-window-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, rgba(255, 95, 86, 0.12), transparent);
+    border-bottom: 1px solid rgba(255, 95, 86, 0.2);
+  }
+  .status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 0 0 10px #ff5f56;
+    animation: pulse-dot 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+  .status-text {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #ff8585;
+    font-weight: 600;
+  }
+
+  .error-window-body {
+    padding: 22px 20px 24px;
+  }
+
+  .code-block {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .line {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .line-no {
+    flex-shrink: 0;
+    width: 24px;
+    text-align: right;
+    color: #3a4a55;
+    user-select: none;
+  }
+  .line-content {
+    flex: 1;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .line.blank .line-content {
+    color: transparent;
+  }
+  .indent {
+    padding-left: 16px;
+  }
+
+  .tok-key {
+    color: #c084fc;
+  }
+  .tok-class {
+    color: #00ffff;
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.25);
+  }
+  .tok-punct {
+    color: #6b7c8a;
+  }
+  .tok-prop {
+    color: #4ade80;
+  }
+  .tok-string {
+    color: #fbbf24;
+  }
+  .tok-num {
+    color: #f472b6;
+  }
+  .tok-comment {
+    color: #4a5a66;
+    font-style: italic;
+  }
+  .line-error .line-content {
+    color: #e0e6eb;
+  }
+
+  .cta-row {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 255, 0.12),
+      rgba(0, 255, 255, 0.04)
+    );
+    color: #00ffff;
+    border-color: rgba(0, 255, 255, 0.45);
+    box-shadow: 0 0 24px -8px rgba(0, 255, 255, 0.4);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 255, 0.2),
+      rgba(0, 255, 255, 0.08)
+    );
+    border-color: #00ffff;
+    box-shadow: 0 0 30px -6px rgba(0, 255, 255, 0.6);
+    transform: translateY(-1px);
+  }
+  .btn-primary kbd {
+    display: inline-block;
+    padding: 1px 6px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 3px;
+    font-size: 10px;
+    color: #00ffff;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: #9ca3af;
+    border-color: #2a2a2a;
+  }
+  .btn-ghost:hover {
+    color: #e0e6eb;
+    border-color: #4a5a66;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .arrow {
+    transition: transform 0.2s ease;
+  }
+  .btn-ghost:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .ide-terminal {
+    flex-shrink: 0;
+    background: #000000;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-code), monospace;
+  }
+  .terminal-tabs {
+    display: flex;
+    background: #01191f;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 11px;
+  }
+  .terminal-tab {
+    padding: 6px 12px;
+    color: #6b7c8a;
+    border-right: 1px solid #2a2a2a;
+    cursor: pointer;
+    transition: color 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .terminal-tab.active {
+    color: #e0e6eb;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+    margin-bottom: -1px;
+  }
+  .terminal-tab .badge {
+    background: #ff5f56;
+    color: #000;
+    border-radius: 8px;
+    padding: 0 5px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .terminal-body {
+    padding: 12px 18px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #b8c4cc;
+    overflow-x: auto;
+  }
+  .terminal-body p {
+    /* white-space: pre-wrap; */
+    margin: 0;
+  }
+  .prompt {
+    color: #4ade80;
+  }
+  .cmd {
+    color: #e0e6eb;
+  }
+  .out-dim {
+    color: #6b7c8a;
+  }
+  .out-error {
+    color: #ff8585;
+  }
+  .hl {
+    color: #ff5f56;
+    font-weight: 600;
+  }
+  .cursor-blink {
+    color: #4ade80;
+    animation: blink 1s step-start infinite;
+    display: inline-block;
+    margin-left: 2px;
+  }
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
