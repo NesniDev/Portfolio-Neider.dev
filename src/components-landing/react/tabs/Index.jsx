@@ -23,7 +23,7 @@ export const WelcomeScreen = () => {
           Neider Nieto
         </h1>
         <p className="text-center text-xs sm:text-sm md:text-base text-gray-400 mt-2 sm:mt-3 font-jetbrains">
-          Ingeniero de Sistemas · Full-Stack Developer
+          Ingeniero de Sistemas
         </p>
       </div>
 
@@ -65,7 +65,7 @@ export const WelcomeScreen = () => {
                 <span className="text-sm text-gray-300 group-hover:text-white transition-colors truncate">
                   {proj.name}
                 </span>
-                <span className="text-xs text-gray-500 font-jetbrains truncate ml-4 max-w-[120px] sm:max-w-[150px] hidden xs:inline">
+                <span className="text-xs text-gray-500 font-jetbrains truncate ml-4 max-w-[120px] sm:max-w-[150px] inline">
                   {proj.path}
                 </span>
               </button>
