@@ -2,7 +2,7 @@ import { Highlight, themes } from 'prism-react-renderer'
 
 export function Profile({ codigoString, info }) {
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full ">
       <Highlight
         theme={themes.vsDark}
         code={codigoString}
@@ -10,7 +10,7 @@ export function Profile({ codigoString, info }) {
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
-            className={`${className} font-jetbrains w-max min-w-full text-xs sm:text-sm`}
+            className={`${className} font-jetbrains w-full text-xs sm:text-sm`}
             style={{
               ...style,
               backgroundColor: 'transparent',
@@ -26,7 +26,7 @@ export function Profile({ codigoString, info }) {
                   {i + 1}
                 </span>
 
-                <span className="flex-1 whitespace-pre">
+                <span className="flex-1 whitespace-pre-wrap">
                   {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token })} />
                   ))}
