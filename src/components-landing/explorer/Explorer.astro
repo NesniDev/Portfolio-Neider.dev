@@ -7,10 +7,10 @@ import Markdown from '../icons/SideBar/Markdown.astro'
 
 <div class="text-gray-300 flex flex-col justify-between h-full font-jetbrains">
   <div>
-    <div class="flex items-center justify-between px-4 py-2 border-b border-[#2a2a2a] md:border-b-0">
-      <h2 class="text-sm font-semibold uppercase text-gray-400">
-        Explorer
-      </h2>
+    <div
+      class="flex items-center justify-between px-4 py-2 border-b border-[#2a2a2a] md:border-b-0"
+    >
+      <h2 class="text-sm font-semibold uppercase text-gray-400">Explorer</h2>
       <button
         id="explorer-close"
         class="md:hidden inline-flex items-center justify-center w-7 h-7 rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
@@ -145,17 +145,13 @@ import Markdown from '../icons/SideBar/Markdown.astro'
             </div>
           </div>
 
-          <div
-            class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
-          >
-            <IconNodeJS class="w-4 h-4" />
-            <span>package.json</span>
+          <div class="pl-2 flex items-center gap-1 py-1">
+            <IconNodeJS class="w-4 h-4 text-gray-300" />
+            <span class="text-gray-500 cursor-auto">package.json</span>
           </div>
-          <div
-            class="pl-2 flex items-center gap-1 cursor-pointer transition duration-200 hover:bg-[rgba(74,222,128,0.1)] py-1"
-          >
-            <Markdown class="w-4 h-4" />
-            <span>README.md</span>
+          <div class="pl-2 flex items-center gap-1 py-1">
+            <Markdown class="w-4 h-4 text-gray-300" />
+            <span class="text-gray-500 cursor-auto">README.md</span>
           </div>
         </div>
       </div>
