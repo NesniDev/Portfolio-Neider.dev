@@ -344,6 +344,7 @@ export const TABS: Record<string, Tab> = {
         downloads: '30M+',
         stars: '85k+'
       },
+
       {
         logo: '/Technologies/Frontend/Bootstrap.svg',
         name: 'Bootstrap',
@@ -507,6 +508,40 @@ export const TABS: Record<string, Tab> = {
         stars: 'N/A'
       },
 
+      //Data Analysis
+
+      {
+        logo: '/Technologies/DataAnalysis/sql-server.svg',
+        name: 'SQL Server',
+        category: 'data analysis',
+        status: 'Installed',
+        description: 'Relational database management system by Microsoft',
+        company: 'Microsoft',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+
+      {
+        logo: '/Technologies/DataAnalysis/Excel.svg',
+        name: 'Excel',
+        category: 'data analysis',
+        status: 'Installed',
+        description: 'Spreadsheet software for data analysis',
+        company: 'Microsoft',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/DataAnalysis/Power-Bi.svg',
+        name: 'Power BI',
+        category: 'data analysis',
+        status: 'Installed',
+        description: 'Data visualization software',
+        company: 'Microsoft',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+
       // Otros
       {
         logo: '/Technologies/Otros/Git.svg',
@@ -548,16 +583,7 @@ export const TABS: Record<string, Tab> = {
         downloads: '3M+',
         stars: '60k+'
       },
-      {
-        logo: '/Technologies/Otros/Excel.svg',
-        name: 'Excel',
-        category: 'Others',
-        status: 'Installed',
-        description: 'Spreadsheet software for data analysis',
-        company: 'Microsoft',
-        downloads: 'N/A',
-        stars: 'N/A'
-      },
+
       {
         logo: '/Technologies/Otros/Linux.svg',
         name: 'Linux',

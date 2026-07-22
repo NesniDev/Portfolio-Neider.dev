@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { TABS } from '../../../lib/infoLanding'
 
-const Category = ['all', 'frontend', 'backend', 'others']
+const Category = ['all', 'frontend', 'backend', "data analysis", 'others']
 export const Skills = () => {
 
   const [search, setSearch] = useState('')
