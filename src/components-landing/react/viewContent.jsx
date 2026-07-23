@@ -1,21 +1,20 @@
+import { lazy, Suspense } from 'react';
 import { useStore } from '@nanostores/react';
-import { activeTab } from '../store/tabsStore'; // Asegúrese de que la ruta sea correcta
+import { activeTab } from '../store/tabsStore';
 
 import { TABS } from '../../lib/infoLanding';
-import { Profile } from './tabs/Profile';
-import { Skills } from './tabs/Skills';
-import { ProjectsGrid } from './tabs/Projects';
-import { Experience } from './tabs/Experience';
-import { TerminalContactForm } from './tabs/Contact';
-import { WelcomeScreen } from './tabs/Index';
+
+const Profile = lazy(() => import('./tabs/Profile'));
+const Skills = lazy(() => import('./tabs/Skills'));
+const ProjectsGrid = lazy(() => import('./tabs/Projects'));
+const Experience = lazy(() => import('./tabs/Experience'));
+const TerminalContactForm = lazy(() => import('./tabs/Contact'));
+const WelcomeScreen = lazy(() => import('./tabs/Index'));
 
 
 export const ViewContent = () => {
-  // 1. Suscripción al estado global de Nano Stores
   const currentTab = useStore(activeTab);
 
-
-  // 3. Obtención de datos
   const data = TABS[currentTab] || TABS.welcome;
 
   const codigoString = data.isCode
@@ -24,8 +23,6 @@ export const ViewContent = () => {
       : data.content
     : '';
 
-  // 4. Patrón de enrutamiento interno (Switch o Diccionario)
-  // Esto reemplaza la cadena de ternarios, aislando la lógica de renderizado.
   const renderizarContenido = () => {
     switch (currentTab) {
       case 'profile':
@@ -48,7 +45,9 @@ export const ViewContent = () => {
       key={currentTab}
       className="w-full h-full py-3 sm:py-4 px-2 sm:px-3 overflow-y-auto animate-fade-in transition-opacity duration-300"
     >
-      {renderizarContenido()}
+      <Suspense fallback={<div className="text-neutral-500 text-sm p-4">Cargando...</div>}>
+        {renderizarContenido()}
+      </Suspense>
     </div>
   );
 };
