@@ -1,6 +1,4 @@
-import { supabase } from "../../lib/supabaseClient.js";
 import { useState } from "react";
-import confetti from "canvas-confetti"
 
 
 const links = [
@@ -59,6 +57,12 @@ export const TerminalContactForm = () => {
     setLoading(true)
     setStatus(null)
 
+    const { createClient } = await import("@supabase/supabase-js")
+    const supabase = createClient(
+      import.meta.env.PUBLIC_SUPABASE_URL,
+      import.meta.env.PUBLIC_SUPABASE_ANON_KEY
+    )
+
     const { error } = await supabase
       .from("user")
       .insert([
@@ -79,6 +83,8 @@ export const TerminalContactForm = () => {
 
     setStatus("Mensaje enviado correctamente")
 
+    const confettiModule = await import("canvas-confetti")
+    const confetti = confettiModule.default
     confetti({
       particleCount: 120,
       spread: 80,
@@ -211,3 +217,5 @@ export const TerminalContactForm = () => {
     </div>
   );
 };
+
+export default TerminalContactForm;
