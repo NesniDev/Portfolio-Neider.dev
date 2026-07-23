@@ -6,3 +6,20 @@
   --font-code: 'Fira Code Variable', monospace;
   --font-jetbrains: 'JetBrains Mono Variable', monospace;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}

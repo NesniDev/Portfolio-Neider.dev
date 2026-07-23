@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 
 /* ───────────────────────────────────────────── */
 /* TYPES & HELPERS                              */
@@ -137,11 +136,8 @@ export const SystemMonitor = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
-      animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="font-mono h-full w-full bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden  mx-auto shadow-2xl backdrop-blur-md"
+    <div
+      className="font-mono h-full w-full bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden mx-auto shadow-2xl backdrop-blur-md animate-fadeIn"
     >
       <div className="flex items-center gap-2.5 px-4 py-3 border-b border-neutral-800 bg-neutral-950/50">
         <div className="flex gap-1.5">
@@ -178,6 +174,6 @@ export const SystemMonitor = () => {
           <EntropyCard label="JS Heap" value={info.heap} />
         </div>
       </Section>
-    </motion.div>
+    </div>
   );
 };
