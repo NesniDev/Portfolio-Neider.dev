@@ -39,3 +39,5 @@ export function Profile({ codigoString, info }) {
     </div>
   )
 }
+
+export default Profile;

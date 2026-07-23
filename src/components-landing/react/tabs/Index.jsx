@@ -81,3 +81,5 @@ export const WelcomeScreen = () => {
     </div>
   );
 };
+
+export default WelcomeScreen;

@@ -155,3 +155,5 @@ export const ProjectsGrid = () => {
     </>
   );
 }
+
+export default ProjectsGrid;

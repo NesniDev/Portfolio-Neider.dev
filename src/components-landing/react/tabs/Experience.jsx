@@ -58,3 +58,5 @@ export const Experience = ({ info }) => {
     </div >
   );
 }
+
+export default Experience;
