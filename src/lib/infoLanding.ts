@@ -31,21 +31,22 @@ export const TABS: Record<string, Tab> = {
       interests: [
         "Desarrollo Web Frontend y Backend",
         "Arquitectura de Software",
+        "Análisis de datos en Python y Excel",
         "Automatización de procesos - n8n"
       ],
       availability: "Disponible para proyectos freelance o en contratación",
-      resume: "/Hojadevida.pdf",
       setup: {
         os: "Windows / Linux / WSL",
         cpu: "Ryzen 7 8700F",
         ram: "32 GB",
         gpu: "NVIDIA GeForce RTX 3050",
-        editor: "VS Code | windsurf",
-        agents: "Opencode"
+        editor: "VS Code | Devin | Cursor",
+        agents: "Opencode | Claude Code | Codex | Command-Code",
+        ecosystem_AI: "Gentle-AI | Hermes-AI"
       },
       socials: {
         github: "https://github.com/NesniDev",
-        linkedin: "https://linkedin.com/in/neidernieto ",
+        linkedin: "https://linkedin.com/in/neidernieto",
         portfolio: "https://neider.dev"
       },
 
@@ -88,7 +89,7 @@ export const TABS: Record<string, Tab> = {
         ],
         text: 'El objetivo principal es desarrollar una plataforma digital moderna para IFE Colombia, mostrando sus servicios y fortaleciendo su presencia en línea con un diseño atractivo y funcional.',
         gh: 'https://github.com/NesniDev/TecnicoSistemas',
-        page: 'https://tecnico-sistemas.vercel.app',
+        page: 'https://infobyte.neider.dev',
         badge: 'Completed',
         language: 'JavaScript',
         forks: 0
