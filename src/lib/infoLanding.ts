@@ -416,6 +416,16 @@ export const TABS: Record<string, Tab> = {
         downloads: '5M+',
         stars: '90k+'
       },
+      {
+        logo: '/Technologies/Frontend/react-native.svg',
+        name: 'React Native',
+        category: 'Frontend',
+        status: 'Installed',
+        description: 'Framework for building native mobile apps with React',
+        company: 'Meta',
+        downloads: '15M+',
+        stars: '120k+'
+      },
 
       // Backend
       {
@@ -509,6 +519,68 @@ export const TABS: Record<string, Tab> = {
         stars: 'N/A'
       },
 
+      // IA
+      {
+        logo: '/Technologies/IA/claude-code.svg',
+        name: 'Claude AI',
+        category: 'IA',
+        status: 'Installed',
+        description: 'AI assistant for coding, analysis, and creative tasks',
+        company: 'Anthropic',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/IA/opencode.svg',
+        name: 'OpenCode',
+        category: 'IA',
+        status: 'Installed',
+        description: 'Interactive CLI tool for software engineering tasks with AI',
+        company: 'Anomaly',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/IA/ollama.svg',
+        name: 'Ollama',
+        category: 'IA',
+        status: 'Installed',
+        description: 'Run large language models locally on your machine',
+        company: 'Ollama',
+        downloads: '5M+',
+        stars: '120k+'
+      },
+      {
+        logo: '/Technologies/IA/mcp.svg',
+        name: 'MCP',
+        category: 'IA',
+        status: 'Installed',
+        description: 'Model Context Protocol for AI-tool integration',
+        company: 'Anthropic',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/IA/openclaw.svg',
+        name: 'OpenClaw',
+        category: 'IA',
+        status: 'Installed',
+        description: 'Open-source AI agent framework',
+        company: 'Community',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/IA/comfyui.svg',
+        name: 'ComfyUI',
+        category: 'IA',
+        status: 'Installed',
+        description: 'Node-based UI for Stable Diffusion workflows',
+        company: 'Comfy',
+        downloads: 'N/A',
+        stars: '20k+'
+      },
+
       //Data Analysis
 
       {
@@ -539,6 +611,16 @@ export const TABS: Record<string, Tab> = {
         status: 'Installed',
         description: 'Data visualization software',
         company: 'Microsoft',
+        downloads: 'N/A',
+        stars: 'N/A'
+      },
+      {
+        logo: '/Technologies/Otros/Google_Colaboratory.svg',
+        name: 'Google Colab',
+        category: 'data analysis',
+        status: 'Installed',
+        description: 'Cloud-based Jupyter notebook environment for ML and data science',
+        company: 'Google',
         downloads: 'N/A',
         stars: 'N/A'
       },
