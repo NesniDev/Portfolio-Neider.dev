@@ -58,26 +58,6 @@ export const TABS: Record<string, Tab> = {
     lenguaje: '',
     content: [
       {
-        url: '/img/solvepc.webp',
-        title: 'SolvePc',
-        technologies: [
-          TECHNOLOGIES.HTML,
-          TECHNOLOGIES.CSS,
-          TECHNOLOGIES.JAVASCRIPT,
-          TECHNOLOGIES.ASTRO,
-          TECHNOLOGIES.REACT,
-          TECHNOLOGIES.DOCKER,
-          TECHNOLOGIES.POSTGRESQL,
-          TECHNOLOGIES.EXPRESS
-        ],
-        text: 'SolvePc es una plataforma web que ofrece servicios de resolución de problemas de computadoras online.',
-        gh: 'https://github.com/NesniDev/SolvePc',
-        page: 'https://solve-pc.vercel.app/',
-        badge: 'Completed',
-        language: 'JavaScript',
-        forks: 0
-      },
-      {
         url: '/img/infoByte.webp',
         title: 'InfoByte',
         technologies: [
@@ -95,6 +75,26 @@ export const TABS: Record<string, Tab> = {
         forks: 0
       },
       {
+        url: '/img/solvepc.webp',
+        title: 'SolvePc',
+        technologies: [
+          TECHNOLOGIES.HTML,
+          TECHNOLOGIES.CSS,
+          TECHNOLOGIES.JAVASCRIPT,
+          TECHNOLOGIES.ASTRO,
+          TECHNOLOGIES.REACT,
+          TECHNOLOGIES.DOCKER,
+          TECHNOLOGIES.POSTGRESQL,
+          TECHNOLOGIES.EXPRESS
+        ],
+        text: 'SolvePc es una plataforma web que ofrece servicios de resolución de problemas de computadoras online.',
+        gh: 'https://github.com/NesniDev/SolvePc',
+        page: 'https://solve-pc.vercel.app/',
+        badge: 'In  Progress',
+        language: 'JavaScript',
+        forks: 0
+      },
+      {
         url: '/img/futbol.webp',
         title: 'Canchas de fútbol',
         technologies: [
@@ -108,6 +108,23 @@ export const TABS: Record<string, Tab> = {
         text: 'El objetivo principal es desarrollar una plataforma donde los usuarios de Chiquinquirá podrán ver las canchas disponibles, hacer su reserva y pagar por la misma de manera sencilla y rápida. ',
         gh: 'https://github.com/NesniDev/Field-Football',
         page: 'https://field-football.vercel.app',
+        badge: 'In Progress',
+        language: 'JavaScript',
+        forks: 0
+      },
+      {
+        url: '/img/contadora.webp',
+        title: 'Contadora Pública',
+        technologies: [
+          TECHNOLOGIES.HTML,
+          TECHNOLOGIES.CSS,
+          TECHNOLOGIES.JAVASCRIPT,
+          TECHNOLOGIES.ASTRO,
+          TECHNOLOGIES.REACT
+        ],
+        text: 'El objetivo principal es desarrollar una plataforma digital para una profesional de contaduría pública, con el fin de fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
+        gh: 'https://github.com/NesniDev/contadora',
+        page: 'https://public-accountant.vercel.app',
         badge: 'In Progress',
         language: 'JavaScript',
         forks: 0
@@ -147,23 +164,6 @@ export const TABS: Record<string, Tab> = {
         badge: 'Completed'
       },
       {
-        url: '/img/artex.avif',
-        title: 'Página de ArtexAlex',
-        technologies: [
-          TECHNOLOGIES.HTML,
-          TECHNOLOGIES.CSS,
-          TECHNOLOGIES.ASTRO,
-          TECHNOLOGIES.JAVASCRIPT,
-          TECHNOLOGIES.TAILWIND
-        ],
-        text: 'El principal objetivo era crear una plataforma digital que reflejara la creatividad y habilidad artesanal del taller, para fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
-        gh: 'https://github.com/NesniDev/ArtexAlex',
-        page: 'https://artexalex.pages.dev/',
-        badge: 'Completed',
-        language: 'JavaScript',
-        forks: 0
-      },
-      {
         url: '/img/Lawyer.webp',
         title: 'Página de Abogada',
         technologies: [
@@ -180,6 +180,24 @@ export const TABS: Record<string, Tab> = {
         language: 'JavaScript',
         forks: 0
       },
+      {
+        url: '/img/artex.avif',
+        title: 'Página de ArtexAlex',
+        technologies: [
+          TECHNOLOGIES.HTML,
+          TECHNOLOGIES.CSS,
+          TECHNOLOGIES.ASTRO,
+          TECHNOLOGIES.JAVASCRIPT,
+          TECHNOLOGIES.TAILWIND
+        ],
+        text: 'El principal objetivo era crear una plataforma digital que reflejara la creatividad y habilidad artesanal del taller, para fortalecer su presencia en línea mediante la creación de un sitio web moderno y funcional.',
+        gh: 'https://github.com/NesniDev/ArtexAlex',
+        page: 'https://artexalex.pages.dev/',
+        badge: 'Completed',
+        language: 'JavaScript',
+        forks: 0
+      },
+
       {
         url: '/img/API.avif',
         title: 'Página de visualización de APIs',
